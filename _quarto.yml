@@ -12,6 +12,6 @@ website:
 
 format:
   html:
-    theme: darkly
+    theme: simplex
     css: styles.css
     toc: true
