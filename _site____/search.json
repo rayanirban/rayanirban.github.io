@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Feel free to reach out:\n\nEmail: your.email@example.com\n\nLinkedIn: Your Profile\n\nGitHub: rayanirban"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome!\nHello 👋 I’m Your Name, a Your Profession. Welcome to my personal website.\n\n🔭 I’m currently working on Project A (link)\n🌱 I’m learning Your Topic\n📫 How to reach me: your.email@example.com"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Provide a concise bio: background, interests, and what drives you."
+  },
+  {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About",
+    "section": "",
+    "text": "Provide a concise bio: background, interests, and what drives you."
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About",
+    "section": "Skills",
+    "text": "Skills\n\nSkill One\nSkill Two\nSkill Three"
+  },
+  {
+    "objectID": "work.html",
+    "href": "work.html",
+    "title": "Work",
+    "section": "",
+    "text": "A brief description of Project A with highlights and link.\n\n\n\nOverview of Project B, technologies used, and outcomes."
+  },
+  {
+    "objectID": "work.html#projects",
+    "href": "work.html#projects",
+    "title": "Work",
+    "section": "",
+    "text": "A brief description of Project A with highlights and link.\n\n\n\nOverview of Project B, technologies used, and outcomes."
+  }
+]
