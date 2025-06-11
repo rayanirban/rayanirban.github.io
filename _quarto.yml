@@ -1,17 +1,22 @@
 project:
   type: website
-  output-dir: docs
 
 website:
-  title: "rayanirban"
+  title: "Your Name"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Work"
+        href: work.qmd
+      - text: "Contact"
+        href: contact.qmd
 
 format:
   html:
-    theme: simplex
-    css: styles.css
-    toc: true
+    css: style.css
+
+# Output directly to root for GitHub Pages user site
+output-dir: "."

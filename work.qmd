@@ -1,0 +1,11 @@
+---
+title: "Work"
+---
+
+## Projects
+
+### Project A
+A brief description of Project A with highlights and link.
+
+### Project B
+Overview of Project B, technologies used, and outcomes.

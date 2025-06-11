@@ -2,4 +2,12 @@
 title: "About"
 ---
 
-About this site
+## About Me
+
+Provide a concise bio: background, interests, and what drives you.
+
+## Skills
+
+- Skill One
+- Skill Two
+- Skill Three

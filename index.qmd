@@ -1,7 +1,11 @@
 ---
-title: "rayanirban"
+title: "Home"
 ---
 
-This is a Quarto website.
+# Welcome!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Hello 👋 I'm **Your Name**, a *Your Profession*. Welcome to my personal website.
+
+- 🔭 I’m currently working on **Project A** ([link](https://example.com))
+- 🌱 I’m learning *Your Topic*
+- 📫 How to reach me: your.email@example.com
