@@ -765,3 +765,23 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-silver);
 }
+
+/* Responsive: Stack panels vertically on small screens */
+@media (max-width: 800px) {
+  .main-content {
+    display: block !important;
+  }
+  .left-panel,
+  .right-panel {
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0.5rem 0.5rem !important;
+    box-sizing: border-box;
+  }
+  .side-nav {
+    position: static !important;
+    width: 100% !important;
+    margin-top: 1rem;
+  }
+}
