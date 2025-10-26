@@ -1,0 +1,39 @@
+---
+title: "Welcome"
+page-layout: full
+---
+
+## Hello, I'm Anirban Ray 👋
+
+I'm a [Your Role/Profession] passionate about [Your Interests].
+
+### What I Do
+
+- 🔬 Research and develop innovative solutions
+- 💻 Build impactful software projects
+- 📊 Analyze data to drive insights
+- 🌱 Continuously learning and growing
+
+### My Interests
+
+- Machine Learning & AI
+- Data Science
+- Software Development
+- Open Source Contributions
+
+---
+
+### Featured Projects
+
+Check out some of my recent work on the [Projects](projects.qmd) page.
+
+### Latest Updates
+
+::: {.callout-note}
+## Currently Working On
+I'm currently exploring [your current focus area] and working on [current project].
+:::
+
+---
+
+*Feel free to explore the site and [get in touch](contact.qmd) if you'd like to collaborate!*

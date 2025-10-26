@@ -1,0 +1,91 @@
+/* Custom styles for your Quarto website */
+
+/* Main styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Homepage hero section */
+#hello-im-anirban-ray {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Improve link styling */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Project cards styling */
+.project-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Callout boxes */
+.callout {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Navigation bar */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer styling */
+.page-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Code blocks */
+pre {
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Improve table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+}
+
+table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}

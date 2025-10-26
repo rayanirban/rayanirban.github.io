@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Anirban Ray"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Projects"
+        href: projects.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "Contact"
+        href: contact.qmd
+    right:
+      - icon: github
+        href: https://github.com/rayanirban
+      - icon: linkedin
+        href: https://linkedin.com/in/yourprofile
+      - icon: twitter
+        href: https://twitter.com/yourhandle
+  page-footer:
+    center: "© 2025 Anirban Ray. All rights reserved."
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3

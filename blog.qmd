@@ -1,0 +1,32 @@
+---
+title: "Blog"
+---
+
+## Recent Posts
+
+Coming soon! I'll be sharing insights, tutorials, and thoughts on:
+
+- Data Science & Machine Learning
+- Software Development Best Practices
+- Technical Tutorials
+- Career & Learning Tips
+
+### Planned Topics
+
+::: {.callout-note}
+## Upcoming Posts
+
+- How to build a personal website with Quarto
+- My journey into [your field]
+- Tips for [relevant topic]
+- Tutorial: [technical topic]
+
+:::
+
+---
+
+*Stay tuned for updates! Follow me on [GitHub](https://github.com/rayanirban) or [LinkedIn](https://linkedin.com) to get notified.*
+
+## Blog Archive
+
+*No posts yet - check back soon!*

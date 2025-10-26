@@ -1,0 +1,64 @@
+---
+title: "About Me"
+---
+
+## Background
+
+Hi! I'm Anirban Ray, a [Your Role] based in [Your Location].
+
+### Education
+
+- **[Degree]** - [University Name], [Year]
+- **[Degree]** - [University Name], [Year]
+
+### Experience
+
+#### [Current Position] at [Company/Organization]
+*[Start Date] - Present*
+
+- Responsibility/Achievement 1
+- Responsibility/Achievement 2
+- Responsibility/Achievement 3
+
+#### [Previous Position] at [Company/Organization]
+*[Start Date] - [End Date]*
+
+- Responsibility/Achievement 1
+- Responsibility/Achievement 2
+
+### Skills
+
+::: {.panel-tabset}
+
+## Programming
+- Python
+- R
+- JavaScript
+- SQL
+
+## Tools & Frameworks
+- Git/GitHub
+- Docker
+- TensorFlow/PyTorch
+- Quarto/R Markdown
+
+## Soft Skills
+- Problem Solving
+- Communication
+- Team Collaboration
+- Project Management
+
+:::
+
+### Interests Beyond Work
+
+When I'm not coding or analyzing data, you can find me:
+
+- 📚 Reading [genre] books
+- 🎮 Playing [games/sports]
+- 🌍 Traveling and exploring new places
+- 🎨 [Your hobby]
+
+---
+
+*Want to know more? Check out my [projects](projects.qmd) or [get in touch](contact.qmd)!*
