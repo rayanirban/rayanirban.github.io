@@ -3,7 +3,11 @@ title: "Welcome"
 page-layout: full
 ---
 
+::: {.profile-header}
+![](images/IMG_2482.jpg){.profile-img}
+
 ## Hello, I'm Anirban Ray 👋
+:::
 
 I'm a [Your Role/Profession] passionate about [Your Interests].
 

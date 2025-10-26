@@ -53,6 +53,50 @@ h4 {
   letter-spacing: -0.5px;
 }
 
+/* Profile header styling */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+/* Profile image - circular frame */
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  margin: 0 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive adjustments for profile header */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 /* Improve link styling */
 a {
   color: #2563eb;
