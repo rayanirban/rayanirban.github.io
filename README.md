@@ -1,50 +1,36 @@
-# Personal Website - Anirban Ray
+# Personal Website
 
-This is my personal website built with [Quarto](https://quarto.org/).
+A personal website built with Quarto featuring a metallic black theme.
 
-## Local Development
+## Setup
 
-To preview the website locally:
+1. Install Quarto: https://quarto.org/docs/get-started/
+2. Add your profile picture as `profile.jpg` in the root directory
+3. Edit `index.qmd` with your personal information
+4. Customize other pages as needed
 
+## Development
+
+Preview the website locally:
 ```bash
 quarto preview
 ```
 
-## Building the Site
+## Build
 
-To build the website:
-
+Build the website:
 ```bash
 quarto render
 ```
 
-The built site will be in the `_site` directory.
+The output will be in the `docs` folder, ready for GitHub Pages deployment.
 
 ## Deployment
 
-### GitHub Pages
+1. Go to your GitHub repository settings
+2. Navigate to Pages
+3. Set Source to "Deploy from a branch"
+4. Select the `main` branch and `/docs` folder
+5. Save
 
-To deploy to GitHub Pages:
-
-1. Push this repository to GitHub
-2. Go to repository Settings > Pages
-3. Set Source to "GitHub Actions"
-4. Create `.github/workflows/publish.yml` (see deployment section)
-
-### Manual Deployment
-
-After running `quarto render`, upload the contents of the `_site` directory to your web host.
-
-## Project Structure
-
-- `index.qmd` - Homepage
-- `about.qmd` - About page
-- `projects.qmd` - Projects showcase
-- `blog.qmd` - Blog listing
-- `contact.qmd` - Contact information
-- `_quarto.yml` - Website configuration
-- `styles.css` - Custom CSS styles
-
-## License
-
-© 2025 Anirban Ray. All rights reserved.
+Your website will be available at https://rayanirban.github.io

@@ -1,84 +1,137 @@
 ---
 title: ""
-page-layout: custom
+format:
+  html:
+    page-layout: full
+    css: styles.css
 ---
 
-::: {.sidebar-container}
-![](images/IMG_2497.jpg){.sidebar-image}
-
-<h2 class="sidebar-name">Anirban Ray</h2>
-<p class="sidebar-title">Data Scientist | Researcher | Developer</p>
-
-<div class="sidebar-bio">
-Passionate about machine learning, data science, and building impactful solutions. I explore the intersection of technology and research to solve real-world problems.
-</div>
-
-<div class="sidebar-social">
-[{{< fa brands github size=xl >}}](https://github.com/rayanirban)
-[{{< fa brands linkedin size=xl >}}](https://linkedin.com/in/yourprofile)
-[{{< fa brands twitter size=xl >}}](https://twitter.com/yourhandle)
-[{{< fa envelope size=xl >}}](mailto:your.email@example.com)
-</div>
-
-<div class="sidebar-contact">
-### Contact
-Email: [your.email@example.com](mailto:your.email@example.com)  
-Location: [Your City, Country]
-</div>
-:::
-
+::: {.hero-section}
+::: {.container}
 ::: {.main-content}
 
-# About Me
+::: {.left-panel}
+![](profile.jpg){.profile-img}
 
-I'm a [Your Role] with a passion for [your interests]. My work focuses on [brief description of your work and research interests].
+::: {.social-links}
+[<img src="logos/github.png" class="social-icon-img" alt="GitHub">](https://github.com/rayanirban){.social-link target="_blank"} [<img src="logos/linkedin.png" class="social-icon-img" alt="LinkedIn">](https://www.linkedin.com/in/anirban-ray/){.social-link target="_blank"} [<img src="logos/twitter.png" class="social-icon-img" alt="Twitter">](https://x.com/anirbanray_){.social-link target="_blank"} [<img src="logos/instagram.png" class="social-icon-img" alt="Instagram">](https://instagram.com/anirbanray_){.social-link target="_blank"} [<img src="logos/bluesky.png" class="social-icon-img" alt="Bluesky">](https://bsky.app/profile/anirbanray.bsky.social){.social-link target="_blank"} [<img src="logos/scholar.png" class="social-icon-img" alt="Google Scholar">](https://scholar.google.de/citations?user=t-f_mwsAAAAJ&hl=en&authuser=1){.social-link target="_blank"} [<img src="logos/orcid.png" class="social-icon-img" alt="ORCID">](https://orcid.org/0000-0002-7285-6727){.social-link target="_blank"} [<img src="logos/humantechnopole.png" class="social-icon-img" alt="Human Technopole">](https://humantechnopole.it/en/people/anirban-ray/){.social-link target="_blank"}
+:::
 
-## Background
+---
 
-I specialize in [your specialization] and have experience in [your experience areas]. My research interests include [research areas], and I'm particularly interested in [specific interests].
+::: {.left-skills}
+**Computational:** Python, Pytorch, Latex, SLURM, Bash
+**Languages:** Bengali, Hindi, English, Japanese, Italian (Elementray)
+:::
+:::
+
+::: {.right-panel}
+# Anirban Ray
+
+::: {.tagline}
+Ph.D. Researcher in Computational Image Restoration | Generative AI for Microscopy
+:::
 
 ## Education
 
-**Ph.D. in [Your Field]**  
-[University Name] | [Year]  
-*Dissertation: [Title or brief description]*
+::: {.education-item}
+**Ph.D. in Computer Science** [Technische Universität Dresden](https://tu-dresden.de){target="_blank"} & [Human Technopole](https://humantechnopole.it){target="_blank"} | *2022 – Present*
+:::
 
-**Master of Science in [Your Field]**  
-[University Name] | [Year]  
-*Focus: [Area of focus]*
 
-**Bachelor of Science in [Your Field]**  
-[University Name] | [Year]
+::: {.education-item}
+**M.Eng. in Computer Science** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank"} | *2016 – 2018*
+:::
 
-## Skills
+::: {.education-item}
+**B.Tech. in Computer Science and Engineering** [Vel Tech Institute of Science and Technology](https://www.veltech.edu.in/){target="_blank"} | *2011 – 2015*
+:::
 
-### Programming & Tools
-Python • R • JavaScript • SQL • Git • Docker • TensorFlow • PyTorch
 
-### Data Science
-Machine Learning • Deep Learning • Statistical Analysis • Data Visualization • NLP
+## Teaching Experience
 
-### Research
-Experimental Design • Scientific Writing • Peer Review • Grant Writing
+::: {.education-item}
+**Teaching Assistant – DL4MIA**[Human Technopole, Milan, Italy](https://humantechnopole.it/){target="_blank"}  
+[2022](https://humantechnopole.it/en/trainings/deep-learning-for-microscopy-image-analysis-2022/){target="_blank"}, [2023](https://dl4mia2023.humantechnopole.it/){target="_blank"}, [2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank"}  
+Supported the *Deep Learning for Microscopy Image Analysis* course across three consecutive editions.  
+Responsibilities included mentoring participants, assisting with lectures and coding sessions, and guiding project work on AI-based microscopy restoration and segmentation.
+:::
 
-## Experience
+::: {.education-item}
+**Teaching Assistant – Deep Learning @ MBL**[Marine Biological Laboratory, Woods Hole, USA](https://www.mbl.edu/){target="_blank"}  
+[2023](https://www.mbl.edu/education/advanced-research-training-courses/courses-calendar?trumbaEmbed=view%3Devent%26eventid%3D164013510){target="_blank"}, [2024](https://ai-mbl.github.io/2024/about/){target="_blank"}  
+Contributed to lectures and hands-on sessions on deep learning for biological imaging.  
+Provided mentoring and technical guidance to participants during lab exercises and research projects.
+:::
 
-**[Current Position]**  
-*[Organization] | [Start Date] - Present*
 
-- Leading research in [area]
-- Developing innovative solutions for [problem]
-- Publishing findings in top-tier journals
 
-**[Previous Position]**  
-*[Organization] | [Start Date] - [End Date]*
+## Work Experience
 
-- Conducted research on [topic]
-- Collaborated with teams on [projects]
-- Achieved [accomplishments]
+::: {.education-item}
+**Associate Researcher** [Hitachi Ltd., Tokyo, Japan](https://www.hitachi.com/){target="_blank"} | *Apr 2018 – Jan 2022*  
+Applied Deep Learning and Computer Vision for image analysis in the R&D Group's Center for Technology Innovation.
+:::
 
-## Recent Work
+::: {.education-item}
+**Engineering Intern (AR Applications)** [Sun Corporation, Konan, Japan](https://www.sun-denshi.co.jp/sc/product_service/acereal/){target="_blank"} | *Sep 2016*  
+Developed augmented reality applications for AceReal smart glasses using Unity and Vuforia frameworks.
+:::
 
-Check out my latest [projects](projects.qmd) to see what I've been working on!
+::: {.education-item}
+**Engineering Intern (Cloud Services)** [Machine Pulse (Mahindra Teqo), Mumbai, India](https://www.mahindrateqo.com/){target="_blank"} | *Aug 2014 – Jan 2015*  
+Analyzed large-scale database migration strategies for renewable energy and logistics cloud systems.
+:::
 
+
+## Special Achievements
+
+::: {.education-item}
+**Aichi Monozukuri Scholarship** [Aichi Prefectural Government, Japan](https://www.pref.aichi.jp/soshiki/kokusai/aichi-scholarship-program.html){target="_blank"} | *2015*  
+Awarded full funding for Master's studies at Nagoya Institute of Technology. Selected among the top 10 students in Asia.
+:::
+
+::: {.education-item}
+**Invited Contributor – Alumni Voice Column** [The University of Tokyo](https://www.u-tokyo.ac.jp/adm/utindia/en/whyjapan/fromalumni/executive_015.html){target="_blank"} | *2018*  
+Invited by the Government of Japan and the University of Tokyo to share academic and professional experiences as part of Japan's international education initiative.
+:::
+
+::: {.education-item}
+**Selected Participant – International Computer Vision Summer School (ICVSS)** [ICVSS, Italy](https://icvss.dmi.unict.it/icvss2017/){target="_blank"} | *2017*  
+Chosen among 150 top global students (mostly PhDs) for advanced training and research presentation in computer vision.
+:::
+
+
+:::
+
+::: {.side-nav}
+### Navigation
+
+- [Projects](#projects)
+- [Publications](#publications)
+- [Research](#research)
+- [Experience](#experience)
+- [Skills](#skills)
+- [Awards](#awards)
+- [Contact](#contact)
+:::
+
+:::
+:::
+:::
+
+::: {.section}
+::: {.container}
+## About Me
+
+I am a passionate [your profession] with expertise in [your key skills]. 
+My research/work focuses on [your focus areas]. I enjoy solving complex 
+problems and building innovative solutions.
+
+### Research Interests
+- Area 1
+- Area 2
+- Area 3
+- Area 4
+:::
 :::
