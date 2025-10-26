@@ -32,34 +32,39 @@ format:
 Ph.D. Researcher in Computational Image Restoration | Generative AI for Microscopy
 :::
 
+## About Me
+
+I am a Ph.D. researcher in Computer Science at TU Dresden and Human Technopole, working on generative AI for microscopy and computational image restoration. My research develops flow-matching and diffusion-based models to enhance biological imaging. I’m passionate about AI for Science (AI4Science) and deeply interested in how science philanthropy can accelerate discovery and innovation.
+
+
 ## Education
 
 ::: {.education-item}
-**Ph.D. in Computer Science** [Technische Universität Dresden](https://tu-dresden.de){target="_blank"} & [Human Technopole](https://humantechnopole.it){target="_blank"} | *2022 – Present*
+**Ph.D. in Computer Science | *2022 – Present*** [Technische Universität Dresden](https://tu-dresden.de){target="_blank"} & [Human Technopole](https://humantechnopole.it){target="_blank"} 
 :::
 
 
 ::: {.education-item}
-**M.Eng. in Computer Science** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank"} | *2016 – 2018*
+**M.Eng. in Computer Science | *2016 – 2018*** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank"}
 :::
 
 ::: {.education-item}
-**B.Tech. in Computer Science and Engineering** [Vel Tech Institute of Science and Technology](https://www.veltech.edu.in/){target="_blank"} | *2011 – 2015*
+**B.Tech. in Computer Science and Engineering | *2011 – 2015*** [Vel Tech Institute of Science and Technology](https://www.veltech.edu.in/){target="_blank"}
 :::
 
 
 ## Teaching Experience
 
 ::: {.education-item}
-**Teaching Assistant – DL4MIA**[Human Technopole, Milan, Italy](https://humantechnopole.it/){target="_blank"}  
-[2022](https://humantechnopole.it/en/trainings/deep-learning-for-microscopy-image-analysis-2022/){target="_blank"}, [2023](https://dl4mia2023.humantechnopole.it/){target="_blank"}, [2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank"}  
-Supported the *Deep Learning for Microscopy Image Analysis* course across three consecutive editions.  
-Responsibilities included mentoring participants, assisting with lectures and coding sessions, and guiding project work on AI-based microscopy restoration and segmentation.
+**Teaching Assistant – DL4MIA | [2022](https://humantechnopole.it/en/trainings/deep-learning-for-microscopy-image-analysis-2022/){target="_blank"}, [2023](https://dl4mia2023.humantechnopole.it/){target="_blank"}, [2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank"}  
+**[Human Technopole, Milan, Italy](https://humantechnopole.it/){target="_blank"}  
+
+Supported the *Deep Learning for Microscopy Image Analysis* (DL4MIA) course across three consecutive editions. Responsibilities included mentoring participants, assisting with lectures and coding sessions, and guiding project work on AI-based microscopy restoration and segmentation.
 :::
 
 ::: {.education-item}
-**Teaching Assistant – Deep Learning @ MBL**[Marine Biological Laboratory, Woods Hole, USA](https://www.mbl.edu/){target="_blank"}  
-[2023](https://www.mbl.edu/education/advanced-research-training-courses/courses-calendar?trumbaEmbed=view%3Devent%26eventid%3D164013510){target="_blank"}, [2024](https://ai-mbl.github.io/2024/about/){target="_blank"}  
+**Teaching Assistant – DL@MBL | [2023](https://www.mbl.edu/education/advanced-research-training-courses/courses-calendar?trumbaEmbed=view%3Devent%26eventid%3D164013510){target="_blank"}, [2024](https://ai-mbl.github.io/2024/about/){target="_blank"}**[Marine Biological Laboratory, Woods Hole, USA](https://www.mbl.edu/){target="_blank"} 
+
 Contributed to lectures and hands-on sessions on deep learning for biological imaging.  
 Provided mentoring and technical guidance to participants during lab exercises and research projects.
 :::
@@ -69,17 +74,20 @@ Provided mentoring and technical guidance to participants during lab exercises a
 ## Work Experience
 
 ::: {.education-item}
-**Associate Researcher** [Hitachi Ltd., Tokyo, Japan](https://www.hitachi.com/){target="_blank"} | *Apr 2018 – Jan 2022*  
+**Associate Researcher | *Apr 2018 – Jan 2022*** [Hitachi Ltd., Tokyo, Japan](https://www.hitachi.com/){target="_blank"}
+
 Applied Deep Learning and Computer Vision for image analysis in the R&D Group's Center for Technology Innovation.
 :::
 
 ::: {.education-item}
-**Engineering Intern (AR Applications)** [Sun Corporation, Konan, Japan](https://www.sun-denshi.co.jp/sc/product_service/acereal/){target="_blank"} | *Sep 2016*  
+**Engineering Intern (AR Applications) | *Sep 2016*** [Sun Corporation, Konan, Japan](https://www.sun-denshi.co.jp/sc/product_service/acereal/){target="_blank"}
+
 Developed augmented reality applications for AceReal smart glasses using Unity and Vuforia frameworks.
 :::
 
 ::: {.education-item}
-**Engineering Intern (Cloud Services)** [Machine Pulse (Mahindra Teqo), Mumbai, India](https://www.mahindrateqo.com/){target="_blank"} | *Aug 2014 – Jan 2015*  
+**Engineering Intern (Cloud Services) | *Aug 2014 – Jan 2015*** [Machine Pulse (Mahindra Teqo), Mumbai, India](https://www.mahindrateqo.com/){target="_blank"}
+
 Analyzed large-scale database migration strategies for renewable energy and logistics cloud systems.
 :::
 
@@ -87,33 +95,40 @@ Analyzed large-scale database migration strategies for renewable energy and logi
 ## Special Achievements
 
 ::: {.education-item}
-**Aichi Monozukuri Scholarship** [Aichi Prefectural Government, Japan](https://www.pref.aichi.jp/soshiki/kokusai/aichi-scholarship-program.html){target="_blank"} | *2015*  
-Awarded full funding for Master's studies at Nagoya Institute of Technology. Selected among the top 10 students in Asia.
-:::
+**Invited Contributor – Alumni Voice Column | *2018*** [The University of Tokyo](https://www.u-tokyo.ac.jp/adm/utindia/en/whyjapan/fromalumni/executive_015.html){target="_blank"}
 
-::: {.education-item}
-**Invited Contributor – Alumni Voice Column** [The University of Tokyo](https://www.u-tokyo.ac.jp/adm/utindia/en/whyjapan/fromalumni/executive_015.html){target="_blank"} | *2018*  
 Invited by the Government of Japan and the University of Tokyo to share academic and professional experiences as part of Japan's international education initiative.
 :::
 
 ::: {.education-item}
-**Selected Participant – International Computer Vision Summer School (ICVSS)** [ICVSS, Italy](https://icvss.dmi.unict.it/icvss2017/){target="_blank"} | *2017*  
+**Selected Participant – International Computer Vision Summer School (ICVSS) | *2017*** [ICVSS, Italy](https://icvss.dmi.unict.it/icvss2017/){target="_blank"}
+
 Chosen among 150 top global students (mostly PhDs) for advanced training and research presentation in computer vision.
 :::
+
+::: {.education-item}
+**Aichi Monozukuri Scholarship | *2015*** [Aichi Prefectural Government, Japan](https://www.pref.aichi.jp/soshiki/kokusai/aichi-scholarship-program.html){target="_blank"}
+
+Awarded full funding for Master's studies at Nagoya Institute of Technology. Selected among the top 10 students in Asia.
+:::
+
+::: {.education-item}
+**Selected Participant – Undergraduate Summer School on Computer Science | *2013*** [Indian Institute of Science, Bengaluru India](https://www.csa.iisc.ac.in/){target="_blank"}
+
+Chosen among 60 top students from India for advanced topics and research presentation in computer science.
+:::
+
+
 
 
 :::
 
 ::: {.side-nav}
-### Navigation
-
-- [Projects](#projects)
-- [Publications](#publications)
-- [Research](#research)
-- [Experience](#experience)
-- [Skills](#skills)
-- [Awards](#awards)
-- [Contact](#contact)
+[About Me](#about-me)  
+[Education](#education)  
+[Teaching](#teaching-experience)  
+[Work](#work-experience)  
+[Achievements](#special-achievements)
 :::
 
 :::
@@ -122,16 +137,4 @@ Chosen among 150 top global students (mostly PhDs) for advanced training and res
 
 ::: {.section}
 ::: {.container}
-## About Me
-
-I am a passionate [your profession] with expertise in [your key skills]. 
-My research/work focuses on [your focus areas]. I enjoy solving complex 
-problems and building innovative solutions.
-
-### Research Interests
-- Area 1
-- Area 2
-- Area 3
-- Area 4
-:::
 :::
