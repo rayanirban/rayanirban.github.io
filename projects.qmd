@@ -6,7 +6,26 @@ Here are some of the projects I've worked on. Click on each to learn more!
 
 ## Featured Projects
 
-### 🚀 Project Name 1
+### � Data Analysis Dashboard
+
+![Data Visualization](images/project1.png){fig-alt="Data analysis dashboard"}
+
+**Description:** An interactive business performance dashboard analyzing sales, expenses, and profitability trends. Features comprehensive visualizations including time series analysis, profit tracking, and correlation analysis.
+
+**Technologies:** Python, Pandas, NumPy, Matplotlib, Jupyter, Quarto
+
+**Key Features:**
+
+- Multi-panel visualization dashboard
+- Statistical analysis and trend identification
+- Interactive code exploration
+- Performance metrics calculation
+
+[View Project](project_notebook.qmd) | [View Notebook](project_analysis.ipynb) | [GitHub](https://github.com/rayanirban/data-analysis)
+
+---
+
+### �🚀 Project Name 2
 
 ![Project Screenshot](images/project1.png){fig-alt="Project 1 screenshot"}
 
