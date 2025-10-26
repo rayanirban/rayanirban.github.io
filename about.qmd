@@ -1,15 +1,31 @@
 ---
 title: "About Me"
+page-layout: article
 ---
+
+::: {.about-header}
+![](images/IMG_2497.jpg){.about-img}
+:::
 
 ## Background
 
 Hi! I'm Anirban Ray, a [Your Role] based in [Your Location].
 
-### Education
+I'm passionate about [your interests] and have been working in [your field] for [duration]. My work focuses on [brief description of your work].
 
-- **[Degree]** - [University Name], [Year]
-- **[Degree]** - [University Name], [Year]
+## Education
+
+**Ph.D. in [Your Field]**  
+[University Name] | [City, Country] | [Year]  
+*Dissertation: [Title or brief description]*
+
+**Master of Science in [Your Field]**  
+[University Name] | [City, Country] | [Year]  
+*Focus: [Area of focus]*
+
+**Bachelor of Science in [Your Field]**  
+[University Name] | [City, Country] | [Year]  
+*Major: [Major], Minor: [Minor if applicable]*
 
 ### Experience
 

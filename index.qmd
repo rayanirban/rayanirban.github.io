@@ -4,7 +4,7 @@ page-layout: article
 ---
 
 ::: {.profile-header}
-![](images/IMG_2482.jpg){.profile-img}
+![](images/IMG_2497.jpg){.profile-img}
 
 # Anirban Ray
 

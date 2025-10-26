@@ -1,8 +1,37 @@
 ---
-title: "Projects"
+title: ""
+page-layout: custom
 ---
 
-Here are some of the projects I've worked on. Click on each to learn more!
+::: {.sidebar-container}
+![](images/IMG_2482.jpg){.sidebar-image}
+
+<h2 class="sidebar-name">Anirban Ray</h2>
+<p class="sidebar-title">Data Scientist | Researcher | Developer</p>
+
+<div class="sidebar-bio">
+Passionate about machine learning, data science, and building impactful solutions. I explore the intersection of technology and research to solve real-world problems.
+</div>
+
+<div class="sidebar-social">
+[{{< fa brands github size=xl >}}](https://github.com/rayanirban)
+[{{< fa brands linkedin size=xl >}}](https://linkedin.com/in/yourprofile)
+[{{< fa brands twitter size=xl >}}](https://twitter.com/yourhandle)
+[{{< fa envelope size=xl >}}](mailto:your.email@example.com)
+</div>
+
+<div class="sidebar-contact">
+### Contact
+Email: [your.email@example.com](mailto:your.email@example.com)  
+Location: [Your City, Country]
+</div>
+:::
+
+::: {.main-content}
+
+# Projects
+
+Here are some of the projects I've worked on, showcasing my skills in data science, machine learning, and software development.
 
 ## Featured Projects
 

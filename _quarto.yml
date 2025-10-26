@@ -5,33 +5,18 @@ project:
 website:
   title: "Anirban Ray"
   navbar:
+    background: dark
     left:
-      - text: "Home"
-        href: index.qmd
       - text: "About"
-        href: about.qmd
+        href: index.qmd
       - text: "Projects"
         href: projects.qmd
-      - text: "Blog"
-        href: blog.qmd
-      - text: "Contact"
-        href: contact.qmd
-    right:
-      - icon: github
-        href: https://github.com/rayanirban
-      - icon: linkedin
-        href: https://linkedin.com/in/yourprofile
-      - icon: twitter
-        href: https://twitter.com/yourhandle
-  page-footer:
-    center: "© 2025 Anirban Ray. All rights reserved."
+  sidebar: false
 
 format:
   html:
     theme: 
-      light: [cosmo, styles.css]
+      dark: [darkly, styles.css]
     css: styles.css
     toc: false
-    toc-depth: 3
-    page-layout: article
-    max-width: 900px
+    page-layout: custom

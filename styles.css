@@ -1,4 +1,73 @@
+/*-- scss:rules --*/
+
 /* Custom styles for your Quarto website - Minimalist Clean Design */
+
+/* Dark mode support */
+[data-bs-theme="dark"] body {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] #hello-im-anirban-ray,
+[data-bs-theme="dark"] #welcome {
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] p,
+[data-bs-theme="dark"] li {
+  color: #d1d1d1;
+}
+
+[data-bs-theme="dark"] a {
+  color: #5b9cf5;
+}
+
+[data-bs-theme="dark"] a:hover {
+  color: #7eb3f7;
+}
+
+[data-bs-theme="dark"] .navbar {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333333;
+}
+
+[data-bs-theme="dark"] .navbar-brand {
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] hr,
+[data-bs-theme="dark"] .content-divider {
+  border-top-color: #333333;
+}
+
+[data-bs-theme="dark"] .page-footer {
+  border-top-color: #333333;
+  color: #999999;
+}
+
+[data-bs-theme="dark"] .callout {
+  background-color: #2a2a2a;
+  border-left-color: #5b9cf5;
+}
+
+[data-bs-theme="dark"] pre {
+  background-color: #2a2a2a;
+  border-color: #333333;
+}
+
+[data-bs-theme="dark"] table th {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] table th,
+[data-bs-theme="dark"] table td {
+  border-color: #333333;
+}
 
 /* Main styling */
 body {
@@ -344,4 +413,43 @@ button:focus {
 .social-links a:hover {
   color: #0066cc;
   text-decoration: none;
+}
+
+/* About page image */
+.about-header {
+  text-align: center;
+  margin: 2rem 0 3rem 0;
+}
+
+.about-img {
+  width: 250px !important;
+  height: 250px !important;
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 8px !important;
+  object-fit: cover;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    width: 200px !important;
+    height: 200px !important;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+/* Dark mode adjustments for images */
+[data-bs-theme="dark"] .about-img,
+[data-bs-theme="dark"] .profile-img {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
