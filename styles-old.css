@@ -1,0 +1,455 @@
+/*-- scss:rules --*/
+
+/* Custom styles for your Quarto website - Minimalist Clean Design */
+
+/* Dark mode support */
+[data-bs-theme="dark"] body {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] #hello-im-anirban-ray,
+[data-bs-theme="dark"] #welcome {
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] p,
+[data-bs-theme="dark"] li {
+  color: #d1d1d1;
+}
+
+[data-bs-theme="dark"] a {
+  color: #5b9cf5;
+}
+
+[data-bs-theme="dark"] a:hover {
+  color: #7eb3f7;
+}
+
+[data-bs-theme="dark"] .navbar {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333333;
+}
+
+[data-bs-theme="dark"] .navbar-brand {
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] hr,
+[data-bs-theme="dark"] .content-divider {
+  border-top-color: #333333;
+}
+
+[data-bs-theme="dark"] .page-footer {
+  border-top-color: #333333;
+  color: #999999;
+}
+
+[data-bs-theme="dark"] .callout {
+  background-color: #2a2a2a;
+  border-left-color: #5b9cf5;
+}
+
+[data-bs-theme="dark"] pre {
+  background-color: #2a2a2a;
+  border-color: #333333;
+}
+
+[data-bs-theme="dark"] table th {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] table th,
+[data-bs-theme="dark"] table td {
+  border-color: #333333;
+}
+
+/* Main styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1a1a1a;
+  max-width: 100%;
+  background-color: #ffffff;
+}
+
+/* Content container */
+.quarto-container {
+  max-width: 800px;
+}
+
+/* Headings - Simple and clean */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+/* Homepage hero section */
+#hello-im-anirban-ray,
+#welcome {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+/* Profile header styling - Centered and clean */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 3rem 0;
+  gap: 1.5rem;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Profile image - rounded square */
+.profile-img {
+  width: 200px !important;
+  height: 200px !important;
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px !important;
+  object-fit: cover;
+  border: none;
+  box-shadow: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+}
+
+.profile-img:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive adjustments for profile header */
+@media (max-width: 768px) {
+  .profile-header {
+    margin: 2rem 0;
+  }
+  
+  .profile-img {
+    width: 150px !important;
+    height: 150px !important;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+  }
+  
+  h1, #hello-im-anirban-ray, #welcome {
+    font-size: 2rem;
+  }
+}
+
+/* Improve link styling - Simple underline */
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #0052a3;
+  text-decoration: underline;
+}
+
+/* Navigation links */
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* Paragraph styling */
+p {
+  margin-bottom: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #1a1a1a;
+}
+
+/* List styling */
+ul, ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+/* Project cards styling - Minimal */
+.project-card {
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 0;
+  padding: 2rem 0;
+  margin-bottom: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.project-card:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+/* Callout boxes - Minimal style */
+.callout {
+  border-radius: 0;
+  border-left: 3px solid #0066cc;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  font-size: 1rem;
+  background-color: #f8f9fa;
+}
+
+.callout-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Navigation bar - Clean and minimal */
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Footer styling - Minimal */
+.page-footer {
+  margin-top: 5rem;
+  padding: 2rem 0;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: #666666;
+  text-align: center;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 2rem 0;
+}
+
+/* Code blocks - Minimal */
+pre {
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+}
+
+code {
+  font-size: 0.9em;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Courier New', monospace;
+}
+
+/* Improve table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+  font-size: 1rem;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Content width for better readability */
+.quarto-title-block {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.quarto-title {
+  font-size: 2.5rem !important;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.quarto-title-meta {
+  text-align: center;
+  color: #666666;
+}
+
+/* Spacing improvements */
+section {
+  margin-bottom: 3rem;
+}
+
+hr {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Icon sizing */
+.bi {
+  font-size: 1.25rem;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus states */
+a:focus,
+button:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Remove excessive shadows and borders */
+.card {
+  border: none;
+  box-shadow: none;
+}
+
+/* Clean section dividers */
+.content-divider {
+  border-top: 1px solid #e5e7eb;
+  margin: 3rem 0;
+}
+
+/* Subtitle or tagline styling */
+.subtitle {
+  font-size: 1.25rem;
+  color: #666666;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Social links - Clean icons */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.social-links a {
+  color: #1a1a1a;
+  font-size: 1.25rem;
+}
+
+.social-links a:hover {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+/* About page image */
+.about-header {
+  text-align: center;
+  margin: 2rem 0 3rem 0;
+}
+
+.about-img {
+  width: 250px !important;
+  height: 250px !important;
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 8px !important;
+  object-fit: cover;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    width: 200px !important;
+    height: 200px !important;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+/* Dark mode adjustments for images */
+[data-bs-theme="dark"] .about-img,
+[data-bs-theme="dark"] .profile-img {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}

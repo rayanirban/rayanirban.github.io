@@ -1,37 +1,84 @@
 ---
 title: ""
-page-layout: article
+page-layout: custom
 ---
 
-::: {.profile-header}
-![](images/IMG_2497.jpg){.profile-img}
+::: {.sidebar-container}
+![](images/IMG_2497.jpg){.sidebar-image}
 
-# Anirban Ray
+<h2 class="sidebar-name">Anirban Ray</h2>
+<p class="sidebar-title">Data Scientist | Researcher | Developer</p>
 
-<p class="subtitle">[Your Role/Profession]</p>
+<div class="sidebar-bio">
+Passionate about machine learning, data science, and building impactful solutions. I explore the intersection of technology and research to solve real-world problems.
+</div>
 
-[Github](https://github.com/rayanirban) | [Google Scholar](https://scholar.google.com/) | [LinkedIn](https://linkedin.com/in/yourprofile)
+<div class="sidebar-social">
+[{{< fa brands github size=xl >}}](https://github.com/rayanirban)
+[{{< fa brands linkedin size=xl >}}](https://linkedin.com/in/yourprofile)
+[{{< fa brands twitter size=xl >}}](https://twitter.com/yourhandle)
+[{{< fa envelope size=xl >}}](mailto:your.email@example.com)
+</div>
+
+<div class="sidebar-contact">
+### Contact
+Email: [your.email@example.com](mailto:your.email@example.com)  
+Location: [Your City, Country]
+</div>
 :::
 
-## Hi! I'm Anirban
+::: {.main-content}
 
-I'm a [Your Role/Profession] passionate about [Your Interests]. I work in the intersection of [your fields], studying [what you study].
+# About Me
 
-I'm interested in how [your research interests] and how we can make [your goals].
+I'm a [Your Role] with a passion for [your interests]. My work focuses on [brief description of your work and research interests].
+
+## Background
+
+I specialize in [your specialization] and have experience in [your experience areas]. My research interests include [research areas], and I'm particularly interested in [specific interests].
 
 ## Education
 
-**Ph.D in [Your Field]**  
-[University Name] | [City, State]
+**Ph.D. in [Your Field]**  
+[University Name] | [Year]  
+*Dissertation: [Title or brief description]*
 
-**M.S. in [Your Field]**  
-[University Name] | [City, State]
+**Master of Science in [Your Field]**  
+[University Name] | [Year]  
+*Focus: [Area of focus]*
 
-**B.S. in [Your Field]**  
-[University Name] | [City, State]
+**Bachelor of Science in [Your Field]**  
+[University Name] | [Year]
 
-## Additional Links
+## Skills
 
-- [Projects](projects.qmd) - View my work
-- [Blog](blog.qmd) - Read my thoughts
-- [Contact](contact.qmd) - Get in touch
+### Programming & Tools
+Python • R • JavaScript • SQL • Git • Docker • TensorFlow • PyTorch
+
+### Data Science
+Machine Learning • Deep Learning • Statistical Analysis • Data Visualization • NLP
+
+### Research
+Experimental Design • Scientific Writing • Peer Review • Grant Writing
+
+## Experience
+
+**[Current Position]**  
+*[Organization] | [Start Date] - Present*
+
+- Leading research in [area]
+- Developing innovative solutions for [problem]
+- Publishing findings in top-tier journals
+
+**[Previous Position]**  
+*[Organization] | [Start Date] - [End Date]*
+
+- Conducted research on [topic]
+- Collaborated with teams on [projects]
+- Achieved [accomplishments]
+
+## Recent Work
+
+Check out my latest [projects](projects.qmd) to see what I've been working on!
+
+:::
