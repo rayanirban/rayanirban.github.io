@@ -1,0 +1,88 @@
+---
+title: ""
+format:
+  html:
+    page-layout: full
+    css: styles.css
+---
+
+::: {.hero-section}
+::: {.container}
+::: {.main-content}
+
+::: {.left-panel}
+![](profile.jpg){.profile-img}
+
+::: {.social-links}
+[<img src="logos/github.png" class="social-icon-img" alt="GitHub">](https://github.com/rayanirban){.social-link target="_blank"} [<img src="logos/linkedin.png" class="social-icon-img" alt="LinkedIn">](https://www.linkedin.com/in/anirban-ray/){.social-link target="_blank"} [<img src="logos/twitter.png" class="social-icon-img" alt="Twitter">](https://x.com/anirbanray_){.social-link target="_blank"} [<img src="logos/instagram.png" class="social-icon-img" alt="Instagram">](https://instagram.com/anirbanray_){.social-link target="_blank"} [<img src="logos/bluesky.png" class="social-icon-img" alt="Bluesky">](https://bsky.app/profile/anirbanray.bsky.social){.social-link target="_blank"} [<img src="logos/scholar.png" class="social-icon-img" alt="Google Scholar">](https://scholar.google.de/citations?user=t-f_mwsAAAAJ&hl=en&authuser=1){.social-link target="_blank"} [<img src="logos/orcid.png" class="social-icon-img" alt="ORCID">](https://orcid.org/0000-0002-7285-6727){.social-link target="_blank"} [<img src="logos/humantechnopole.png" class="social-icon-img" alt="Human Technopole">](https://humantechnopole.it/en/people/anirban-ray/){.social-link target="_blank"}
+:::
+
+::: {.contact-links}
+[<span class="contact-emoji">✉️</span> Email](mailto:your.email@example.com){.social-link} [<span class="contact-emoji">📄</span> CV](cv.pdf){.social-link target="_blank"}
+:::
+
+---
+
+::: {.left-skills}
+**Computational:** Python, Pytorch, Latex, SLURM, Bash  
+**Languages:** Bengali, Hindi, English, Japanese, Italian (Elementary)
+:::
+:::
+
+::: {.projects-panel}
+# Research
+
+### Current Research
+
+::: {.project-item}
+
+**HazeMatching: Conditional Flow Matching for Microscopy Dehazing**  
+![](images/hazematching_teaser.png){fig-align="center" width="90%" alt="HazeMatching: Conditional Flow Matching for microscopy dehazing"}
+A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures.  
+**Technologies:** Python, PyTorch, torchCFM, Microscopy Datasets  
+[GitHub](#){target="_blank"} | [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank"} | [Demo](#){target="_blank"}
+:::
+
+::: {.project-item}
+
+**ResMatching: Guided Flow Matching for Super-Resolution Microscopy**  
+![](images/resmatching_teaser.png){fig-align="center" width="90%" alt="ResMatching: Guided Flow Matching for super-resolution microscopy"}
+An extension of HazeMatching designed for computational super-resolution (CSR) reconstruction from low-resolution and extremely noisy microscopy data. ResMatching integrates cross-scale guidance and adaptive velocity fields to recover fine structural details with high fidelity.  
+**Technologies:** Python, PyTorch, torchCFM, BioSR
+[GitHub](#) | [Paper (arXiv)](#) | [Demo](#)
+:::
+
+
+### Past Research
+
+::: {.project-item}
+**Deep Learning for Industrial and Microscopy Image Analysis (2018–2021)**  
+
+From 2018 to 2021, my research at Hitachi Ltd., Tokyo focused on developing deep learning–based systems for high-precision image understanding in both industrial inspection and biomedical microscopy. I worked on combining computer vision and AI-driven automation for identifying and quantifying objects of interest in complex visual data.
+
+In **2021**, I co-authored the paper [*Quantitative Analysis System for Bacterial Cells in SEM Images Using Deep Learning*](https://ieeexplore.ieee.org/abstract/document/9400322) (*CISS 2021*), introducing a neural architecture for accurate segmentation and counting of bacterial cells from scanning electron microscopy (SEM) data. This was followed by [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170) (*CISS 2022*), where we improved bacterial classification by jointly modeling morphological and internal structural cues.
+
+Building on this foundation, I co-invented several **patented AI image-processing systems** that enable adaptive feature extraction and object detection for microscopy and industrial imaging. These include [**US Patent 12,327,363**](https://patents.google.com/patent/US12327363B2), [**US Patent 12,211,213**](https://patents.google.com/patent/US12211213B2), and [**EP Patent 3961562A1**](https://patents.google.com/patent/EP3961562A1), describing methods and apparatuses for generating neural models that identify and segment objects of interest from images.
+
+This phase of my work established a foundation in AI-driven visual understanding, bridging industrial automation with quantitative biological imaging, and set the stage for my later research in generative and flow-based models for microscopy restoration.
+:::
+
+![Conceptual schematic of deep learning pipeline for SEM-based bacterial analysis and industrial visual inspection.](images/past_research_teaser.png){width="100%" style="border-radius: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.1);"}
+
+**Figure:** Conceptual schematic of deep learning pipelines developed at Hitachi for automated bacterial analysis and industrial image understanding.
+
+:::
+
+::: {.side-nav}
+[Home](index.qmd)  
+[About Me](index.qmd#about-me)  
+[Education](index.qmd#education)  
+[Teaching](index.qmd#teaching-experience)  
+[Work](index.qmd#work-experience)  
+[Achievements](index.qmd#special-achievements)  
+[Research](research.qmd){.nav-projects}
+:::
+
+:::
+:::
+:::

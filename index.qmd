@@ -17,6 +17,10 @@ format:
 [<img src="logos/github.png" class="social-icon-img" alt="GitHub">](https://github.com/rayanirban){.social-link target="_blank"} [<img src="logos/linkedin.png" class="social-icon-img" alt="LinkedIn">](https://www.linkedin.com/in/anirban-ray/){.social-link target="_blank"} [<img src="logos/twitter.png" class="social-icon-img" alt="Twitter">](https://x.com/anirbanray_){.social-link target="_blank"} [<img src="logos/instagram.png" class="social-icon-img" alt="Instagram">](https://instagram.com/anirbanray_){.social-link target="_blank"} [<img src="logos/bluesky.png" class="social-icon-img" alt="Bluesky">](https://bsky.app/profile/anirbanray.bsky.social){.social-link target="_blank"} [<img src="logos/scholar.png" class="social-icon-img" alt="Google Scholar">](https://scholar.google.de/citations?user=t-f_mwsAAAAJ&hl=en&authuser=1){.social-link target="_blank"} [<img src="logos/orcid.png" class="social-icon-img" alt="ORCID">](https://orcid.org/0000-0002-7285-6727){.social-link target="_blank"} [<img src="logos/humantechnopole.png" class="social-icon-img" alt="Human Technopole">](https://humantechnopole.it/en/people/anirban-ray/){.social-link target="_blank"}
 :::
 
+::: {.contact-links}
+[<span class="contact-emoji">✉️</span> Email](mailto:anirban.ray@fht.org){.social-link} [<span class="contact-emoji">📄</span> CV](cv.pdf){.social-link target="_blank"}
+:::
+
 ---
 
 ::: {.left-skills}
@@ -29,12 +33,12 @@ format:
 # Anirban Ray
 
 ::: {.tagline}
-Ph.D. Researcher in Computational Image Restoration | Generative AI for Microscopy
+Ph.D. Student in Computational Image Restoration | Generative AI for Microscopy
 :::
 
 ## About Me
 
-I am a Ph.D. researcher in Computer Science at TU Dresden and Human Technopole, working on generative AI for microscopy and computational image restoration. My research develops flow-matching and diffusion-based models to enhance biological imaging. I’m passionate about AI for Science (AI4Science) and deeply interested in how science philanthropy can accelerate discovery and innovation.
+I am a Ph.D. Student in Computer Science at TU Dresden and Human Technopole, working on generative AI for microscopy and computational image restoration. My research develops flow-matching and diffusion-based models to enhance biological imaging. I’m passionate about AI4Science and deeply interested in how science philanthropy can accelerate discovery and innovation.
 
 
 ## Education
@@ -52,7 +56,6 @@ I am a Ph.D. researcher in Computer Science at TU Dresden and Human Technopole, 
 **B.Tech. in Computer Science and Engineering | *2011 – 2015*** [Vel Tech Institute of Science and Technology](https://www.veltech.edu.in/){target="_blank"}
 :::
 
-
 ## Teaching Experience
 
 ::: {.education-item}
@@ -68,8 +71,6 @@ Supported the *Deep Learning for Microscopy Image Analysis* (DL4MIA) course acro
 Contributed to lectures and hands-on sessions on deep learning for biological imaging.  
 Provided mentoring and technical guidance to participants during lab exercises and research projects.
 :::
-
-
 
 ## Work Experience
 
@@ -118,20 +119,14 @@ Awarded full funding for Master's studies at Nagoya Institute of Technology. Sel
 Chosen among 60 top students from India for advanced topics and research presentation in computer science.
 :::
 
-
-
-
 :::
-
 ::: {.side-nav}
 [About Me](#about-me)  
 [Education](#education)  
 [Teaching](#teaching-experience)  
 [Work](#work-experience)  
-[Achievements](#special-achievements)
-:::
-
-:::
+[Achievements](#special-achievements)  
+[Research](research.qmd){.nav-projects}
 :::
 :::
 

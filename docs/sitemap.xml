@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://rayanirban.github.io/research.html</loc>
+    <lastmod>2025-10-26T22:40:19.844Z</lastmod>
+  </url>
+  <url>
     <loc>https://rayanirban.github.io/index.html</loc>
-    <lastmod>2025-10-26T21:50:02.749Z</lastmod>
+    <lastmod>2025-10-26T22:52:15.236Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rayanirban.github.io/teaching.html</loc>
+    <lastmod>2025-10-26T22:45:17.560Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rayanirban.github.io/achievements.html</loc>
+    <lastmod>2025-10-26T22:45:17.868Z</lastmod>
   </url>
 </urlset>
