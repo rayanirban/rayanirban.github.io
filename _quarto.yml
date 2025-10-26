@@ -28,7 +28,10 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: [cosmo, styles.css]
     css: styles.css
-    toc: true
+    toc: false
     toc-depth: 3
+    page-layout: article
+    max-width: 900px

@@ -1,43 +1,37 @@
 ---
-title: "Welcome"
-page-layout: full
+title: ""
+page-layout: article
 ---
 
 ::: {.profile-header}
 ![](images/IMG_2482.jpg){.profile-img}
 
-## Hello, I'm Anirban Ray 👋
+# Anirban Ray
+
+<p class="subtitle">[Your Role/Profession]</p>
+
+[Github](https://github.com/rayanirban) | [Google Scholar](https://scholar.google.com/) | [LinkedIn](https://linkedin.com/in/yourprofile)
 :::
 
-I'm a [Your Role/Profession] passionate about [Your Interests].
+## Hi! I'm Anirban
 
-### What I Do
+I'm a [Your Role/Profession] passionate about [Your Interests]. I work in the intersection of [your fields], studying [what you study].
 
-- 🔬 Research and develop innovative solutions
-- 💻 Build impactful software projects
-- 📊 Analyze data to drive insights
-- 🌱 Continuously learning and growing
+I'm interested in how [your research interests] and how we can make [your goals].
 
-### My Interests
+## Education
 
-- Machine Learning & AI
-- Data Science
-- Software Development
-- Open Source Contributions
+**Ph.D in [Your Field]**  
+[University Name] | [City, State]
 
----
+**M.S. in [Your Field]**  
+[University Name] | [City, State]
 
-### Featured Projects
+**B.S. in [Your Field]**  
+[University Name] | [City, State]
 
-Check out some of my recent work on the [Projects](projects.qmd) page.
+## Additional Links
 
-### Latest Updates
-
-::: {.callout-note}
-## Currently Working On
-I'm currently exploring [your current focus area] and working on [current project].
-:::
-
----
-
-*Feel free to explore the site and [get in touch](contact.qmd) if you'd like to collaborate!*
+- [Projects](projects.qmd) - View my work
+- [Blog](blog.qmd) - Read my thoughts
+- [Contact](contact.qmd) - Get in touch
