@@ -21,11 +21,21 @@ format:
 [<span class="contact-emoji">✉️</span> Email](mailto:anirban.ray@fht.org){.social-link} [<span class="contact-emoji">📄</span> CV](cv.pdf){.social-link target="_blank"}
 :::
 
+::: {.booking-link}
+::: {style="text-align: center;"}
+[<span class="contact-emoji">📅</span> Book a meeting](https://calendar.app.google/ztwbew48GhVHQ63e7){.social-link target="_blank"} No agenda needed 😊
+:::
+:::
+
 ---
 
 ::: {.left-skills}
+::: {.skill-category}
 **Computational Skills:** Python, Pytorch, Latex, SLURM, Bash
+:::
+::: {.skill-category}
 **Spoken Languages:** Bengali, Hindi, English, Japanese, Italian (Elementray)
+:::
 :::
 :::
 
@@ -38,7 +48,7 @@ Ph.D. Student in Computational Image Restoration | Generative AI for Microscopy
 
 ## About Me
 
-I am a Ph.D. Student in Computer Science at TU Dresden and Human Technopole, working on generative AI for microscopy and computational image restoration. My research develops flow-matching and diffusion-based models to enhance biological imaging. I’m passionate about AI4Science and deeply interested in how science philanthropy can accelerate discovery and innovation.
+I am a final year Ph.D. Student in Computer Science at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole](https://humantechnopole.it){target="_blank" .flj}  and Human Technopole advised by [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, working on generative AI for microscopy and computational image restoration. My research develops flow-matching models to enhance biological imaging. I’m passionate about AI4Science and deeply interested in how science philanthropy can accelerate discovery and innovation.
 
 
 ## Education
@@ -120,6 +130,8 @@ Chosen among 60 top students from India for advanced topics and research present
 :::
 
 :::
+
+::: {.right-side-column}
 ::: {.side-nav}
 [About Me](#about-me)  
 [Education](#education)  
@@ -127,6 +139,22 @@ Chosen among 60 top students from India for advanced topics and research present
 [Work](#work-experience)  
 [Achievements](#special-achievements)  
 [Research](research.qmd){.nav-projects}
+:::
+
+::: {.news-block}
+### News
+
+::: {.news-item}
+<span class="news-date">Sep 2024</span>
+<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Jul 2024</span>
+<div class="news-content">Teaching assistant at DL@MBL course, Woods Hole</div>
+:::
+:::
+:::
 :::
 :::
 
