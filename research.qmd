@@ -43,14 +43,14 @@ A generative framework that restores optical microscopy images degraded by scatt
 [GitHub](#){target="_blank"} | [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank"} | [Demo](#){target="_blank"}
 :::
 
-::: {.project-item}
+<!-- ::: {.project-item}
 
 **ResMatching: Guided Flow Matching for Super-Resolution Microscopy**  
 ![](images/resmatching_teaser.png){fig-align="center" width="90%" alt="ResMatching: Guided Flow Matching for super-resolution microscopy"}
 An extension of HazeMatching designed for computational super-resolution (CSR) reconstruction from low-resolution and extremely noisy microscopy data. ResMatching integrates cross-scale guidance and adaptive velocity fields to recover fine structural details with high fidelity.  
 **Technologies:** Python, PyTorch, torchCFM, BioSR
 [GitHub](#) | [Paper (arXiv)](#) | [Demo](#)
-:::
+::: -->
 
 
 ### Past Research

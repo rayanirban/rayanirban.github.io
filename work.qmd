@@ -1,0 +1,73 @@
+---
+title: ""
+format:
+  html:
+    page-layout: full
+    css: styles.css
+---
+
+::: {.hero-section}
+::: {.container}
+::: {.main-content}
+
+::: {.left-panel}
+![](profile.jpg){.profile-img}
+
+::: {.social-links}
+[<img src="logos/github.png" class="social-icon-img" alt="GitHub">](https://github.com/rayanirban){.social-link target="_blank"} [<img src="logos/linkedin.png" class="social-icon-img" alt="LinkedIn">](https://www.linkedin.com/in/anirban-ray/){.social-link target="_blank"} [<img src="logos/twitter.png" class="social-icon-img" alt="Twitter">](https://x.com/anirbanray_){.social-link target="_blank"} [<img src="logos/instagram.png" class="social-icon-img" alt="Instagram">](https://instagram.com/anirbanray_){.social-link target="_blank"} [<img src="logos/bluesky.png" class="social-icon-img" alt="Bluesky">](https://bsky.app/profile/anirbanray.bsky.social){.social-link target="_blank"} [<img src="logos/scholar.png" class="social-icon-img" alt="Google Scholar">](https://scholar.google.de/citations?user=t-f_mwsAAAAJ&hl=en&authuser=1){.social-link target="_blank"} [<img src="logos/orcid.png" class="social-icon-img" alt="ORCID">](https://orcid.org/0000-0002-7285-6727){.social-link target="_blank"} [<img src="logos/humantechnopole.png" class="social-icon-img" alt="Human Technopole">](https://humantechnopole.it/en/people/anirban-ray/){.social-link target="_blank"}
+:::
+
+::: {.contact-links}
+[<span class="contact-emoji">✉️</span> Email](mailto:anirban.ray@fht.org){.social-link} [<span class="contact-emoji">📄</span> CV](cv.pdf){.social-link target="_blank"}
+:::
+
+::: {.booking-link}
+::: {style="text-align: center;"}
+[<span class="contact-emoji">📅</span> Book a Meeting](https://calendar.app.google/ztwbew48GhVHQ63e7){.social-link target="_blank"} No agenda needed 😊
+:::
+:::
+
+---
+
+::: {.left-skills}
+::: {.skill-category}
+**Computational Skills:** Python, Pytorch, Latex, SLURM, Bash
+:::
+::: {.skill-category}
+**Spoken Languages:** Bengali, Hindi, English, Japanese, Italian (Elementray)
+:::
+:::
+:::
+
+::: {.right-panel}
+# Work Experience
+
+::: {.education-item}
+**Associate Researcher | *Apr 2018 – Jan 2022***  
+[Hitachi Ltd., Tokyo, Japan](https://www.hitachi.com/){target="_blank"}
+
+Applied Deep Learning and Computer Vision for image analysis in the R&D Group's Center for Technology Innovation.
+:::
+
+::: {.education-item}
+**Engineering Intern (AR Applications) | *Sep 2016***  
+[Sun Corporation, Konan, Japan](https://www.sun-denshi.co.jp/sc/product_service/acereal/){target="_blank"}
+
+Developed augmented reality applications for AceReal smart glasses using Unity and Vuforia frameworks.
+:::
+
+::: {.education-item}
+**Engineering Intern (Cloud Services) | *Aug 2014 – Jan 2015***  
+[Machine Pulse (Mahindra Teqo), Mumbai, India](https://www.mahindrateqo.com/){target="_blank"}
+
+Analyzed large-scale database migration strategies for renewable energy and logistics cloud systems.
+:::
+
+:::
+:::
+:::
+:::
+
+::: {.section}
+::: {.container}
+:::

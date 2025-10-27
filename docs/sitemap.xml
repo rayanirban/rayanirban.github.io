@@ -2,18 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rayanirban.github.io/achievements.html</loc>
+    <lastmod>2025-10-27T17:13:21.756Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rayanirban.github.io/achievements_old.html</loc>
     <lastmod>2025-10-27T09:50:51.023Z</lastmod>
   </url>
   <url>
-    <loc>https://rayanirban.github.io/teaching.html</loc>
+    <loc>https://rayanirban.github.io/index_old.html</loc>
+    <lastmod>2025-10-27T17:01:39.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rayanirban.github.io/teaching_old.html</loc>
     <lastmod>2025-10-27T09:50:51.538Z</lastmod>
   </url>
   <url>
     <loc>https://rayanirban.github.io/index.html</loc>
-    <lastmod>2025-10-27T17:01:39.032Z</lastmod>
+    <lastmod>2025-10-27T17:25:20.934Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rayanirban.github.io/teaching.html</loc>
+    <lastmod>2025-10-27T17:13:22.308Z</lastmod>
   </url>
   <url>
     <loc>https://rayanirban.github.io/research.html</loc>
-    <lastmod>2025-10-27T09:50:51.493Z</lastmod>
+    <lastmod>2025-10-27T21:43:22.860Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rayanirban.github.io/work.html</loc>
+    <lastmod>2025-10-27T17:04:50.793Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rayanirban.github.io/education.html</loc>
+    <lastmod>2025-10-27T17:04:26.161Z</lastmod>
   </url>
 </urlset>

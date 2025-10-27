@@ -1,0 +1,53 @@
+---
+title: "Teaching Experience"
+format:
+  html:
+    page-layout: full
+    css: styles.css
+---
+
+::: {.hero-section}
+::: {.container}
+::: {.main-content}
+
+::: {.left-panel}
+![](profile.jpg){.profile-img}
+
+::: {.social-links}
+[<img src="logos/github.png" class="social-icon-img" alt="GitHub">](https://github.com/rayanirban){.social-link target="_blank"} [<img src="logos/linkedin.png" class="social-icon-img" alt="LinkedIn">](https://www.linkedin.com/in/anirban-ray/){.social-link target="_blank"} [<img src="logos/twitter.png" class="social-icon-img" alt="Twitter">](https://x.com/anirbanray_){.social-link target="_blank"} [<img src="logos/instagram.png" class="social-icon-img" alt="Instagram">](https://instagram.com/anirbanray_){.social-link target="_blank"} [<img src="logos/bluesky.png" class="social-icon-img" alt="Bluesky">](https://bsky.app/profile/anirbanray.bsky.social){.social-link target="_blank"} [<img src="logos/scholar.png" class="social-icon-img" alt="Google Scholar">](https://scholar.google.de/citations?user=t-f_mwsAAAAJ&hl=en&authuser=1){.social-link target="_blank"} [<img src="logos/orcid.png" class="social-icon-img" alt="ORCID">](https://orcid.org/0000-0002-7285-6727){.social-link target="_blank"} [<img src="logos/humantechnopole.png" class="social-icon-img" alt="Human Technopole">](https://humantechnopole.it/en/people/anirban-ray/){.social-link target="_blank"}
+:::
+
+::: {.contact-links}
+<span class="contact-emoji">✉️</span> [Email](mailto:your.email@example.com){.social-link} <span class="contact-emoji">📄</span> [CV](cv.pdf){.social-link target="_blank"}
+:::
+
+---
+
+::: {.left-skills}
+**Computational:** Python, Pytorch, Latex, SLURM, Bash  
+**Languages:** Bengali, Hindi, English, Japanese, Italian (Elementary)
+:::
+:::
+
+::: {.projects-panel}
+# Teaching Experience
+
+## Teaching Assistantships
+- **2024**: TA for "Deep Learning for Image Analysis" (TU Dresden)
+- **2023**: TA for "Computational Microscopy" (Human Technopole)
+
+## Guest Lectures
+- "Generative AI for Microscopy" (2025, Human Technopole)
+- "AI for Science" (2024, TU Dresden)
+:::
+
+::: {.side-nav}
+[Home](index.qmd)  
+[Research](research.qmd)  
+[Teaching](teaching.qmd){.nav-projects}  
+[Achievements](achievements.qmd){.nav-projects}
+:::
+
+:::
+:::
+:::
