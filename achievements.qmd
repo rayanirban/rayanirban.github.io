@@ -1,5 +1,5 @@
 ---
-title: "Special Achievements"
+title: "Achievements"
 format:
   html:
     page-layout: full
@@ -30,7 +30,7 @@ format:
 :::
 
 ::: {.projects-panel}
-# Special Achievements
+# Achievements
 
 - **US Patent 12,327,363**: AI image-processing system for microscopy and industrial imaging ([link](https://patents.google.com/patent/US12327363B2))
 - **US Patent 12,211,213**: Adaptive feature extraction for object detection ([link](https://patents.google.com/patent/US12211213B2))

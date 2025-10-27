@@ -41,7 +41,7 @@ format:
 **Computational Skills:** Python, Pytorch, Latex, SLURM, Bash
 :::
 ::: {.skill-category}
-**Spoken Languages:** Bengali, Hindi, English, Japanese, Italian (Elementray)
+**Spoken Languages:** Bengali, Hindi, English, Japanese, Italian (Elementary)
 :::
 :::
 :::
@@ -55,22 +55,23 @@ Ph.D. Student in Computational Image Restoration | Generative AI for Microscopy
 
 ## About Me
 
-I am a final year Ph.D. Student in Computer Science at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole](https://humantechnopole.it){target="_blank" .flj}  and Human Technopole advised by [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, working on generative AI for microscopy and computational image restoration. My research develops flow-matching models to enhance biological imaging. I’m passionate about AI4Science and deeply interested in how science philanthropy can accelerate discovery and innovation.
+I am a final year Ph.D. Student in Computer Science at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole](https://humantechnopole.it){target="_blank" .flj}  and Human Technopole, Italy, advised by [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, working on generative AI for microscopy and computational image restoration. My research develops flow-matching models to enhance biological imaging. I’m passionate about AI4Science and deeply interested in how *science philanthropy* can accelerate discovery and innovation.
 
 
 ## Education
 
 ::: {.education-item}
-**Ph.D. in Computer Science | *2022 – Present*** [Technische Universität Dresden](https://tu-dresden.de){target="_blank"} & [Human Technopole](https://humantechnopole.it){target="_blank"} 
+**Ph.D. in Computer Science | *2022 – Present*** [Technische Universität Dresden](https://tu-dresden.de){target="_blank"} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank"} 
 :::
 
 
 ::: {.education-item}
-**M.Eng. in Computer Science | *2016 – 2018*** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank"}
+**Master of Engineering in Computer Science | *2016 – 2018*** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank"}  
+Advisor: [Prof. Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){target="_blank"} and [Prof. Fumihiko Sakaue](https://researcher.nitech.ac.jp/html/257_en.html){target="_blank"} | [Thesis](https://drive.google.com/file/d/1A7Gm2RS3L8SPyb9G9Ey5O350kh7DYZKk/view?usp=sharing){target="_blank"}
 :::
 
 ::: {.education-item}
-**B.Tech. in Computer Science and Engineering | *2011 – 2015*** [Vel Tech Institute of Science and Technology](https://www.veltech.edu.in/){target="_blank"}
+**Bachelor of Tech. in Computer Science and Engineering | *2011 – 2015*** [Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology](https://www.veltech.edu.in/){target="_blank"}
 :::
 
 ## Teaching Experience
@@ -79,14 +80,14 @@ I am a final year Ph.D. Student in Computer Science at [Technische Universität 
 **Teaching Assistant – DL4MIA | [2022](https://humantechnopole.it/en/trainings/deep-learning-for-microscopy-image-analysis-2022/){target="_blank"}, [2023](https://dl4mia2023.humantechnopole.it/){target="_blank"}, [2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank"}  
 **[Human Technopole, Milan, Italy](https://humantechnopole.it/){target="_blank"}  
 
-Supported the *Deep Learning for Microscopy Image Analysis* (DL4MIA) course across three consecutive editions. Responsibilities included mentoring participants, assisting with lectures and coding sessions, and guiding project work on AI-based microscopy restoration and segmentation.
+Supported the *Deep Learning for Microscopy Image Analysis* (DL4MIA) course across three consecutive editions. Responsibilities included mentoring participants, invited [lecture](https://x.com/anirbanray_/status/1789421846225404105){target="_blank"}, coding sessions, and guiding project work on AI-based microscopy restoration and segmentation. 
 :::
 
 ::: {.education-item}
 **Teaching Assistant – DL@MBL | [2023](https://www.mbl.edu/education/advanced-research-training-courses/courses-calendar?trumbaEmbed=view%3Devent%26eventid%3D164013510){target="_blank"}, [2024](https://ai-mbl.github.io/2024/about/){target="_blank"}**[Marine Biological Laboratory, Woods Hole, USA](https://www.mbl.edu/){target="_blank"} 
 
-Contributed to lectures and hands-on sessions on deep learning for biological imaging.  
-Provided mentoring and technical guidance to participants during lab exercises and research projects.
+Contributed to hands-on sessions on deep learning for biological imaging. Provided mentoring and technical guidance to participants during lab exercises and research projects.
+One of the project started there ended up being published in <a href="https://openreview.net/forum?id=HtlfNbyfOn" target="_blank">NeurIPS 2024</a>.
 :::
 
 ## Work Experience
