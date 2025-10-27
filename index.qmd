@@ -24,8 +24,8 @@ format:
 ---
 
 ::: {.left-skills}
-**Computational:** Python, Pytorch, Latex, SLURM, Bash
-**Languages:** Bengali, Hindi, English, Japanese, Italian (Elementray)
+**Computational Skills:** Python, Pytorch, Latex, SLURM, Bash
+**Spoken Languages:** Bengali, Hindi, English, Japanese, Italian (Elementray)
 :::
 :::
 
