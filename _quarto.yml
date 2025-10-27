@@ -6,7 +6,7 @@ project:
     - logos/
 
 website:
-  title: "Your Name"
+  title: "Anirban Ray"
   site-url: https://rayanirban.github.io
   repo-url: https://github.com/rayanirban/rayanirban.github.io
   page-footer:
