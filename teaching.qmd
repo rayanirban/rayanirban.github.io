@@ -45,6 +45,8 @@ format:
 [Home](index.qmd)  
 [Research](research.qmd)  
 [Teaching](teaching.qmd){.nav-projects}  
+[Skills](index.qmd#skills)  
+[Contact Me](index.qmd#contact-me)  
 [Achievements](achievements.qmd){.nav-projects}
 :::
 

@@ -60,9 +60,9 @@ An extension of HazeMatching designed for computational super-resolution (CSR) r
 
 From 2018 to 2021, my research at Hitachi Ltd., Tokyo focused on developing deep learning–based systems for high-precision image understanding in both industrial inspection and biomedical microscopy. I worked on combining computer vision and AI-driven automation for identifying and quantifying objects of interest in complex visual data.
 
-In **2021**, I co-authored the paper [*Quantitative Analysis System for Bacterial Cells in SEM Images Using Deep Learning*](https://ieeexplore.ieee.org/abstract/document/9400322) (*CISS 2021*), introducing a neural architecture for accurate segmentation and counting of bacterial cells from scanning electron microscopy (SEM) data. This was followed by [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170) (*CISS 2022*), where we improved bacterial classification by jointly modeling morphological and internal structural cues.
+In **2021**, I co-authored the paper [*Quantitative Analysis System for Bacterial Cells in SEM Images Using Deep Learning*](https://ieeexplore.ieee.org/abstract/document/9400322){target="_blank"}{target="_blank"} (*CISS 2021*), introducing a neural architecture for accurate segmentation and counting of bacterial cells from scanning electron microscopy (SEM) data. This was followed by [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170){target="_blank"} (*CISS 2022*), where we improved bacterial classification by jointly modeling morphological and internal structural cues.
 
-Building on this foundation, I co-invented several patented AI image-processing systems that enable adaptive feature extraction and object detection for microscopy and industrial imaging. These include [US Patent 12,327,363](https://patents.google.com/patent/US12327363B2), [US Patent 12,211,213](https://patents.google.com/patent/US12211213B2), and [EP Patent 3961562A1](https://patents.google.com/patent/EP3961562A1), describing methods and apparatuses for generating neural models that identify and segment objects of interest from images.
+Building on this foundation, I co-invented several patented AI image-processing systems that enable adaptive feature extraction and object detection for microscopy and industrial imaging. These include [US Patent 12,327,363](https://patents.google.com/patent/US12327363B2){target="_blank"}, [US Patent 12,211,213](https://patents.google.com/patent/US12211213B2){target="_blank"}, and [EP Patent 3961562A1](https://patents.google.com/patent/EP3961562A1){target="_blank"}, describing methods and apparatuses for generating neural models that identify and segment objects of interest from images.
 
 This phase of my work established a foundation in AI-driven visual understanding, bridging industrial automation with quantitative biological imaging, and set the stage for my later research in generative and flow-based models for microscopy restoration.
 :::
@@ -78,6 +78,7 @@ This phase of my work established a foundation in AI-driven visual understanding
 [Teaching](index.qmd#teaching-experience)  
 [Work](index.qmd#work-experience)  
 [Achievements](index.qmd#special-achievements)  
+[Skills](index.qmd#skills)  
 [Research](research.qmd){.nav-projects}
 :::
 

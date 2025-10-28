@@ -13,6 +13,12 @@ format:
 ::: {.left-panel}
 ![](profile.jpg){.profile-img}
 
+::: {.profile-info}
+**Anirban Ray**
+Ph.D. Student in Computational Image Restoration | Generative AI for Microscopy
+
+:::
+
 ::: {.social-links}
 [<img src="logos/github.png" class="social-icon-img" alt="GitHub">](https://github.com/rayanirban){.social-link target="_blank"} 
 [<img src="logos/linkedin.png" class="social-icon-img" alt="LinkedIn">](https://www.linkedin.com/in/anirban-ray/){.social-link target="_blank"} 
@@ -34,28 +40,12 @@ format:
 :::
 :::
 
----
-
-::: {.left-skills}
-::: {.skill-category}
-**Computational Skills:** Python, Pytorch, Latex, SLURM, Bash
-:::
-::: {.skill-category}
-**Spoken Languages:** Bengali, Hindi, English, Japanese, Italian (Elementary)
-:::
-:::
 :::
 
 ::: {.right-panel}
-# Anirban Ray
-
-::: {.tagline}
-Ph.D. Student in Computational Image Restoration | Generative AI for Microscopy
-:::
-
 ## About Me
 
-I am a final year Ph.D. Student in Computer Science at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole](https://humantechnopole.it){target="_blank" .flj}  and Human Technopole, Italy, advised by [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, working on generative AI for microscopy and computational image restoration. My research develops flow-matching models to enhance biological imaging. I’m passionate about AI4Science and deeply interested in how *science philanthropy* can accelerate discovery and innovation.
+I am a final year Ph.D. Student in Computer Science at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj}, advised by [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, working on generative AI for microscopy and computational image restoration. My research develops flow-matching models to enhance biological imaging. I'm passionate about AI4Science and deeply interested in how *science philanthropy* can accelerate discovery and innovation.
 
 
 ## Education
@@ -114,6 +104,12 @@ Analyzed large-scale database migration strategies for renewable energy and logi
 ## Special Achievements
 
 ::: {.education-item}
+**Selected Participant – Optical Microscopy & Imaging in the Biomedical Sciences (OMIBS) | *2023*** [Marine Biological Laboratory, USA](https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/optical-microscopy-imaging-biomedical-sciences){target="_blank"}
+
+Selected for this prestigious advanced microscopy course at the Marine Biological Laboratory, covering cutting-edge optical imaging techniques in biomedical sciences.
+:::
+
+::: {.education-item}
 **Invited Contributor – Alumni Voice Column | *2018*** [The University of Tokyo](https://www.u-tokyo.ac.jp/adm/utindia/en/whyjapan/fromalumni/executive_015.html){target="_blank"}
 
 Invited by the Government of Japan and the University of Tokyo to share academic and professional experiences as part of Japan's international education initiative.
@@ -137,21 +133,39 @@ Awarded full funding for Master's studies at Nagoya Institute of Technology. Sel
 Chosen among 60 top students from India for advanced topics and research presentation in computer science.
 :::
 
+## Skills
+
+::: {.education-item}
+**Computational Skills**
+
+Python, PyTorch, Scikit-learn, OpenCV, NumPy, LaTeX, Git, SLURM, Bash, Linux
+:::
+
+::: {.education-item}
+**Spoken Languages**
+
+Bengali (Native), Hindi (Fluent), English (Fluent), Japanese (Conversational), Italian (Elementary)
+:::
+
 :::
 
 ::: {.right-side-column}
-::: {.side-nav}
-[About Me](#about-me)  
-[Education](#education)  
-[Teaching](#teaching-experience)  
-[Work](#work-experience)  
-[Achievements](#special-achievements)  
-[Research](research.qmd){.nav-projects}
-:::
-
 ::: {.news-block}
 ### News
 
+::: {.news-items-container}
+::: {.news-item}
+<span class="news-date">Sep 2024</span>
+<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
+:::
+::: {.news-item}
+<span class="news-date">Sep 2024</span>
+<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
+:::
+::: {.news-item}
+<span class="news-date">Sep 2024</span>
+<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
+:::
 ::: {.news-item}
 <span class="news-date">Sep 2024</span>
 <div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
@@ -163,6 +177,17 @@ Chosen among 60 top students from India for advanced topics and research present
 :::
 :::
 :::
+
+::: {.side-nav}
+[About Me](#about-me)  
+[Education](#education)  
+[Teaching](#teaching-experience)  
+[Work](#work-experience)  
+[Achievements](#special-achievements)  
+[Skills](#skills)  
+[Research](research.qmd){.nav-projects}
+:::
+:::
 :::
 :::
 :::
@@ -170,6 +195,6 @@ Chosen among 60 top students from India for advanced topics and research present
 ---
 
 ::: {style="text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem; padding-bottom: 1rem;"}
-If you use this template, please acknowledge the original design.
+If you use this template, please acknowledge the original design by thinking here 😊.
 :::
 
