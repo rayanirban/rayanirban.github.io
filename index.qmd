@@ -260,6 +260,14 @@ document.addEventListener('DOMContentLoaded', function() {
       const contentToShow = document.querySelector(`[data-tab-id="${tabId}"]`);
       if (contentToShow) {
         contentToShow.classList.add('active');
+        
+        // Scroll to the content on mobile
+        setTimeout(() => {
+          const rightPanel = document.querySelector('.right-panel');
+          if (rightPanel && window.innerWidth <= 800) {
+            rightPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
       }
     });
   });
