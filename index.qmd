@@ -6,6 +6,18 @@ format:
     css: styles.css
 ---
 
+::: {.top-nav}
+::: {.top-nav-container}
+[About Me](#about-me)
+[Education](#education)
+[Teaching](#teaching-experience)
+[Work](#work-experience)
+[Skills](#skills)
+[Achievements](#special-achievements)
+[Research](research.qmd)
+:::
+:::
+
 ::: {.hero-section}
 ::: {.container}
 ::: {.main-content}
@@ -176,16 +188,6 @@ Bengali (Native), Hindi (Fluent), English (Fluent), Japanese (Conversational), I
 <div class="news-content">Teaching assistant at DL@MBL course, Woods Hole</div>
 :::
 :::
-:::
-
-::: {.side-nav}
-[About Me](#about-me)  
-[Education](#education)  
-[Teaching](#teaching-experience)  
-[Work](#work-experience)  
-[Achievements](#special-achievements)  
-[Skills](#skills)  
-[Research](research.qmd){.nav-projects}
 :::
 :::
 :::
