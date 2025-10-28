@@ -1,6 +1,6 @@
 ::: {.news-item}
 <span class="news-date">June 2025</span>
-<div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} is now on arxiv 🎉</div>
+<div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} is now on *arXiv* 🎉</div>
 :::
 
 ::: {.news-item}
@@ -20,7 +20,7 @@
 
 ::: {.news-item}
 <span class="news-date">Aug 2023</span>
-<div class="news-content">TAing at [DL@MBL 2024](https://www.mbl.edu/education/advanced-research-training-courses/courses-calendar?trumbaEmbed=view%3Devent%26eventid%3D164013510){target="_blank" .flj}</div>
+<div class="news-content">TAing at [DL@MBL 2023](https://www.mbl.edu/education/advanced-research-training-courses/courses-calendar?trumbaEmbed=view%3Devent%26eventid%3D164013510){target="_blank" .flj}</div>
 :::
 
 ::: {.news-item}
