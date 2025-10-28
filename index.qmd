@@ -57,7 +57,12 @@ Ph.D. Student in Computational Image Restoration | Generative AI for Microscopy
 ::: {.right-panel}
 ## About Me
 
-I am a final year Ph.D. Student in Computer Science at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj}, advised by [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, working on generative AI for microscopy and computational image restoration. My research develops flow-matching models to enhance biological imaging. I'm passionate about AI4Science and deeply interested in how *science philanthropy* can accelerate discovery and innovation.
+I am a final year Ph.D. Student in Computer Science at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj}, advised by [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}.
+My research focuses on developing flow-matching models to restore biological imaging, advancing the intersection of artificial intelligence and the life sciences. I am passionate about AI4Science and deeply interested in how *[science philanthropy](https://sciencephilanthropyalliance.org/){target="_blank" .flj}* can accelerate discovery and innovation.  
+I hold a Masters degree in Computer Vision and Deep Learning from [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank" .flj}, Japan (2018), where I was advised by [Professor Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){target="_blank" .flj} and co-advised by [Associate Professor Fumihiko Sakaue](https://researcher.nitech.ac.jp/html/257_en.html){target="_blank" .flj}. Before beginning my doctoral journey, I worked as an Associate AI researcher at [Hitachi Research](https://www.hitachi.com/rd/){target="_blank" .flj} in Tokyo, applying deep learning to visual understanding and bioimage analysis.  
+I earned my Bachelors in Computer Science from [Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology](https://www.veltech.edu.in/){target="_blank" .flj}, India, and was born and raised in [Kolkata, India](https://maps.app.goo.gl/uAYA9p9hDrgCzwhH7){target="_blank" .flj}, where I completed my Secondary and Higher Secondary education.
+
+
 
 
 ## Education
@@ -65,7 +70,6 @@ I am a final year Ph.D. Student in Computer Science at [Technische Universität 
 ::: {.education-item}
 **Ph.D. in Computer Science | *2022 – Present*** [Technische Universität Dresden](https://tu-dresden.de){target="_blank"} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank"} 
 :::
-
 
 ::: {.education-item}
 **Master of Engineering in Computer Science | *2016 – 2018*** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank"}  
@@ -95,7 +99,7 @@ One of the project started there ended up being published in <a href="https://op
 ## Work Experience
 
 ::: {.education-item}
-**Associate Researcher | *Apr 2018 – Jan 2022*** [Hitachi Ltd., Tokyo, Japan](https://www.hitachi.com/){target="_blank"}
+**Associate Researcher | *Apr 2018 – Jan 2022*** [Hitachi Ltd., Tokyo, Japan](https://www.hitachi.com/rd/){target="_blank"}
 
 Applied Deep Learning and Computer Vision for image analysis in the R&D Group's Center for Technology Innovation.
 :::
