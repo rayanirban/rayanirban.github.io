@@ -8,14 +8,14 @@ format:
 
 ::: {.top-nav}
 ::: {.top-nav-container}
-[Home](index.qmd)
+<!-- [Home](index.qmd) -->
 [About Me](index.qmd#about-me)
 [Education](index.qmd#education)
 [Teaching](index.qmd#teaching-experience)
 [Work](index.qmd#work-experience)
 [Skills](index.qmd#skills)
 [Achievements](index.qmd#special-achievements)
-[Research](research.qmd)
+[Research](#research)
 :::
 :::
 
@@ -56,9 +56,9 @@ Ph.D. Student in Computational Image Restoration | Generative AI for Microscopy
 :::
 
 ::: {.projects-panel}
-# Research
+# Research {#research}
 
-### Current Research
+### Current Research {#current-research}
 
 ::: {.project-item}
 
@@ -79,7 +79,7 @@ An extension of HazeMatching designed for computational super-resolution (CSR) r
 ::: -->
 
 
-### Past Research
+### Past Research {#past-research}
 
 ::: {.project-item}
 **Deep Learning for Industrial and Microscopy Image Analysis (2018–2021)**  

@@ -197,6 +197,6 @@ Bengali (Native), Hindi (Fluent), English (Fluent), Japanese (Conversational), I
 ---
 
 ::: {style="text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem; padding-bottom: 1rem;"}
-If you use this template, please acknowledge the original design by thinking here 😊.
+If you use this template, please acknowledge the original design by linking here 😊
 :::
 
