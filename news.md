@@ -10,7 +10,12 @@
 
 ::: {.news-item}
 <span class="news-date">May 2024</span>
-<div class="news-content">[Invited talk](https://x.com/anirbanray_/status/1789421846225404105){target="_blank" .flj} at EMBO-DL4MIA Workshop</div>
+<div class="news-content">TAing at [EMBO-DL4MIA 2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank" .flj} and [Invited talk](https://x.com/anirbanray_/status/1789421846225404105){target="_blank" .flj} at EMBO-DL4MIA 2024</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Oct 2023</span>
+<div class="news-content">TAing at [DL4MIA 2023](https://dl4mia2023.humantechnopole.it/){target="_blank" .flj}</div>
 :::
 
 ::: {.news-item}
@@ -31,6 +36,11 @@
 ::: {.news-item}
 <span class="news-date">October 2022</span>
 <div class="news-content">Officially enrolled as a PhD candidate at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj}</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Jul 2022</span>
+<div class="news-content">TAing at [DL4MIA 2022](https://humantechnopole.it/en/trainings/deep-learning-for-microscopy-image-analysis-2022/){target="_blank" .flj}</div>
 :::
 
 ::: {.news-item}
