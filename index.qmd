@@ -12,8 +12,8 @@ format:
 [Education](#education)
 [Teaching](#teaching-experience)
 [Work](#work-experience)
-[Skills](#skills)
 [Achievements](#special-achievements)
+[Skills](#skills)
 [Research](research.qmd)
 :::
 :::
@@ -150,7 +150,7 @@ Chosen among 60 top students from India for advanced topics and research present
 ::: {.education-item}
 **Computational Skills**
 
-Python, PyTorch, Scikit-learn, OpenCV, NumPy, LaTeX, Git, SLURM, Bash, Linux
+Python, PyTorch, OpenCV, NumPy, LaTeX, Git, SLURM, Bash, Linux
 :::
 
 ::: {.education-item}

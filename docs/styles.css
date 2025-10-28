@@ -287,7 +287,7 @@ body {
   flex-direction: column;
   gap: 0;
   position: sticky;
-  top: 2rem;
+  top: 90px;
   align-self: flex-start;
 }
 

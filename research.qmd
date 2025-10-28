@@ -13,8 +13,8 @@ format:
 [Education](index.qmd#education)
 [Teaching](index.qmd#teaching-experience)
 [Work](index.qmd#work-experience)
-[Skills](index.qmd#skills)
 [Achievements](index.qmd#special-achievements)
+[Skills](index.qmd#skills)
 [Research](#research)
 :::
 :::
@@ -106,6 +106,19 @@ This phase of my work established a foundation in AI-driven visual understanding
 <span class="news-date">Sep 2024</span>
 <div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
 :::
+::: {.news-item}
+<span class="news-date">Sep 2024</span>
+<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
+:::
+::: {.news-item}
+<span class="news-date">Sep 2024</span>
+<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
+:::
+::: {.news-item}
+<span class="news-date">Sep 2024</span>
+<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
+:::
+
 ::: {.news-item}
 <span class="news-date">Jul 2024</span>
 <div class="news-content">Teaching assistant at DL@MBL course, Woods Hole</div>
