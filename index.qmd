@@ -61,9 +61,9 @@ Ph.D. Student in Computational Image Restoration | Generative AI for Microscopy
 ## About Me
 
 I am a final year Ph.D. Student in Computer Science at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj}, advised by [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}.
-My research focuses on developing flow-matching models to restore biological imaging, advancing the intersection of artificial intelligence and the life sciences. I am passionate about AI4Science and deeply interested in how *[science philanthropy](https://sciencephilanthropyalliance.org/){target="_blank" .flj}* can accelerate discovery and innovation.  
-I hold a Masters degree in Computer Vision and Deep Learning from [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank" .flj}, Japan (2018), where I was advised by [Professor Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){target="_blank" .flj} and co-advised by [Associate Professor Fumihiko Sakaue](https://researcher.nitech.ac.jp/html/257_en.html){target="_blank" .flj}. Before beginning my doctoral journey, I worked as an Associate AI researcher at [Hitachi Research](https://www.hitachi.com/rd/){target="_blank" .flj} in Tokyo, applying deep learning to visual understanding and bioimage analysis.  
-I earned my Bachelors in Computer Science in India, and was born and raised in [Kolkata, India](https://maps.app.goo.gl/uAYA9p9hDrgCzwhH7){target="_blank" .flj}, where I completed my Secondary and Higher Secondary education.
+My research focuses on developing flow-matching models to restore biological imaging, advancing the intersection of artificial intelligence and the life sciences. I am passionate about AI4Science and deeply interested in how *[science philanthropy](https://sciencephilanthropyalliance.org/){target="_blank" .flj}* can accelerate discovery and innovation. </br>  
+I hold a Masters degree in Computer Vision and Deep Learning from [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank" .flj}, Japan (2018), where I was advised by [Professor Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){target="_blank" .flj} and co-advised by [Associate Professor Fumihiko Sakaue](https://researcher.nitech.ac.jp/html/257_en.html){target="_blank" .flj}. Before beginning my doctoral journey, I worked as an Associate AI researcher at [Hitachi Research](https://www.hitachi.com/rd/){target="_blank" .flj} in Tokyo, applying deep learning to visual understanding and bioimage analysis.</br>  
+I earned my Bachelors in Computer Science in Chennai, India, and was born and raised in [Kolkata, India](https://maps.app.goo.gl/uAYA9p9hDrgCzwhH7){target="_blank" .flj}, where I completed my Secondary and Higher Secondary education.
 
 </div>
 
@@ -72,12 +72,12 @@ I earned my Bachelors in Computer Science in India, and was born and raised in [
 ## Education
 
 ::: {.education-item}
-**Ph.D. in Computer Science | *2022 – Present*** [Technische Universität Dresden](https://tu-dresden.de){target="_blank"} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank"} 
+**Ph.D. in Computer Science | *2022 – Present*** [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj} 
 :::
 
 ::: {.education-item}
-**Master of Engineering in Computer Science | *2016 – 2018*** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank"}  
-Advisor: [Prof. Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){target="_blank"} and [Prof. Fumihiko Sakaue](https://researcher.nitech.ac.jp/html/257_en.html){target="_blank"} | [Thesis](https://drive.google.com/file/d/1A7Gm2RS3L8SPyb9G9Ey5O350kh7DYZKk/view?usp=sharing){target="_blank"}
+**Master of Engineering in Computer Science | *2016 – 2018*** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank" .flj}  
+Advisor: [Prof. Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){target="_blank" .flj} and [Prof. Fumihiko Sakaue](https://researcher.nitech.ac.jp/html/257_en.html){target="_blank" .flj} | [Thesis](https://drive.google.com/file/d/1A7Gm2RS3L8SPyb9G9Ey5O350kh7DYZKk/view?usp=sharing){target="_blank"}
 :::
 
 ::: {.education-item}
@@ -91,14 +91,14 @@ Advisor: [Prof. Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){targe
 ## Teaching Experience
 
 ::: {.education-item}
-**Teaching Assistant – DL4MIA | [2022](https://humantechnopole.it/en/trainings/deep-learning-for-microscopy-image-analysis-2022/){target="_blank"}, [2023](https://dl4mia2023.humantechnopole.it/){target="_blank"}, [2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank"}  
-**[Human Technopole, Milan, Italy](https://humantechnopole.it/){target="_blank"}  
+**Teaching Assistant – DL4MIA | [2022](https://humantechnopole.it/en/trainings/deep-learning-for-microscopy-image-analysis-2022/){target="_blank"}, [2023](https://dl4mia2023.humantechnopole.it/){target="_blank"}, [2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank" .flj}  
+**[Human Technopole, Milan, Italy](https://humantechnopole.it/){target="_blank" .flj}  
 
 Supported the *Deep Learning for Microscopy Image Analysis* (DL4MIA) course across three consecutive editions. Responsibilities included mentoring participants, invited [lecture](https://x.com/anirbanray_/status/1789421846225404105){target="_blank"}, coding sessions, and guiding project work on AI-based microscopy restoration and segmentation. 
 :::
 
 ::: {.education-item}
-**Teaching Assistant – DL@MBL | [2023](https://www.mbl.edu/education/advanced-research-training-courses/courses-calendar?trumbaEmbed=view%3Devent%26eventid%3D164013510){target="_blank"}, [2024](https://ai-mbl.github.io/2024/about/){target="_blank"}**[Marine Biological Laboratory, Woods Hole, USA](https://www.mbl.edu/){target="_blank"} 
+**Teaching Assistant – DL@MBL | [2023](https://www.mbl.edu/education/advanced-research-training-courses/courses-calendar?trumbaEmbed=view%3Devent%26eventid%3D164013510){target="_blank"}, [2024](https://ai-mbl.github.io/2024/about/){target="_blank"}**[Marine Biological Laboratory, Woods Hole, USA](https://www.mbl.edu/){target="_blank" .flj} 
 
 Contributed to hands-on sessions on deep learning for biological imaging. Provided mentoring and technical guidance to participants during lab exercises and research projects.
 One of the project started there ended up being published in <a href="https://openreview.net/forum?id=HtlfNbyfOn" target="_blank">NeurIPS 2024</a>.
@@ -196,7 +196,7 @@ Bengali (Native), Hindi (Fluent), English (Fluent), Japanese (Conversational), I
 ![](images/hazematching_teaser.png){fig-align="center" width="80%" alt="HazeMatching: Conditional Flow Matching for microscopy dehazing"}
 
 A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures.  
-[GitHub](#){target="_blank"} | [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank"} | [Demo](#){target="_blank"}
+[GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank" .flj} | [Demo](#){target="_blank"}
 :::
 
 ### Past Research
@@ -206,7 +206,7 @@ A generative framework that restores optical microscopy images degraded by scatt
 
 From 2018 to 2021, my research at Hitachi Ltd., Tokyo focused on developing deep learning–based systems for high-precision image understanding in both industrial inspection and biomedical microscopy. I worked on combining computer vision and AI-driven automation for identifying and quantifying objects of interest in complex visual data.
 
-In 2021, I co-authored the paper [*Quantitative Analysis System for Bacterial Cells in SEM Images Using Deep Learning*](https://ieeexplore.ieee.org/abstract/document/9400322){target="_blank"} (*CISS 2021*), introducing a neural architecture for accurate segmentation and counting of bacterial cells from scanning electron microscopy (SEM) data. This was followed by [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170){target="_blank"} (*CISS 2022*), where we improved bacterial classification by jointly modeling morphological and internal structural cues.
+In 2021, I co-authored the paper [*Quantitative Analysis System for Bacterial Cells in SEM Images Using Deep Learning*](https://ieeexplore.ieee.org/abstract/document/9400322){target="_blank" .flj} (*CISS 2021*), introducing a neural architecture for accurate segmentation and counting of bacterial cells from scanning electron microscopy (SEM) data. This was followed by [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170){target="_blank" .flj} (*CISS 2022*), where we improved bacterial classification by jointly modeling morphological and internal structural cues.
 
 Building on this foundation, I co-invented several patented AI image-processing systems that enable adaptive feature extraction and object detection for microscopy and industrial imaging. These include [US Patent 12,327,363](https://patents.google.com/patent/US12327363B2){target="_blank"}, [US Patent 12,211,213](https://patents.google.com/patent/US12211213B2){target="_blank"}, and [EP Patent 3961562A1](https://patents.google.com/patent/EP3961562A1){target="_blank"}, describing methods and apparatuses for generating neural models that identify and segment objects of interest from images.
 
@@ -224,27 +224,7 @@ This phase of my work established a foundation in AI-driven visual understanding
 ### News
 
 ::: {.news-items-container}
-::: {.news-item}
-<span class="news-date">Sep 2024</span>
-<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
-:::
-::: {.news-item}
-<span class="news-date">Sep 2024</span>
-<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
-:::
-::: {.news-item}
-<span class="news-date">Sep 2024</span>
-<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
-:::
-::: {.news-item}
-<span class="news-date">Sep 2024</span>
-<div class="news-content">Invited talk at EMBO Deep Learning Workshop</div>
-:::
-
-::: {.news-item}
-<span class="news-date">Jul 2024</span>
-<div class="news-content">Teaching assistant at DL@MBL course, Woods Hole</div>
-:::
+{{< include news.md >}}
 :::
 :::
 :::
