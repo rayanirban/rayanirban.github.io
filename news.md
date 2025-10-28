@@ -34,7 +34,7 @@
 :::
 
 ::: {.news-item}
-<span class="news-date">October 2022</span>
+<span class="news-date">Oct 2022</span>
 <div class="news-content">Officially enrolled as a PhD candidate at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj}</div>
 :::
 
@@ -44,7 +44,7 @@
 :::
 
 ::: {.news-item}
-<span class="news-date">February 2022</span>
+<span class="news-date">Feb 2022</span>
 <div class="news-content">Started my PhD with [Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj} at [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj}</div>
 :::
 
