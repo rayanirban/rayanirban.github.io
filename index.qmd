@@ -48,7 +48,7 @@ PhD Student in Computational Image Restoration | Generative AI for Microscopy
 
 ::: {.booking-link}
 ::: {style="text-align: center;"}
-[<span class="contact-emoji">📅</span> Book a meeting](https://calendar.app.google/ztwbew48GhVHQ63e7){.social-link target="_blank"} No agenda needed 😊
+<!-- [<span class="contact-emoji">📅</span> Book a meeting](https://calendar.app.google/ztwbew48GhVHQ63e7){.social-link target="_blank"} No agenda needed 😊 -->
 :::
 :::
 
@@ -233,8 +233,8 @@ This phase of my work established a foundation in AI-driven visual understanding
 
 
 
-::: {style="text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem; padding-bottom: 1rem;"}
-If you use this template, please acknowledge this original design by linking here 😊
+::: {style="text-align: center; color: gray; font-size: 0.75rem; margin-top: 0.5rem; padding-bottom: 1rem;"}
+If you use this template, please acknowledge this original design 😊
 :::
 
 ```{=html}
