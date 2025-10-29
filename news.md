@@ -14,6 +14,11 @@
 :::
 
 ::: {.news-item}
+<span class="news-date">Feb 2024</span>
+<div class="news-content">[Talk](https://x.com/anirbanray_/status/1761034462781960351){target="_blank" .flj} on OpenAI's Sora at Human Technopole</div>
+:::
+
+::: {.news-item}
 <span class="news-date">Oct 2023</span>
 <div class="news-content">TAing at [DL4MIA 2023](https://dl4mia2023.humantechnopole.it/){target="_blank" .flj}</div>
 :::
@@ -24,18 +29,33 @@
 :::
 
 ::: {.news-item}
+<span class="news-date">Aug 2023</span>
+<div class="news-content">Our [team won the 3rd Place](https://x.com/anirbanray_/status/1694519329159602662){target="_blank" .flj} in microscopy imaging at Optical Microscopy & Imaging in the Biomedical Sciences course</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Aug 2023</span>
+<div class="news-content">Attending [Optical Microscopy & Imaging in the Biomedical Sciences](https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/optical-microscopy-imaging-biomedical-sciences){target="_blank" .flj} at the Marine Biological Laboratory, USA</div>
+:::
+
+::: {.news-item}
 <span class="news-date">May 2023</span>
 <div class="news-content">Attending Light Microscopy Course at [ETH, Zurich](https://scopem.ethz.ch/education/MTP/IC/LM1.html){target="_blank" .flj}</div>
 :::
 
 ::: {.news-item}
 <span class="news-date">Dec 2022</span>
-<div class="news-content">Attended [Mathematics and Image Analysis Workshop](https://rt-maiages.math.cnrs.fr/mia25/mia25/){target="_blank" .flj} in Paris</div>
+<div class="news-content">[Attended](https://x.com/anirbanray_/status/1600465694839123968){target="_blank" .flj} [Mathematics and Image Analysis Workshop](https://rt-maiages.math.cnrs.fr/mia25/mia25/){target="_blank" .flj} in Paris</div>
 :::
 
 ::: {.news-item}
 <span class="news-date">Oct 2022</span>
 <div class="news-content">Officially enrolled as a PhD candidate at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj}</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Aug 2022</span>
+<div class="news-content">I [gave a talk](https://x.com/anirbanray_/status/1563499736191352835){target="_blank" .flj} introducing deep learning and computer vision to the students at my undergrad institution. </div>
 :::
 
 ::: {.news-item}
