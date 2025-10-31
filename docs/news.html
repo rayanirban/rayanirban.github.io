@@ -154,48 +154,6 @@ Left my job at <a href="https://www.hitachi.com/rd/" class="flj" target="_blank"
 </div>
 
 
-<div id="visitor-counter">
-  <span class="eye-icon">👁️</span>
-  <span>Visitors:</span>
-  <span id="visits">--</span>
-</div>
-
-<style>
-  #visitor-counter {
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--text-muted, #aaa);
-    margin-top: 2rem;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-  }
-  #visitor-counter:hover {
-    color: var(--accent-metallic, #00bfa6);
-  }
-  .eye-icon {
-    margin-right: 4px;
-    opacity: 0.8;
-  }
-</style>
-
-<script>
-  const namespace = "rayanirban-github-io";
-  const key = "homepage";
-
-  async function updateCounter() {
-    try {
-      // First, increment the counter
-      const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
-      const data = await res.json();
-      document.getElementById("visits").innerText = data.value;
-    } catch (error) {
-      console.error("Visitor counter error:", error);
-      document.getElementById("visits").innerText = "offline";
-    }
-  }
-
-  updateCounter();
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
