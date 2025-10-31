@@ -1,5 +1,10 @@
 ::: {.news-item}
-<span class="news-date">June 2025</span>
+<span class="news-date">Oct 2025</span>
+<div class="news-content">[ResMatching](https://arxiv.org/abs/2510.26601){target="_blank" .flj} is now on *arXiv* 🎉</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Jun 2025</span>
 <div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} is now on *arXiv* 🎉</div>
 :::
 
