@@ -9,6 +9,16 @@
 :::
 
 ::: {.news-item}
+<span class="news-date">Apr 2025</span>
+<div class="news-content">Presented [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} at the Human Technopole institute seminar series</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Oct 2024</span>
+<div class="news-content">Presented my Poster at [I2K 2024](https://events.humantechnopole.it/event/1/contributions/81/){target="_blank" .flj}</div>
+:::
+
+::: {.news-item}
 <span class="news-date">Aug 2024</span>
 <div class="news-content">TAing at [DL@MBL 2024](https://ai-mbl.github.io/2024/about/){target="_blank" .flj}</div>
 :::
