@@ -197,6 +197,12 @@ Advisor: <a href="https://researcher.nitech.ac.jp/html/56_en.html" class="flj" t
 </div>
 </div>
 <div class="news-item">
+<span class="news-date">Apr 2025</span>
+<div class="news-content">
+Presented <a href="https://arxiv.org/abs/2506.22397" class="flj" target="_blank">HazeMatching</a> at the Human Technopole institute seminar series
+</div>
+</div>
+<div class="news-item">
 <span class="news-date">Oct 2024</span>
 <div class="news-content">
 Presented my Poster at <a href="https://events.humantechnopole.it/event/1/contributions/81/" class="flj" target="_blank">I2K 2024</a>
@@ -331,6 +337,50 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+<!-- _footer.html -->
+<div id="visitor-counter">
+  <span class="eye-icon">👁️</span>
+  <span>Visitors:</span>
+  <span id="visits">--</span>
+</div>
+
+<style>
+  #visitor-counter {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted, #7e7171);
+    margin-top: 2rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  #visitor-counter:hover {
+    color: var(--accent-metallic, #00bfa6);
+  }
+  .eye-icon {
+    margin-right: 4px;
+    opacity: 0.8;
+  }
+</style>
+
+<script>
+  const namespace = "rayanirban-github-io"; // change if your repo name changes
+  const key = "homepage";
+
+  if (!localStorage.getItem("visited")) {
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visits').innerText = data.value;
+      });
+    localStorage.setItem("visited", "true");
+  } else {
+    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visits').innerText = data.value;
+      });
+  }
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

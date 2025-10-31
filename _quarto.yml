@@ -27,3 +27,4 @@ format:
     theme: none
     css: styles.css
     toc: false
+    include-after-body: _footer.html

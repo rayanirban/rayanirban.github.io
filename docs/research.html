@@ -72,6 +72,50 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
+<!-- _footer.html -->
+<div id="visitor-counter">
+  <span class="eye-icon">👁️</span>
+  <span>Visitors:</span>
+  <span id="visits">--</span>
+</div>
+
+<style>
+  #visitor-counter {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted, #7e7171);
+    margin-top: 2rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  #visitor-counter:hover {
+    color: var(--accent-metallic, #00bfa6);
+  }
+  .eye-icon {
+    margin-right: 4px;
+    opacity: 0.8;
+  }
+</style>
+
+<script>
+  const namespace = "rayanirban-github-io"; // change if your repo name changes
+  const key = "homepage";
+
+  if (!localStorage.getItem("visited")) {
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visits').innerText = data.value;
+      });
+    localStorage.setItem("visited", "true");
+  } else {
+    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visits').innerText = data.value;
+      });
+  }
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
