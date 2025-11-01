@@ -282,12 +282,25 @@ body {
 
 .project-item p {
   margin-bottom: 1rem;
-  line-height: 1.8;
-  text-align: justify;
+  line-height: 1.1;
+  text-align: start;
 }
 
 .project-item p:last-child {
   margin-bottom: 0;
+}
+
+/* Style bullet lists inside project-item */
+.project-item ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-item li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
 }
 
 .right-side-column {
@@ -388,6 +401,14 @@ body {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
+}
+
+/* Add vertical spacing between project heading and images inside project-item */
+.project-item > strong + img,
+.project-item h3 + img,
+.project-item img {
+  margin-top: 0.9rem;
+  display: block;
 }
 
 .news-date {
