@@ -93,7 +93,7 @@ Advisor: [Prof. Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){targe
 **Teaching Assistant – DL4MIA | [2022](https://humantechnopole.it/en/trainings/deep-learning-for-microscopy-image-analysis-2022/){target="_blank"}, [2023](https://dl4mia2023.humantechnopole.it/){target="_blank"}, [2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank" .flj}  
 **[Human Technopole, Milan, Italy](https://humantechnopole.it/){target="_blank" .flj}  
 
-Supported the *Deep Learning for Microscopy Image Analysis* (DL4MIA) course across three consecutive editions. Responsibilities included mentoring participants, invited [lecture](https://x.com/anirbanray_/status/1789421846225404105){target="_blank"}, coding sessions, and guiding project work on AI-based microscopy restoration and segmentation. 
+Supported the *Deep Learning for Microscopy Image Analysis* (DL4MIA) course across three consecutive editions. Responsibilities included mentoring participants, [invited lecture](https://x.com/anirbanray_/status/1789421846225404105){target="_blank"}, coding sessions, and guiding project work on AI-based microscopy restoration and segmentation. 
 :::
 
 ::: {.education-item}
