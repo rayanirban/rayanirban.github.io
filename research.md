@@ -1,4 +1,4 @@
-### Current Research
+### Current Research (2022–Present)
 
 
 ::: {.project-item}
@@ -22,7 +22,7 @@ A generative framework that restores optical microscopy images degraded by scatt
 ### Past Research (Hitachi Ltd., 2018–2021)
 
 ::: {.project-item}
-**Deep Learning for Industrial and Microscopy Image Analysis (2018–2021)**  
+**Deep Learning for Microscopy Image Analysis (2018–2021)**  
 
 From 2018 to 2021, my research at [Hitachi Ltd., Tokyo](https://www.hitachi.com/rd/){target="_blank" .flj} focused on developing deep learning–based systems for high-precision image understanding in biomedical microscopy. I worked on combining computer vision and AI-driven automation for identifying and quantifying objects of interest in complex visual data.
 
