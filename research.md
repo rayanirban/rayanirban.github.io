@@ -7,7 +7,7 @@
 ![](images/resmatching_teaser.png){fig-align="center" width="80%" alt="HazeMatching: Conditional Flow Matching for microscopy dehazing"}
 
 A guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy, unifying restoration, uncertainty estimation, and posterior sampling within a single generative model.</br>
-[GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Demo](#){target="_blank"}
+[GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://resmatching.github.io/){target="_blank"}
 :::
 
 ::: {.project-item}
@@ -16,7 +16,7 @@ A guided conditional flow-matching framework for noise-resilient computational s
 ![](images/hazematching_teaser.png){fig-align="center" width="80%" alt="HazeMatching: Conditional Flow Matching for microscopy dehazing"}
 
 A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures.  
-[GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank" .flj} | [Demo](#){target="_blank"}
+[GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank" .flj} | [Project Page](#){target="_blank"}
 :::
 
 ### Past Research (Hitachi Ltd., 2018–2021)
