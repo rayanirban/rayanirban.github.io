@@ -15,6 +15,11 @@
 
 ::: {.news-item}
 <span class="news-date">Oct 2024</span>
+<div class="news-content">Attended [ECCV 2024](https://eccv.ecva.net/Conferences/2024){target="_blank" .flj}</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Oct 2024</span>
 <div class="news-content">Presented my Poster at [I2K 2024](https://events.humantechnopole.it/event/1/contributions/81/){target="_blank" .flj}</div>
 :::
 
@@ -66,6 +71,11 @@
 ::: {.news-item}
 <span class="news-date">Oct 2022</span>
 <div class="news-content">Officially enrolled as a PhD candidate at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj}</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Sep 2022</span>
+<div class="news-content">[My thoughts](https://rayanirban.notion.site/The-Computer-Science-Craze-in-Undergraduate-Education-in-India-6f329314710d40dc8ab099d296a3c4ab){target="_blank" .flj} on the current craze of computer science among Indian Students.</div>
 :::
 
 ::: {.news-item}

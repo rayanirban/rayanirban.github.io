@@ -1,9 +1,10 @@
-### Current Research (2022–Present)
+### Current Research (PhD, 2022–Present)
 
 
 ::: {.project-item}
 
 **<span style="font-size: 1.2em;">ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching</span>**  
+[Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Vera Galinova](https://humantechnopole.it/en/people/vera-galinova/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}</br>
 ![](images/resmatching_teaser.png){fig-align="center" width="80%" alt="HazeMatching: Conditional Flow Matching for microscopy dehazing"}
 
 A guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy, unifying restoration, uncertainty estimation, and posterior sampling within a single generative model.</br>
@@ -13,9 +14,10 @@ A guided conditional flow-matching framework for noise-resilient computational s
 ::: {.project-item}
 
 **<span style="font-size: 1.2em;">HazeMatching: Conditional Flow Matching for Microscopy Dehazing</span>**  
+[Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Ashesh](https://ashesh-0.github.io/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}</br>  
 ![](images/hazematching_teaser.png){fig-align="center" width="80%" alt="HazeMatching: Conditional Flow Matching for microscopy dehazing"}
 
-A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures.  
+A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures.</br>
 [GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank" .flj} | [Project Page](#){target="_blank"}
 :::
 

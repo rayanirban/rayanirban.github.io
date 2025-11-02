@@ -100,7 +100,7 @@ Supported the *Deep Learning for Microscopy Image Analysis* (DL4MIA) course acro
 **Teaching Assistant – DL@MBL | [2023](https://www.mbl.edu/education/advanced-research-training-courses/courses-calendar?trumbaEmbed=view%3Devent%26eventid%3D164013510){target="_blank"}, [2024](https://ai-mbl.github.io/2024/about/){target="_blank"}**[Marine Biological Laboratory, Woods Hole, USA](https://www.mbl.edu/){target="_blank" .flj} 
 
 Contributed to hands-on sessions on deep learning for biological imaging. Provided mentoring and technical guidance to participants during lab exercises and research projects.
-One of the project started in the group that I co-mentored, ended up being published in <a href="https://openreview.net/forum?id=HtlfNbyfOn" target="_blank">NeurIPS 2024</a>.
+One of the project started in the group that I co-mentored, ended up being published in <a href="https://www.linkedin.com/posts/anirban-ray_our-super-cool-project-bit2bit-1-bit-quanta-activity-7260904021522010112-Nfgi?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqfVj4BuGmZW_XROl13l-KT-LedbrI2tzQ" target="_blank">NeurIPS 2024</a>.
 :::
 
 </div>
