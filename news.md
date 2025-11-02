@@ -1,6 +1,6 @@
 ::: {.news-item}
 <span class="news-date">Oct 2025</span>
-<div class="news-content">[ResMatching](https://arxiv.org/abs/2510.26601){target="_blank" .flj} is now on *arXiv* 🎉</div>
+<div class="news-content">[ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} is now on *arXiv* 🎉</div>
 :::
 
 ::: {.news-item}
