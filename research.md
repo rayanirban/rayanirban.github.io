@@ -7,7 +7,7 @@
 ![](images/resmatching_teaser.png){fig-align="center" width="80%" alt="HazeMatching: Conditional Flow Matching for microscopy dehazing"}
 
 A guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy, unifying restoration, uncertainty estimation, and posterior sampling within a single generative model.</br>
-[GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://rayanirban.github.io/resmatching/){target="_blank"}
+[GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://rayanirban.github.io/resmatching/){target="_blank" .flj}
 :::
 
 ::: {.project-item}
