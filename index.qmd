@@ -80,6 +80,11 @@ Advisor: [Prof. Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){targe
 :::
 
 ::: {.education-item}
+**Research Student | *Oct, 2015 – Mar, 2016*** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank" .flj}  
+Advisor: [Prof. Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){target="_blank" .flj} and [Prof. Fumihiko Sakaue](https://researcher.nitech.ac.jp/html/257_en.html){target="_blank" .flj} | Preparatory research for Master's thesis on Deep Learning for Image Super-Resolution.
+:::
+
+::: {.education-item}
 **Bachelor of Tech. in Computer Science and Engineering | *2011 – 2015*** [Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology](https://www.veltech.edu.in/){target="_blank"}
 :::
 
