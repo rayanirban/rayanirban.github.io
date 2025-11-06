@@ -12,10 +12,10 @@ format:
 <a href="#" class="nav-tab" data-tab="research">Research</a>
 <a href="#" class="nav-tab" data-tab="education">Education</a>
 <a href="#" class="nav-tab" data-tab="teaching">Teaching</a>
+<a href="#" class="nav-tab" data-tab="talks">Talks</a>
 <a href="#" class="nav-tab" data-tab="work">Work</a>
 <a href="#" class="nav-tab" data-tab="achievements">Achievements</a>
 <a href="#" class="nav-tab" data-tab="skills">Skills</a>
-<a href="#" class="nav-tab" data-tab="talks">Talks</a>
 :::
 :::
 
