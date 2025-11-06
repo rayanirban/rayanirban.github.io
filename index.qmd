@@ -15,6 +15,7 @@ format:
 <a href="#" class="nav-tab" data-tab="work">Work</a>
 <a href="#" class="nav-tab" data-tab="achievements">Achievements</a>
 <a href="#" class="nav-tab" data-tab="skills">Skills</a>
+<a href="#" class="nav-tab" data-tab="talks">Talks</a>
 :::
 :::
 
@@ -167,6 +168,14 @@ Awarded full funding for Master's studies at Nagoya Institute of Technology. Sel
 
 Chosen among 60 top students from India for advanced topics and research presentation in computer science.
 :::
+
+</div>
+
+<div class="tab-content" data-tab-id="talks">
+
+## Talks
+
+{{< include talks.md >}}
 
 </div>
 
