@@ -4,6 +4,11 @@
 :::
 
 ::: {.news-item}
+<span class="news-date">Jul 2025</span>
+<div class="news-content">Presented [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} at the Human Technopole institute Introduction to ML course</div>
+:::
+
+::: {.news-item}
 <span class="news-date">Jun 2025</span>
 <div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} is now on *arXiv* 🎉</div>
 :::
