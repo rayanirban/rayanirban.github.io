@@ -1,11 +1,21 @@
 ### Current Research (PhD, 2022–Present)
 
+::: {.project-item}
+
+**<span style="font-size: 1.2em;">RESOLFT time lapse imaging empowered by deep learning</span>**  
+[Guillaume Minet](https://www.testalab.org/people.php){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.testalab.org/){target="_blank" .flj}</br> 
+
+![](images/resolft_teaser.png){fig-align="center" width="80%" alt="RESOLFT time lapse imaging empowered by deep learning"}
+
+Deep learning extended RESOLFT nanoscopy by restoring low-SNR and sub-sampled acquisitions, enabling 5× longer and 4× faster live-cell imaging while preserving ~60 nm resolution.</br>
+[Preprint (under review)](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj}
+:::
 
 ::: {.project-item}
 
 **<span style="font-size: 1.2em;">ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching</span>**  
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Vera Galinova](https://humantechnopole.it/en/people/vera-galinova/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}</br>
-![](images/resmatching_teaser.png){fig-align="center" width="80%" alt="HazeMatching: Conditional Flow Matching for microscopy dehazing"}
+![](images/resmatching_teaser.png){fig-align="center" width="80%" alt="ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching"}
 
 A guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy, unifying restoration, uncertainty estimation, and posterior sampling within a single generative model.</br>
 [GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://rayanirban.github.io/resmatching/){target="_blank" .flj}
