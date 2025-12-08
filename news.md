@@ -40,6 +40,11 @@
 
 ::: {.news-item}
 <span class="news-date">May 2024</span>
+<div class="news-content">Served as a reviewer for the <a href="https://ai4life.eurobioimaging.eu/first-ai4life-open-call-announcement-of-selected-projects/" target="_blank">AI4Life Open Call</a> and received my official reviewer <a href="https://api.badgr.io/public/assertions/OsueugVFSI22qBgKaqTgdg" target="_blank">badge 😊</div>
+:::
+
+::: {.news-item}
+<span class="news-date">May 2024</span>
 <div class="news-content">TAing at [EMBO-DL4MIA 2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank" .flj} and [Invited talk](https://x.com/anirbanray_/status/1789421846225404105){target="_blank" .flj} at EMBO-DL4MIA 2024</div>
 :::
 
