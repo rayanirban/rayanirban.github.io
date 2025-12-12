@@ -124,7 +124,7 @@ Applied Deep Learning and Computer Vision for image analysis in the R&D Group's 
 ::: {.education-item}
 **Engineering Intern (AR Applications) | *Sep 2016*** [Sun Corporation, Konan, Japan](https://www.sun-denshi.co.jp/sc/product_service/acereal/){target="_blank"}
 
-Developed augmented reality applications for AceReal smart glasses using Unity and Vuforia frameworks. Find the evaluation report in Japanese [here](files/SunCorp_Internship_Evaluation.pdf){target="_blank"}, and interactive ChatGPT translated version [here](https://chatgpt.com/share/693bd2c2-1524-8008-877c-71c1d0f77b69){target="_blank"}.
+Developed augmented reality applications for AceReal smart glasses using Unity and Vuforia frameworks. Find the official evaluation report in Japanese [here](files/SunCorp_Internship_Evaluation.pdf){target="_blank"}, and an interactive ChatGPT translated version [here](https://chatgpt.com/share/693bd2c2-1524-8008-877c-71c1d0f77b69){target="_blank"}.
 :::
 
 ::: {.education-item}
