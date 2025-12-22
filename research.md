@@ -62,5 +62,5 @@ This phase of my work established a foundation in AI-driven visual understanding
 During my master's studies at [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank" .flj}, Japan (2018), I explored the temporal dynamics of feature representations in Convolutional Neural Networks (CNNs) using Long Short-Term Memory (LSTM) networks. My research focused on understanding how features evolve across layers in CNNs and leveraging LSTMs to model these transitions for improved image classification performance. Read more about it in my [thesis.](https://drive.google.com/file/d/1A7Gm2RS3L8SPyb9G9Ey5O350kh7DYZKk/view?usp=sharing){target="_blank".flj} | <span class="infographic-wrapper"><a href="files/Thesis.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/Thesis.png" class="infographic-pop"></span>
 :::
 <p style="font-size: 0.8em; color: #ff4d4d; text-align: center; margin-top: 3rem; font-style: italic;">
-  (Note that AI Generated infographics are representational. For accurate details, please visit the published documents)
+  (Note that AI Generated infographics are representational only)
 </p>
