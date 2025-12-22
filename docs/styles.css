@@ -123,7 +123,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background: 
+  background:
     radial-gradient(ellipse at top, rgba(192, 192, 192, 0.05) 0%, transparent 50%),
     linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   position: relative;
@@ -137,14 +137,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    repeating-linear-gradient(
-      90deg,
+  background:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 2px,
       rgba(192, 192, 192, 0.03) 2px,
-      rgba(192, 192, 192, 0.03) 4px
-    );
+      rgba(192, 192, 192, 0.03) 4px);
   pointer-events: none;
 }
 
@@ -204,7 +202,7 @@ body {
   background-clip: text;
 }
 
-.profile-info > p {
+.profile-info>p {
   font-size: 1.1rem;
   color: var(--text-secondary);
   line-height: 1.5;
@@ -404,8 +402,8 @@ body {
 }
 
 /* Add vertical spacing between project heading and images inside project-item */
-.project-item > strong + img,
-.project-item h3 + img,
+.project-item>strong+img,
+.project-item h3+img,
 .project-item img {
   margin-top: 0.9rem;
   display: block;
@@ -433,8 +431,8 @@ body {
   border: 3px solid var(--accent-metallic);
   object-fit: scale-down;
   object-position: 60% 10%;
-  transform: scale(0.9); 
-    box-shadow: 
+  transform: scale(0.9);
+  box-shadow:
     0 0 20px var(--glow-color),
     0 0 40px rgba(192, 192, 192, 0.2),
     inset 0 0 60px rgba(0, 0, 0, 0.8),
@@ -448,7 +446,7 @@ body {
 
 .profile-img:hover {
   transform: translateY(-5px);
-  box-shadow: 
+  box-shadow:
     0 0 30px var(--glow-color),
     0 0 60px rgba(192, 192, 192, 0.3),
     inset 0 0 60px rgba(0, 0, 0, 0.8),
@@ -482,7 +480,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-.right-panel h2 + p {
+.right-panel h2+p {
   text-align: justify;
   line-height: 1.7;
   color: var(--text-secondary);
@@ -842,7 +840,7 @@ h3 {
   border-radius: 12px;
   padding: 2rem;
   margin: 1.5rem 0;
-  box-shadow: 
+  box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.3),
     0 0 20px var(--shadow-color);
   transition: all 0.3s ease;
@@ -862,7 +860,7 @@ h3 {
 
 .education-card:hover {
   transform: translateY(-5px);
-  box-shadow: 
+  box-shadow:
     0 8px 12px rgba(0, 0, 0, 0.4),
     0 0 30px var(--glow-color);
   border-color: var(--accent-metallic);
@@ -931,23 +929,23 @@ footer {
     grid-template-columns: 280px 1fr;
     gap: 2rem;
   }
-  
+
   .side-nav {
     grid-column: 1 / -1;
     grid-row: 3;
     position: static;
   }
-  
+
   .side-nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-  
+
   .side-nav li {
     margin: 0;
   }
-  
+
   .side-nav a {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -959,92 +957,92 @@ footer {
     padding: 0.5rem 1rem;
     gap: 0.3rem;
   }
-  
+
   .top-nav-container a {
     font-size: 0.7rem;
     padding: 0.4rem 0.7rem;
     letter-spacing: 0.3px;
   }
-  
+
   .main-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .left-panel,
   .right-panel,
   .side-nav {
     width: 100%;
     position: static !important;
   }
-  
+
   .right-panel {
     min-width: 100%;
     margin-top: 2rem;
   }
-  
+
   .right-side-column {
     position: static !important;
     margin-top: 2rem;
   }
-  
+
   h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 1.8rem;
     margin-top: 1rem;
   }
-  
+
   .profile-img {
     width: 180px !important;
     height: 180px !important;
   }
-  
+
   .tagline {
     font-size: 1.1rem;
   }
-  
+
   .social-links {
     gap: 0.25rem;
     max-width: 220px;
     grid-template-columns: repeat(4, 1fr);
   }
-  
+
   .social-links a {
     font-size: 0.7rem !important;
     padding: 0.4rem 0.4rem !important;
     width: 100%;
   }
-  
+
   .social-icon-img {
     width: 16px !important;
     height: 16px !important;
   }
-  
+
   .contact-links {
     max-width: 100%;
   }
-  
+
   .contact-links a {
     font-size: 0.7rem !important;
     padding: 0.45rem 0.7rem !important;
   }
-  
+
   .booking-link {
     max-width: 100%;
   }
-  
+
   .booking-link a {
     font-size: 0.7rem !important;
     padding: 0.45rem 0.7rem !important;
   }
-  
+
   .container {
     padding: 0 1rem;
   }
-  
+
   .hero-section {
     padding: 1rem;
   }
@@ -1055,14 +1053,14 @@ footer {
     padding: 0.4rem 0.5rem;
     gap: 0.25rem;
   }
-  
+
   .top-nav-container a {
     font-size: 0.65rem;
     padding: 0.35rem 0.5rem;
     letter-spacing: 0.2px;
     border-radius: 4px;
   }
-  
+
   body {
     padding-top: 60px;
   }
@@ -1110,7 +1108,7 @@ a:hover {
 
 /* Footer Section */
 .footer-section {
-  background: 
+  background:
     radial-gradient(ellipse at top, rgba(192, 192, 192, 0.05) 0%, transparent 50%),
     linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   padding: 3rem 2rem;
@@ -1125,14 +1123,12 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    repeating-linear-gradient(
-      90deg,
+  background:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 2px,
       rgba(192, 192, 192, 0.03) 2px,
-      rgba(192, 192, 192, 0.03) 4px
-    );
+      rgba(192, 192, 192, 0.03) 4px);
   pointer-events: none;
 }
 
@@ -1163,6 +1159,7 @@ a:hover {
     display: flex !important;
     flex-direction: column !important;
   }
+
   .left-panel,
   .right-panel,
   .right-side-column {
@@ -1172,11 +1169,13 @@ a:hover {
     padding: 1rem 0.5rem !important;
     box-sizing: border-box;
   }
+
   .side-nav {
     position: static !important;
     width: 100% !important;
     margin-top: 1rem;
   }
+
   .profile-img {
     width: 180px !important;
     height: 180px !important;
@@ -1207,6 +1206,7 @@ a:hover {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1215,4 +1215,45 @@ a:hover {
 
 .content-section {
   width: 100%;
+}
+
+/* Pop-on-Hover Infographic Effect */
+.infographic-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  text-decoration: none;
+}
+
+.infographic-wrapper a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.infographic-wrapper:hover a {
+  color: cyan;
+}
+
+.infographic-pop {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  width: 500px;
+  max-width: none;
+  border-radius: 12px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  background: #1a1a1a;
+  padding: 5px;
+}
+
+.infographic-wrapper:hover .infographic-pop {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+  bottom: 120%;
 }
