@@ -18,7 +18,8 @@ Deep learning extended RESOLFT nanoscopy by restoring low-SNR and sub-sampled ac
 ![](images/resmatching_teaser.png){fig-align="center" width="80%" alt="ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching"}
 
 A guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy, unifying restoration, uncertainty estimation, and posterior sampling within a single generative model.</br>
-[GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://rayanirban.github.io/resmatching/){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RM.png" class="infographic-pop"></span>
+<!-- [GitHub](#){target="_blank" .flj} | -->
+[Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://rayanirban.github.io/resmatching/){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RM.png" class="infographic-pop"></span>
 :::
 
 ::: {.project-item}
@@ -28,7 +29,10 @@ A guided conditional flow-matching framework for noise-resilient computational s
 ![](images/hazematching_teaser.png){fig-align="center" width="80%" alt="HazeMatching: Conditional Flow Matching for microscopy dehazing"}
 
 A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures.</br>
-[GitHub](#){target="_blank" .flj} | [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank" .flj} | [Project Page](#){target="_blank"} | <span class="infographic-wrapper"><a href="files/HM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HM.png" class="infographic-pop"></span>
+<!-- [GitHub](#){target="_blank" .flj} | -->
+[Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank" .flj} | 
+<!-- [Project Page](#){target="_blank"} | -->
+<span class="infographic-wrapper"><a href="files/HM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HM.png" class="infographic-pop"></span>
 :::
 
 ### Past Research (Hitachi Ltd., 2018–2021)
