@@ -17,7 +17,7 @@ Deep learning extended RESOLFT nanoscopy by restoring low-SNR and sub-sampled ac
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Vera Galinova](https://humantechnopole.it/en/people/vera-galinova/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}</br>
 ![](images/resmatching_teaser.png){fig-align="center" width="80%" alt="ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching"}
 
-A guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy, unifying restoration, uncertainty estimation, and posterior sampling within a single generative model.</br>
+A guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy, unifying denoising, super-resolution, uncertainty estimation, and posterior sampling within a single generative model.</br>
 <!-- [GitHub](#){target="_blank" .flj} | -->
 [Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://rayanirban.github.io/resmatching/){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RM.png" class="infographic-pop"></span>
 :::
