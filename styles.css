@@ -924,10 +924,75 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+
+/* iPad and tablet-specific layout (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
   .main-content {
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 220px 1fr 200px;
+    gap: 1.5rem;
+  }
+
+  .left-panel {
+    position: sticky;
+    top: 80px;
+  }
+
+  .right-panel {
+    min-width: unset;
+  }
+
+  .right-side-column {
+    position: sticky;
+    top: 90px;
+    width: 200px;
+  }
+
+  .news-block {
+    max-height: 400px;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-info strong {
+    font-size: 1.6rem;
+  }
+
+  .social-links {
+    max-width: 180px;
+  }
+
+  .social-links a {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.3rem;
+  }
+
+  .social-icon-img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .contact-links {
+    max-width: 180px;
+  }
+
+  .contact-links a {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.5rem;
+  }
+}
+
+/* Medium-large screens (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .main-content {
+    grid-template-columns: 260px 1fr 220px;
     gap: 2rem;
+  }
+
+  .right-side-column {
+    width: 220px;
   }
 
   .side-nav {
@@ -1411,23 +1476,23 @@ a:hover {
 }
 
 /* Full-width showcase layout - hide sidebars when showcase is active */
-.tab-content[data-tab-id="showcase"].active~.right-side-column,
-body:has(.tab-content[data-tab-id="showcase"].active) .left-panel,
-body:has(.tab-content[data-tab-id="showcase"].active) .right-side-column {
+/* Using class-based approach for cross-browser compatibility (including older Safari/iPad) */
+body.showcase-active .left-panel,
+body.showcase-active .right-side-column {
   display: none !important;
 }
 
-body:has(.tab-content[data-tab-id="showcase"].active) .main-content {
+body.showcase-active .main-content {
   grid-template-columns: 1fr !important;
   max-width: 100% !important;
 }
 
-body:has(.tab-content[data-tab-id="showcase"].active) .right-panel {
+body.showcase-active .right-panel {
   min-width: 100% !important;
   max-width: 100% !important;
 }
 
-body:has(.tab-content[data-tab-id="showcase"].active) .showcase-grid {
+body.showcase-active .showcase-grid {
   column-count: 4;
   /* 4 columns when full width */
   max-width: 100%;
@@ -1438,15 +1503,22 @@ body:has(.tab-content[data-tab-id="showcase"].active) .showcase-grid {
 }
 
 @media (max-width: 1400px) {
-  body:has(.tab-content[data-tab-id="showcase"].active) .showcase-grid {
+  body.showcase-active .showcase-grid {
     column-count: 3;
     /* 3 columns on medium screens */
   }
 }
 
 @media (max-width: 1000px) {
-  body:has(.tab-content[data-tab-id="showcase"].active) .showcase-grid {
+  body.showcase-active .showcase-grid {
     column-count: 2;
     /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  body.showcase-active .showcase-grid {
+    column-count: 1;
+    /* 1 column on mobile */
   }
 }

@@ -259,6 +259,14 @@ document.addEventListener('DOMContentLoaded', function() {
       if (contentToShow) {
         contentToShow.classList.add('active');
         
+        // Toggle showcase-active class on body for hiding sidebars
+        // This provides better browser support than CSS :has() selector
+        if (tabId === 'showcase') {
+          document.body.classList.add('showcase-active');
+        } else {
+          document.body.classList.remove('showcase-active');
+        }
+        
         // Scroll to the content on mobile
         setTimeout(() => {
           const rightPanel = document.querySelector('.right-panel');
