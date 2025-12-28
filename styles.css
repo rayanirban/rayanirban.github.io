@@ -1257,3 +1257,196 @@ a:hover {
   opacity: 1;
   bottom: 120%;
 }
+
+/* Showcase Gallery */
+.showcase-grid {
+  column-count: 4;
+  /* 4 columns at 100% size */
+  column-gap: 0.5rem;
+  /* Very tight spacing */
+  margin-top: 1rem;
+}
+
+.showcase-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  display: inline-block;
+  /* Required for column layout */
+  text-decoration: none;
+  width: 100%;
+  /* Fill column width */
+  margin-bottom: 0.5rem;
+  /* Very tight vertical spacing */
+  break-inside: avoid;
+  /* Prevent column breaks inside items */
+}
+
+/* Embed-specific styles */
+.showcase-item.twitter-embed,
+.showcase-item.linkedin-embed {
+  background: transparent;
+  border: none;
+  overflow: visible;
+  border-radius: 0;
+}
+
+.showcase-item.twitter-embed {
+  min-height: 400px;
+  width: 100%;
+  /* Fill the full width of grid cell */
+}
+
+.showcase-item.linkedin-embed {
+  min-height: 400px;
+}
+
+.showcase-item.twitter-embed .twitter-tweet {
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Ensure Twitter embeds fit within grid and stretch */
+.showcase-item.twitter-embed iframe.twitter-tweet-rendered {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.showcase-item.linkedin-embed iframe {
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.showcase-item.linkedin-embed:hover iframe {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.5);
+}
+
+/* Static image showcase items */
+.showcase-item.portrait {
+  aspect-ratio: 9/16;
+}
+
+.showcase-item.landscape {
+  aspect-ratio: 16/9;
+}
+
+.showcase-item.square {
+  aspect-ratio: 1/1;
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.showcase-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.5);
+}
+
+.showcase-item:hover img {
+  transform: scale(1.05);
+}
+
+.showcase-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.showcase-item:hover .showcase-overlay {
+  opacity: 1;
+}
+
+.showcase-platform {
+  color: cyan;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments for showcase */
+@media (max-width: 1200px) {
+  .showcase-grid {
+    column-count: 3;
+    /* 3 columns on medium-large screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .showcase-grid {
+    column-count: 2;
+    /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase-grid {
+    column-count: 1 !important;
+    /* Single column on mobile */
+    column-gap: 0;
+  }
+
+  .showcase-overlay {
+    padding: 0.5rem;
+  }
+
+  .showcase-platform {
+    font-size: 0.75rem;
+  }
+}
+
+/* Full-width showcase layout - hide sidebars when showcase is active */
+.tab-content[data-tab-id="showcase"].active~.right-side-column,
+body:has(.tab-content[data-tab-id="showcase"].active) .left-panel,
+body:has(.tab-content[data-tab-id="showcase"].active) .right-side-column {
+  display: none !important;
+}
+
+body:has(.tab-content[data-tab-id="showcase"].active) .main-content {
+  grid-template-columns: 1fr !important;
+  max-width: 100% !important;
+}
+
+body:has(.tab-content[data-tab-id="showcase"].active) .right-panel {
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+body:has(.tab-content[data-tab-id="showcase"].active) .showcase-grid {
+  column-count: 4;
+  /* 4 columns when full width */
+  max-width: 100%;
+  /* Use full available width */
+  margin: 0 auto;
+  padding: 0 2rem;
+  /* Add some padding from edges */
+}
+
+@media (max-width: 1400px) {
+  body:has(.tab-content[data-tab-id="showcase"].active) .showcase-grid {
+    column-count: 3;
+    /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 1000px) {
+  body:has(.tab-content[data-tab-id="showcase"].active) .showcase-grid {
+    column-count: 2;
+    /* 2 columns on smaller screens */
+  }
+}
