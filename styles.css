@@ -1522,3 +1522,49 @@ body.showcase-active .showcase-grid {
     /* 1 column on mobile */
   }
 }
+
+/* Tooltip for footnote-like hover text */
+.tooltip-trigger {
+  cursor: help;
+  color: var(--text-secondary);
+  font-size: 0.8em;
+  vertical-align: super;
+  position: relative;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.tooltip-trigger:hover {
+  color: cyan;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.tooltip-trigger::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  top: 150%;
+  transform: translateX(-50%);
+  background: rgba(20, 20, 20, 0.98);
+  color: var(--text-primary);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  width: 400px;
+  max-width: 90vw;
+  text-align: left;
+  border: 1px solid var(--accent-metallic);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 255, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1000;
+  pointer-events: none;
+  white-space: normal;
+}
+
+.tooltip-trigger:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
