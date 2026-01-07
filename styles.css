@@ -1528,10 +1528,12 @@ body.showcase-active .showcase-grid {
   cursor: help;
   color: var(--text-secondary);
   font-size: 0.8em;
-  vertical-align: super;
+  vertical-align: baseline;
   position: relative;
-  display: inline-block;
+  display: inline;
   margin-left: 2px;
+  top: -0.4em;
+  line-height: 0;
 }
 
 .tooltip-trigger:hover {
