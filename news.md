@@ -1,5 +1,5 @@
 ::: {.news-item}
-<span class="news-date">Jan 2026/span>
+<span class="news-date">Jan 2026</span>
 <div class="news-content">[ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} has been accepted to [IEEE ISBI 2026](https://biomedicalimaging.org/2026/){target="_blank" .flj} 🎉🎉</div>
 :::
 
