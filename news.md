@@ -1,4 +1,9 @@
 ::: {.news-item}
+<span class="news-date">Jan 2026/span>
+<div class="news-content">[ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} has been accepted to [IEEE ISBI 2026](https://biomedicalimaging.org/2026/){target="_blank" .flj} 🎉🎉</div>
+:::
+
+::: {.news-item}
 <span class="news-date">Dec 2025</span>
 <div class="news-content">Preprint of [RESOLFT with Deep Learning](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} is now available 🎉</div>
 :::
