@@ -2,6 +2,10 @@
 
 <div class="showcase-grid">
 
+<div class="showcase-item linkedin-embed">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7417062191268462592" height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+</div>
+
 <!-- Twitter/X Embeds - First 8 (2 rows) load immediately -->
 <div class="showcase-item twitter-embed" data-priority="immediate">
   <blockquote class="twitter-tweet" data-theme="dark">

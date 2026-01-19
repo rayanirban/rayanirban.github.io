@@ -5,3 +5,5 @@
 .RData
 .Ruserdata
 *.qmd.html
+
+**/*.quarto_ipynb

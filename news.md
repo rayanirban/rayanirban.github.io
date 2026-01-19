@@ -1,6 +1,11 @@
 ::: {.news-item}
 <span class="news-date">Jan 2026</span>
-<div class="news-content">[ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} has been accepted to [IEEE ISBI 2026](https://biomedicalimaging.org/2026/){target="_blank" .flj} 🎉🎉</div>
+<div class="news-content">Wrote a short [thread](https://x.com/anirbanray_/status/2012732617569800368){target="_blank" .flj} on why I believe [Rectified Flow](https://arxiv.org/abs/2209.03003){target="_blank" .flj} is not the best choice for scientific imaging inverse problems.</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Jan 2026</span>
+<div class="news-content">[ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} has been accepted to [IEEE ISBI 2026](https://biomedicalimaging.org/2026/){target="_blank" .flj} 🎉🎉. Read the story [here.](https://www.linkedin.com/posts/anirban-ray_isbi2026-generativeai-flowmatching-activity-7417062191268462592-mC8_?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABqfVj4BuGmZW_XROl13l-KT-LedbrI2tzQ){target="_blank" .flj}</div>
 :::
 
 ::: {.news-item}
