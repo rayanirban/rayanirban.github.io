@@ -1,4 +1,4 @@
-<p class="subtitle" style="margin-bottom: 2rem; color: #a1a0a0ff; font-size: 1.0rem;">Some highlights of my journey (posts take a while to load sometimes 😉)</p>
+<p class="subtitle" style="margin-bottom: 2rem; color: #a1a0a0ff; font-size: 1.0rem;">Some highlights of my journey 😇</p>
 
 <div class="showcase-grid">
 
