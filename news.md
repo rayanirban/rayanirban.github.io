@@ -9,6 +9,11 @@
 :::
 
 ::: {.news-item}
+<span class="news-date">Jan 2026</span>
+<div class="news-content">Selected for poster presentation on [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} and [ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} at the [AI and Biology Symposium 2026](https://www.embl.org/about/info/course-and-conference-office/events/ees26-02/){target="_blank" .flj} to be held at [EMBL](https://www.embl.org/sites/heidelberg/){target="_blank" .flj} in Heidelberg, Germany 🎉.</div>
+:::
+
+::: {.news-item}
 <span class="news-date">Dec 2025</span>
 <div class="news-content">Preprint of [RESOLFT with Deep Learning](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} is now available 🎉</div>
 :::
