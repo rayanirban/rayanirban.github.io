@@ -9,6 +9,7 @@ website:
   title: "Anirban Ray"
   site-url: https://rayanirban.github.io
   repo-url: https://github.com/rayanirban/rayanirban.github.io
+  favicon: profile.jpg
   page-footer:
     center: "© 2025 Your Name. All rights reserved."
   navbar:
