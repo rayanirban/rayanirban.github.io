@@ -24,6 +24,12 @@
 :::
 
 ::: {.news-item}
+<span class="news-date">Sep 2025</span>
+<div class="news-content">This [AI4Life project](https://github.com/ai4life-opencalls/oc2_project_23?tab=readme-ov-file#213-hazematching){target="_blank" .flj} demonstarted that [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} also seem to work well for image super-resolution tasks on Expansion Microscopy Data 😱</div>
+:::
+
+
+::: {.news-item}
 <span class="news-date">Jul 2025</span>
 <div class="news-content">Presented [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} at the Human Technopole institute Introduction to ML course</div>
 :::
