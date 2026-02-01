@@ -10,6 +10,13 @@ website:
   site-url: https://rayanirban.github.io
   repo-url: https://github.com/rayanirban/rayanirban.github.io
   favicon: profile.jpg
+  open-graph:
+    site-name: "Anirban Ray"
+    title: "Anirban Ray"
+    description: "PhD Student in Computer Science at Technische Universität Dresden & Human Technopole, Italy. Research focuses on flow-matching models for biological image restoration."
+  twitter-card:
+    site: "@anirbanray_"
+    creator: "@anirbanray_"
   page-footer:
     center: "© 2025 Your Name. All rights reserved."
   navbar:
