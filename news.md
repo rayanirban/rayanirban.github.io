@@ -126,7 +126,7 @@
 
 ::: {.news-item}
 <span class="news-date">Feb 2022</span>
-<div class="news-content">Started my PhD with [Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj} at [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj}</div>
+<div class="news-content">[Started my PhD](https://youtu.be/5skjz4Fe044?t=15){target="_blank" .flj} with [Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj} at [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj}</div>
 :::
 
 ::: {.news-item}
