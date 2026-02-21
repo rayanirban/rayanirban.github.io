@@ -1,7 +1,12 @@
 ::: {.news-item}
 <span class="news-date">Feb 2026</span>
-<div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} has been accepted to CVPR 2026 (Findings) 🎉🎉. Read the story [here.](){target="_blank" .flj}</div>
+<div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} has been accepted to [CVPR 2026 (Findings)](https://cvpr.thecvf.com/){target="_blank" .flj} 🎉🎉. More details soon!</div>
 :::
+
+<!-- ::: {.news-item}
+<span class="news-date">Feb 2026</span>
+<div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} has been accepted to [CVPR 2026 (Findings)](https://cvpr.thecvf.com/){target="_blank" .flj} 🎉🎉. Read the story [here.](){target="_blank" .flj}</div>
+::: -->
 
 ::: {.news-item}
 <span class="news-date">Jan 2026</span>
