@@ -1,4 +1,9 @@
 ::: {.news-item}
+<span class="news-date">Feb 2026</span>
+<div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} has been accepted to CVPR 2026 (Findings) 🎉🎉. Read the story [here.](){target="_blank" .flj}</div>
+:::
+
+::: {.news-item}
 <span class="news-date">Jan 2026</span>
 <div class="news-content">Wrote a short [thread](https://x.com/anirbanray_/status/2012732617569800368){target="_blank" .flj} on why I believe [Rectified Flow](https://arxiv.org/abs/2209.03003){target="_blank" .flj} is not the best choice for scientific imaging inverse problems.</div>
 :::
