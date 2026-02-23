@@ -1,3 +1,8 @@
+<!-- ::: {.news-item}
+<span class="news-date">Mar 2026</span>
+<div class="news-content">Presenting our [poster](files/EMBL_poster.pdf){target="_blank" .flj} on [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} and [ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} at the [AI and Biology Symposium 2026](https://www.embl.org/about/info/course-and-conference-office/events/ees26-02/){target="_blank" .flj} at [EMBL](https://www.embl.org/sites/heidelberg/){target="_blank" .flj} in Heidelberg, Germany. If you're around please drop by!</div>
+::: -->
+
 ::: {.news-item}
 <span class="news-date">Feb 2026</span>
 <div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} has been accepted to [CVPR 2026 (Findings)](https://cvpr.thecvf.com/){target="_blank" .flj} 🎉🎉. More details soon!</div>
