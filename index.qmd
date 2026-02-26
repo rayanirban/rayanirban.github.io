@@ -92,12 +92,12 @@ Advisor: [Prof. Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){targe
 :::
 
 ::: {.education-item}
-**Research Student | *Oct, 2015 – Mar, 2016*** [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank" .flj}  
+**Research Student | *Oct, 2015 – Mar, 2016*** [Nagoya Institute of Technology, Nagoya, Japan](https://www.nitech.ac.jp/eng/){target="_blank" .flj}  
 Advisor: [Prof. Jun Sato](https://researcher.nitech.ac.jp/html/56_en.html){target="_blank" .flj} and [Prof. Fumihiko Sakaue](https://researcher.nitech.ac.jp/html/257_en.html){target="_blank" .flj} | Preparatory phase for Master's thesis on Computer Vision and Deep Learning.
 :::
 
 ::: {.education-item}
-**Bachelor of Tech. in Computer Science and Engineering | *2011 – 2015*** [Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology](https://www.veltech.edu.in/){target="_blank"}
+**Bachelor of Tech. in Computer Science and Engineering | *2011 – 2015*** [Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology, Chennai, India](https://www.veltech.edu.in/){target="_blank"}
 :::
 
 </div>
