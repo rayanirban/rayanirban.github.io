@@ -1,4 +1,4 @@
-<p class="subtitle" style="margin-bottom: 2rem; color: #a1a0a0ff; font-size: 1.0rem;">List of my selected talks</p>
+<p class="subtitle" style="margin-bottom: 2rem; color: #a1a0a0ff; font-size: 1.0rem;">List of my selected talks and posters presentations</p>
 
 <div style="font-size: 0.95rem;">
 
@@ -9,6 +9,11 @@
 
 - **[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} at the institute seminar series** • *Apr 2025*  
   Human Technopole | 📍 Milan, Italy
+  
+  <br>
+
+- **Diffusion Models in Microscopy: Bleedthrough Removal, Image Splitting, and Dehazing** • *Oct 2024*  
+  I2K 2024 | 📍 Milan, Italy
   
   <br>
 
