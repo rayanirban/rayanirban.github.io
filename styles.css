@@ -25,7 +25,7 @@
 
 /* Global link color — slightly cyan */
 a {
-  color: #00ffff !important;
+  color: rgb(41, 169, 162) !important;
   transition: color 0.3s ease;
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 .top-nav-container a {
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 500;
