@@ -203,7 +203,7 @@ Python, PyTorch, OpenCV, NumPy, LaTeX, Git, SLURM, Bash, Linux
 ::: {.education-item}
 **Spoken Languages**
 
-Bengali (Native), Hindi (Fluent), English (Fluent), Japanese (Conversational), Italian (Elementary)
+Bengali (Native), Hindi (Fluent), English (Fluent), Japanese (Conversational), Tamil (Elementary), Italian (Elementary)
 :::
 
 </div>
