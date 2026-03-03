@@ -23,6 +23,16 @@
   box-sizing: border-box;
 }
 
+/* Global link color — slightly cyan */
+a {
+  color: #00ffff !important;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: cyan !important;
+}
+
 html {
   font-size: 95%;
   scroll-padding-top: 90px;
