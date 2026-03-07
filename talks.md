@@ -12,7 +12,7 @@
   
   <br>
 
-- <span class="tag-poster">Poster</span> **Diffusion Models in Microscopy: Bleedthrough Removal, Image Splitting, and Dehazing** • *Oct 2024*  
+- <span class="tag-poster">Poster</span> **Diffusion Models in Microscopy: Bleedthrough Removal, Image Splitting, and Dehazing | [Poster](files/I2K.pdf){target="_blank" .flj}** • *Oct 2024*  
   I2K 2024 | 📍 Milan, Italy
   
   <br>

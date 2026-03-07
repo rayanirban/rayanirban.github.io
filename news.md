@@ -66,7 +66,7 @@
 
 ::: {.news-item}
 <span class="news-date">Oct 2024</span>
-<div class="news-content">Presented my Poster at [I2K 2024](https://events.humantechnopole.it/event/1/contributions/81/){target="_blank" .flj}</div>
+<div class="news-content">Presented my [poster](files/I2K.pdf){target="_blank" .flj} at [I2K 2024](https://events.humantechnopole.it/event/1/contributions/81/){target="_blank" .flj}</div>
 :::
 
 ::: {.news-item}
