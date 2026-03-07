@@ -587,6 +587,27 @@ h3 {
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
+/* Talk / Poster Tags */
+.tag-talk,
+.tag-poster {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.tag-talk {
+  background-color: #4CAF50;
+}
+
+.tag-poster {
+  background-color: #2196F3;
+}
+
 /* Left Panel Divider */
 .left-divider {
   width: 100%;
