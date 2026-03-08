@@ -17,22 +17,22 @@
   
   <br>
 
-- <span class="tag-poster">Poster</span> **Diffusion Models in Microscopy: Bleedthrough Removal, Image Splitting, and Dehazing | [Poster](files/I2K.pdf){target="_blank" .flj}** • *Oct 2024*  
+- <span class="tag-poster">Poster</span> **Diffusion Models in Microscopy: Bleedthrough Removal, Image Splitting, and Dehazing [Link](https://events.humantechnopole.it/event/1/contributions/81/){target="_blank" .flj} | [Poster](files/I2K.pdf){target="_blank" .flj}** • *Oct 2024*  
   I2K 2024 | 📍 Milan, Italy
   
   <br>
 
-- <span class="tag-talk">Talk</span> **Introduction to Diffusion Model for Microscopy** • *May 2024*  
+- <span class="tag-talk">Talk</span> **Invited [talk](https://x.com/anirbanray_/status/1789421846225404105){target="_blank" .flj} on Introduction to Diffusion Model for Microscopy** • *May 2024*  
   EMBO-DL4MIA | 📍 Milan, Italy
   
   <br>
 
-- <span class="tag-talk">Talk</span> **Talk on OpenAI’s Sora** • *Feb 2024*  
+- <span class="tag-talk">Talk</span> **[Talk](https://x.com/anirbanray_/status/1761034462781960351){target="_blank" .flj} on OpenAI’s Sora** • *Feb 2024*  
   Human Technopole Research Seminar  | 📍 Milan, Italy
   
   <br>
 
-- <span class="tag-talk">Talk</span> **A talk introducing deep learning and computer vision** • *Aug 2022*  
+- <span class="tag-talk">Talk</span> **A [talk](https://x.com/anirbanray_/status/1563499736191352835){target="_blank" .flj} introducing deep learning and computer vision** • *Aug 2022*  
   Vel Tech University | 📍 Chennai, India
 
 </div>
