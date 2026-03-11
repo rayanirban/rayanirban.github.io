@@ -2,10 +2,10 @@
 
 <div style="font-size: 0.95rem;">
 
-<!-- - <span class="tag-poster">Poster</span> **Computational Dehazing and Super-resolution in Fluorescence Microscopy via Guided Conditional Flow Matching | [Poster](files/EMBL_poster.pdf){target="_blank" .flj}** • *Mar 2026*  
-  EMBO|EMBL AI and Biology Symposium 2026 | 📍 Heidelberg, Germany
+- <span class="tag-poster">Poster</span> **Computational Dehazing and Super-resolution in Fluorescence Microscopy via Guided Conditional Flow Matching | [Poster](files/EMBL_poster.pdf){target="_blank" .flj}** • *Mar 2026*  
+  EMBO | EMBL AI and Biology Symposium 2026 | 📍 Heidelberg, Germany
   
-  <br> -->
+  <br>
 
 - <span class="tag-talk">Talk</span> **[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} at the introduction to ML course** • *Jul 2025*  
   Human Technopole | 📍 Milan, Italy
