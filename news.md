@@ -1,3 +1,8 @@
+<!-- ::: {.news-item}
+<span class="news-date">Mar 2026</span>
+<div class="news-content">Giving a [talk](files/EMBL_poster.pdf){target="_blank" .flj} and presenting our [poster](files/EMBL_poster.pdf){target="_blank" .flj} on [ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} at [IEEE ISBI 2026](https://biomedicalimaging.org/2026/){target="_blank" .flj} in London, UK. If you're around please drop by!</div>
+::: -->
+
 ::: {.news-item}
 <span class="news-date">Mar 2026</span>
 <div class="news-content">Presenting our [poster](files/EMBL_poster.pdf){target="_blank" .flj} on [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} and [ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} at the [AI and Biology Symposium 2026](https://www.embl.org/about/info/course-and-conference-office/events/ees26-02/){target="_blank" .flj} at [EMBL](https://www.embl.org/sites/heidelberg/){target="_blank" .flj} in Heidelberg, Germany. If you're around please drop by!</div>
@@ -5,7 +10,7 @@
 
 ::: {.news-item}
 <span class="news-date">Mar 2026</span>
-<div class="news-content">[ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} has been selected for an oral presentation at [IEEE ISBI 2026](https://biomedicalimaging.org/2026/){target="_blank" .flj} 😱🎉🎉.</div>
+<div class="news-content">[ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} has been selected for an oral presentation at [IEEE ISBI 2026](https://biomedicalimaging.org/2026/){target="_blank" .flj} [top 24.3% of all the submissions] 😱🎉🎉.</div>
 :::
 
 ::: {.news-item}

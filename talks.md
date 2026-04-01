@@ -2,6 +2,12 @@
 
 <div style="font-size: 0.95rem;">
 
+<!-- - <span class="tag-talk">Talk</span> <span class="tag-poster">Poster</span> **ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching [Talk](files/EMBL_poster.pdf){target="_blank" .flj} | [Poster](files/EMBL_poster.pdf){target="_blank" .flj}** • *Apr 2026*  
+  IEEE ISBI 2026 | 📍 London, UK
+  
+  <br> -->
+
+
 - <span class="tag-poster">Poster</span> **Computational Dehazing and Super-resolution in Fluorescence Microscopy via Guided Conditional Flow Matching | [Poster](files/EMBL_poster.pdf){target="_blank" .flj}** • *Mar 2026*  
   EMBO | EMBL AI and Biology Symposium 2026 | 📍 Heidelberg, Germany
   
