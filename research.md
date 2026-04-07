@@ -21,7 +21,7 @@ Deep learning extended RESOLFT nanoscopy by restoring low-SNR and sub-sampled ac
 <td style="border:none; text-align:center; padding:0.5rem;"><img src="images/ER_Test_Cell_028_concatenated.gif" alt="HazeMatching" style="width:100%;"></td>
 </tr></table>
 A guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy, unifying denoising, super-resolution, uncertainty estimation, and posterior sampling within a single generative model.</br>
-<!-- [GitHub](#){target="_blank" .flj} | -->
+[GitHub](https://github.com/juglab/resmatching){target="_blank" .flj} |
 [Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://rayanirban.github.io/resmatching/){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RM.png" class="infographic-pop"></span>
 :::
 
@@ -35,7 +35,7 @@ A guided conditional flow-matching framework for noise-resilient computational s
 </tr></table>
 
 A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures.</br>
-<!-- [GitHub](#){target="_blank" .flj} | -->
+[GitHub](https://github.com/juglab/HazeMatching){target="_blank" .flj} |
 [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank" .flj} | 
 <!-- [Project Page](#){target="_blank"} | -->
 <span class="infographic-wrapper"><a href="files/HM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HM.png" class="infographic-pop"></span>
