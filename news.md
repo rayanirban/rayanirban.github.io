@@ -1,5 +1,10 @@
 ::: {.news-item}
 <span class="news-date">Apr 2026</span>
+<div class="news-content">Code, data and models for [ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} are now [available](https://github.com/juglab/resmatching){target="_blank" .flj} 🎉. There is also a quickstart [jupyter notebook](https://github.com/juglab/resmatching/blob/main/notebooks/resmatching_walkthrough.ipynb){target="_blank" .flj}. Please give it a try!😇</div>
+:::
+
+::: {.news-item}
+<span class="news-date">Apr 2026</span>
 <div class="news-content">Giving a [talk](files/ISBI_Presentation.pdf){target="_blank" .flj} and trying to sneak in our [poster](files/ISBI_Poster.pdf){target="_blank" .flj} on [ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} at [IEEE ISBI 2026](https://biomedicalimaging.org/2026/){target="_blank" .flj} in London, UK. If you're around please drop by!</div>
 :::
 
