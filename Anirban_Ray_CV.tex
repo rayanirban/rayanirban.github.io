@@ -1,0 +1,236 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+
+\definecolor{linkblue}{HTML}{0B5CAD}
+\definecolor{sectiongray}{HTML}{333333}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=linkblue
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=2pt, parsep=0pt}
+\setlist[enumerate]{leftmargin=*, topsep=2pt, itemsep=3pt, parsep=0pt}
+\titleformat{\section}{\large\bfseries\color{sectiongray}}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\pagestyle{plain}
+
+\newcommand{\entry}[4]{%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X r@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4}
+  \end{tabularx}\vspace{-2pt}
+}
+
+\newcommand{\paper}[4]{%
+  \item \textbf{#1}. #2. \textit{#3}. #4
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Anirban Ray}}\\
+  Final-year PhD Student in Computer Science \textbar{} Computational Image Restoration \textbar{} Generative AI for Microscopy\\
+  Milan, Italy\\[2pt]
+  \href{mailto:anirban.ray@fht.org}{anirban.ray@fht.org}
+  \textbar{} \href{https://rayanirban.github.io/}{rayanirban.github.io}
+  \textbar{} \href{https://github.com/rayanirban}{GitHub: rayanirban}
+  \textbar{} \href{https://www.linkedin.com/in/anirban-ray/}{LinkedIn}
+  \textbar{} \href{https://scholar.google.de/citations?user=t-f_mwsAAAAJ}{Google Scholar}
+  \textbar{} \href{https://orcid.org/0000-0002-7285-6727}{ORCID: 0000-0002-7285-6727}\\
+  \href{https://humantechnopole.it/en/people/anirban-ray/}{Human Technopole profile}
+  \textbar{} \href{https://x.com/anirbanray_}{X: @anirbanray\_}
+  \textbar{} \href{https://bsky.app/profile/anirbanray.bsky.social}{Bluesky}
+  \textbar{} \href{https://instagram.com/anirbanray_}{Instagram}\\
+  Last updated: April 2026
+\end{center}
+
+\section*{Profile}
+Final-year PhD student in Computer Science at Technische Universit\"at Dresden and Human Technopole, Italy, advised by Dr. Florian Jug. My research develops flow-matching and other deep learning methods for inverse problems in biological microscopy, with an emphasis on computational image restoration, dehazing, super-resolution, denoising, uncertainty estimation, and posterior sampling. I am broadly interested in AI4Science and in how science philanthropy can accelerate discovery and innovation.
+
+Previously, I completed a Master of Engineering in Computer Science at Nagoya Institute of Technology, Japan, specializing in computer vision and deep learning, and worked as an Associate AI researcher at Hitachi Research in Tokyo on deep learning for visual understanding and bioimage analysis.
+
+\section*{Education}
+\entry{PhD in Computer Science}{2022--2026 (expected)}{Technische Universit\"at Dresden \& Human Technopole}{Dresden, Germany / Milan, Italy}
+\begin{itemize}
+  \item Advisor: Dr. Florian Jug.
+  \item Thesis Advisory Committee: Prof. Dr. Ivo F. Sbalzarini and Dr. Virginie Uhlmann.
+  \item Thesis: \textit{Generative AI for Microscopy Restoration using Flow-Matching}.
+  \item Started doctoral research with Florian Jug at Human Technopole in February 2022; officially enrolled as a PhD candidate at Technische Universit\"at Dresden in October 2022.
+  \item Selected through the IMPRS-CellDevoSys PhD Program at the Max Planck Institute of Molecular Cell Biology and Genetics to work with Dr. Jug; after the advisor's move to Human Technopole, the doctoral affiliation remained with Technische Universit\"at Dresden while the research base moved to Milan.
+\end{itemize}
+
+\entry{Master of Engineering in Computer Science}{2016--2018}{Nagoya Institute of Technology}{Nagoya, Japan}
+\begin{itemize}
+  \item Research area: computer vision and deep learning.
+  \item Advisors: Prof. Jun Sato and Prof. Fumihiko Sakaue.
+  \item Thesis: \href{https://drive.google.com/file/d/1A7Gm2RS3L8SPyb9G9Ey5O350kh7DYZKk/view}{\textit{Modeling the Feature Evolution in CNNs using LSTM}}.
+\end{itemize}
+
+\entry{Research Student}{Oct. 2015--Mar. 2016}{Nagoya Institute of Technology}{Nagoya, Japan}
+\begin{itemize}
+  \item Preparatory research phase for the master's thesis on computer vision and deep learning.
+  \item Advisors: Prof. Jun Sato and Prof. Fumihiko Sakaue.
+\end{itemize}
+
+\entry{Bachelor of Technology in Computer Science and Engineering}{2011--2015}{Vel Tech Rangarajan Dr. Sagunthala R\&D Institute of Science and Technology}{Chennai, India}
+
+\section*{Research Experience}
+\entry{RESOLFT time-lapse imaging empowered by deep learning}{2024--Present}{Human Technopole; collaboration with the Testa Lab}{Milan, Italy}
+\begin{itemize}
+  \item Collaborators/authors: Guillaume Minet, Anirban Ray, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa.
+  \item Developed and applied deep learning restoration to low-SNR and sub-sampled RESOLFT nanoscopy acquisitions.
+  \item Enabled $5\times$ longer imaging with $10\times$ lower light dose per frame, or a $4\times$ increase in imaging speed for faster live-cell imaging while preserving approximately 60 nm resolution.
+  \item Reduced photobleaching and accelerated volumetric recording, making previously inaccessible sub-organelle dynamics in living cells easier to observe.
+  \item Output: \href{https://www.researchsquare.com/article/rs-8059028/v1}{Research Square preprint, under review} (preprint available since December 2025).
+\end{itemize}
+
+\entry{ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching}{2024--2025}{Human Technopole}{Milan, Italy}
+\begin{itemize}
+  \item Authors: Anirban Ray, Vera Galinova, and Florian Jug.
+  \item Developed a guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy.
+  \item Unified denoising, super-resolution, uncertainty estimation, and posterior sampling within a single generative model.
+  \item Accepted to IEEE ISBI 2026 and selected for oral presentation; noted in the profile as top 24.3\% of submissions.
+  \item Code, data, models, project page, and a quickstart Jupyter notebook were made available in April 2026.
+  \item Links: \href{https://github.com/juglab/resmatching}{GitHub}, \href{https://arxiv.org/abs/2510.26601}{arXiv}, \href{https://rayanirban.github.io/resmatching/}{project page}.
+\end{itemize}
+
+\entry{HazeMatching: Conditional Flow Matching for Microscopy Dehazing}{2023--2024}{Human Technopole}{Milan, Italy}
+\begin{itemize}
+  \item Authors: Anirban Ray, Ashesh, and Florian Jug.
+  \item Created a generative framework to restore optical microscopy images degraded by scattering and haze using Conditional Flow Matching.
+  \item Modeled mappings between widefield and confocal modalities to enable clearer visualization of biological structures.
+  \item Accepted to CVPR 2026 (Findings); arXiv preprint available since June 2025.
+  \item An AI4Life Open Call project later demonstrated that HazeMatching also works well for image super-resolution tasks on Expansion Microscopy data.
+  \item Links: \href{https://github.com/juglab/HazeMatching}{GitHub}, \href{https://arxiv.org/abs/2506.22397}{arXiv}.
+\end{itemize}
+
+\entry{Deep Learning for Microscopy Image Analysis}{2018--2021}{Hitachi Ltd., Center for Technology Innovation}{Tokyo, Japan}
+\begin{itemize}
+  \item Developed deep learning systems for high-precision image understanding in biomedical microscopy.
+  \item Worked on combining computer vision and AI-driven automation for identifying, segmenting, classifying, counting, and quantifying objects of interest in complex visual data.
+  \item Built neural approaches for bacterial cell analysis in scanning electron microscopy (SEM) images, including segmentation/counting and classification from membrane and internal features.
+  \item This work contributed to peer-reviewed CISS publications and patent filings/grants in AI-based image processing.
+\end{itemize}
+
+\entry{Modeling the Feature Evolution in CNNs using LSTM}{2016--2018}{Nagoya Institute of Technology}{Nagoya, Japan}
+\begin{itemize}
+  \item Studied temporal dynamics of feature representations in convolutional neural networks.
+  \item Used Long Short-Term Memory networks to model how features evolve across CNN layers and to improve image classification performance.
+\end{itemize}
+
+\section*{Professional Experience}
+\entry{Associate Researcher}{Apr. 2018--Jan. 2022}{Hitachi Ltd., R\&D Group, Center for Technology Innovation}{Tokyo, Japan}
+\begin{itemize}
+  \item Applied deep learning and computer vision to image analysis problems in industrial R\&D and biomedical microscopy.
+  \item Bridged industrial automation and quantitative biological imaging through AI-based visual understanding systems.
+\end{itemize}
+
+\entry{Engineering Intern, AR Applications}{Sept. 2016}{Sun Corporation}{Konan, Japan}
+\begin{itemize}
+  \item Developed augmented reality applications for AceReal smart glasses using Unity and Vuforia.
+  \item Received an official internship evaluation report in Japanese.
+\end{itemize}
+
+\entry{Engineering Intern, Cloud Services}{Aug. 2014--Jan. 2015}{Machine Pulse (Mahindra Teqo)}{Mumbai, India}
+\begin{itemize}
+  \item Analyzed large-scale database migration strategies for renewable energy and logistics cloud systems.
+\end{itemize}
+
+\section*{Publications and Preprints}
+\begin{enumerate}[label={[\arabic*]}]
+  \paper{\textbf{Anirban Ray}, Vera Galinova, and Florian Jug}{\href{https://arxiv.org/abs/2510.26601}{ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching}}{IEEE ISBI 2026}{Accepted; selected for oral presentation; top 24.3\% of submissions.}
+  \paper{\textbf{Anirban Ray}, Ashesh, and Florian Jug}{\href{https://arxiv.org/abs/2506.22397}{HazeMatching: Conditional Flow Matching for Microscopy Dehazing}}{CVPR 2026 (Findings)}{Accepted; arXiv preprint.}
+  \paper{Guillaume Minet, \textbf{Anirban Ray}, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa}{\href{https://www.researchsquare.com/article/rs-8059028/v1}{RESOLFT time lapse imaging empowered by deep learning}}{Research Square preprint}{Under review; preprint available since December 2025.}
+  \paper{Yasuki Kakishita, \textbf{Anirban Ray}, Hideharu Hattori, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult}{\href{https://ieeexplore.ieee.org/abstract/document/9400322}{Quantitative Analysis System for Bacterial Cells in SEM Image using Deep Learning}}{CISS 2021}{pp. 1--6. Introduced a neural architecture for accurate segmentation and counting of bacterial cells from SEM data.}
+  \paper{Yasuki Kakishita, Hideharu Hattori, \textbf{Anirban Ray}, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult}{\href{https://ieeexplore.ieee.org/abstract/document/9751170}{Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features}}{CISS 2022}{pp. 13--18. Improved bacterial classification by jointly modeling morphological and internal structural cues.}
+\end{enumerate}
+
+\section*{Patents}
+\begin{itemize}
+  \item \href{https://patents.google.com/patent/US12327363B2}{US Patent 12327363B2}: \textit{Apparatus, method and system for generating models for identifying objects of interest from images}. Inventors: Anirban Ray, Hideharu Hattori, and Yasuki Kakishita. Assignee: Hitachi High-Tech Corporation. Filed Feb. 2, 2021; granted Jun. 10, 2025.
+  \item \href{https://patents.google.com/patent/US12211213B2}{US Patent 12211213B2}: \textit{Image processing method, image processing apparatus, and image processing system}. Inventors: Anirban Ray, Hideharu Hattori, Yasuki Kakishita, and Taku Sakazume. Assignee: Hitachi High-Tech Corporation. Filed Feb. 6, 2020; granted Jan. 28, 2025.
+  \item \href{https://patents.google.com/patent/EP3961562A1}{EP Patent 3961562A1}: \textit{Image processing method, image processing device, and image processing system}. Inventors: Anirban Ray, Hideharu Hattori, Yasuki Kakishita, and Taku Sakazume. Assignee: Hitachi High-Tech Corporation. Published Mar. 2, 2022; granted as EP3961562B1 on Dec. 20, 2023.
+\end{itemize}
+
+\section*{Presentations and Posters}
+\begin{itemize}
+  \item \textbf{Talk and poster}: \href{https://rayanirban.github.io/resmatching/}{ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching}. IEEE ISBI 2026, London, UK, Apr. 2026.
+  \item \textbf{Poster}: Computational Dehazing and Super-resolution in Fluorescence Microscopy via Guided Conditional Flow Matching. EMBO / EMBL AI and Biology Symposium 2026, Heidelberg, Germany, Mar. 2026.
+  \item \textbf{Talk}: \href{https://arxiv.org/abs/2506.22397}{HazeMatching} at the introduction to ML course. Human Technopole, Milan, Italy, Jul. 2025.
+  \item \textbf{Talk}: \href{https://arxiv.org/abs/2506.22397}{HazeMatching} at the institute seminar series. Human Technopole, Milan, Italy, Apr. 2025.
+  \item \textbf{Poster}: \href{https://events.humantechnopole.it/event/1/contributions/81/}{Diffusion Models in Microscopy: Bleedthrough Removal, Image Splitting, and Dehazing}. I2K 2024, Milan, Italy, Oct. 2024.
+  \item \textbf{Invited talk}: Introduction to Diffusion Model for Microscopy. EMBO-DL4MIA, Milan, Italy, May 2024.
+  \item \textbf{Talk}: OpenAI's Sora. Human Technopole Research Seminar, Milan, Italy, Feb. 2024.
+  \item \textbf{Talk}: Introduction to deep learning and computer vision. Vel Tech University, Chennai, India, Aug. 2022.
+\end{itemize}
+
+\section*{Teaching and Mentoring}
+\entry{Teaching Assistant, Deep Learning for Microscopy Image Analysis (DL4MIA)}{2022, 2023, 2024}{Human Technopole}{Milan, Italy}
+\begin{itemize}
+  \item Supported three consecutive editions of DL4MIA.
+  \item Mentored participants, supported coding sessions, guided project work on AI-based microscopy restoration and segmentation, and delivered an invited lecture in the 2024 edition.
+\end{itemize}
+
+\entry{Teaching Assistant, Deep Learning at MBL (DL@MBL)}{2023, 2024}{Marine Biological Laboratory}{Woods Hole, USA}
+\begin{itemize}
+  \item Contributed to hands-on sessions on deep learning for biological imaging.
+  \item Provided mentoring and technical guidance during lab exercises and participant research projects.
+  \item One co-mentored project was later published at NeurIPS 2024; another co-mentored/project-linked work on improving RESOLFT microscopy with deep learning is under review.
+\end{itemize}
+
+\section*{Professional Service}
+\begin{itemize}
+  \item Reviewer, \href{https://ai4life.eurobioimaging.eu/first-ai4life-open-call-announcement-of-selected-projects/}{AI4Life Open Call}, 2024; received official reviewer badge.
+\end{itemize}
+
+\section*{Awards, Honors, and Selected Training}
+\begin{itemize}
+  \item \textbf{Selected Participant, Optical Microscopy \& Imaging in the Biomedical Sciences (OMIBS)}, Marine Biological Laboratory, USA, 2023. Selected for an advanced microscopy course covering cutting-edge optical imaging in biomedical sciences; team won 3rd place in microscopy imaging.
+  \item \textbf{Light Microscopy Course}, ETH Zurich, Switzerland, May 2023.
+  \item \textbf{Mathematics and Image Analysis Workshop}, Paris, France, Dec. 2022.
+  \item \textbf{Invited Contributor, Alumni Voice Column}, The University of Tokyo, 2018. Invited by the Government of Japan and the University of Tokyo to share academic and professional experiences as part of Japan's international education initiative.
+  \item \textbf{Selected Participant, International Computer Vision Summer School (ICVSS)}, Italy, 2017. Chosen among 150 top global students, mostly PhD students, for advanced training and research presentation in computer vision.
+  \item \textbf{Aichi Monozukuri Scholarship}, Aichi Prefectural Government, Japan, 2015. Awarded full funding for master's studies at Nagoya Institute of Technology; selected among the top 10 students in Asia.
+  \item \textbf{Selected Participant, Undergraduate Summer School on Computer Science}, Indian Institute of Science, Bengaluru, India, 2013. Chosen among 60 top students from India for advanced topics and research presentation in computer science.
+  \item \textbf{ECCV 2024 attendee}, Milan, Italy, Oct. 2024.
+\end{itemize}
+
+\section*{Projects and Software}
+\begin{itemize}
+  \item \textbf{\href{https://github.com/juglab/resmatching}{ResMatching}}: Open-source implementation, data, models, project page, and quickstart Jupyter notebook for noise-resilient computational super-resolution via guided conditional flow matching.
+  \item \textbf{\href{https://github.com/juglab/HazeMatching}{HazeMatching}}: Open-source conditional flow matching framework for microscopy dehazing; also demonstrated on Expansion Microscopy super-resolution through an AI4Life project.
+  \item \textbf{AR smart-glasses applications}: Unity/Vuforia applications for AceReal smart glasses during Sun Corporation internship.
+\end{itemize}
+
+\section*{Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{0.22\linewidth} X@{}}
+Research & Computational microscopy; biological image restoration; inverse problems; generative AI; conditional flow matching; diffusion models; denoising; dehazing; super-resolution; uncertainty estimation; posterior sampling; segmentation; counting; SEM image analysis; computer vision.\\
+Programming & Python; PyTorch; OpenCV; NumPy; Bash; Linux; Git; SLURM; \LaTeX; Unity; Vuforia.\\
+Languages & Bengali (native); Hindi (fluent); English (fluent); Japanese (conversational); Tamil (elementary); Italian (elementary).\\
+\end{tabularx}
+
+\section*{Writing, Outreach, and Public Engagement}
+\begin{itemize}
+  \item Wrote a short thread in January 2026 on why Rectified Flow may not be the best choice for scientific imaging inverse problems.
+  \item Wrote a September 2022 essay on the computer science craze in undergraduate education in India.
+  \item Maintains a public research profile and project pages documenting current work, publications, talks, software, and selected research visuals.
+\end{itemize}
+
+\section*{Background and Interests}
+Born and raised in Kolkata, India, where I completed Secondary and Higher Secondary school education. Outside research, I enjoy badminton, ping pong, hiking, and light strength training.
+
+\end{document}
