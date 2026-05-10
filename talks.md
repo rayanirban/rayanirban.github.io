@@ -2,6 +2,16 @@
 
 <div style="font-size: 0.95rem;">
 
+<!-- - <span class="tag-poster">Poster</span> **HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching | [Poster](files/CVPR_poster.pdf){target="_blank" .flj}** • *Jun 2026*  
+  IEEE/CVF CVPR 2026 | 📍 Denver, CO, USA.
+  
+  <br>
+
+- <span class="tag-talk">Talk</span> **Scientific Inverse Problems in the Age of Generative AI** • *Jun 2026*  
+  [Schmidt Sciences](https://www.schmidtsciences.org/){target="_blank" .flj} | 📍 NYC, USA
+  
+  <br> -->
+
 - <span class="tag-talk">Talk</span> <span class="tag-poster">Poster</span> **ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching [Talk](files/ISBI_Presentation.pdf){target="_blank" .flj} | [Poster](files/ISBI_Poster.pdf){target="_blank" .flj}** • *Apr 2026*  
   IEEE ISBI 2026 | 📍 London, UK
   

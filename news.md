@@ -1,3 +1,18 @@
+<!-- ::: {.news-item}
+<span class="news-date">June 2026</span>
+<div class="news-content">Presenting our [poster](files/CVPR_poster.pdf){target="_blank" .flj} on [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} at [IEEE/CVF CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj} in Denver, CO, USA, on June 6, 2026. If you're around please drop by!🎉</div>
+:::
+
+::: {.news-item}
+<span class="news-date">June 2026</span>
+<div class="news-content">Super excited for an invited talk on **Scientific Inverse Problems in the Age of Generative AI** at the AI & Advanced Computing Institute, [Schmidt Sciences](https://www.schmidtsciences.org/){target="_blank" .flj} in NYC, USA on June 1, 2026. If you're around please drop by!😇</div>
+:::
+
+::: {.news-item}
+<span class="news-date">May 2026</span>
+<div class="news-content">Code, data and models for [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} are now [available](https://github.com/juglab/HazeMatching){target="_blank" .flj} 🎉. There is also a quickstart [jupyter notebook](https://github.com/juglab/resmatching/blob/main/notebooks/resmatching_walkthrough.ipynb){target="_blank" .flj}. Please give it a try!😇</div>
+::: -->
+
 ::: {.news-item}
 <span class="news-date">Apr 2026</span>
 <div class="news-content">Code, data and models for [ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} are now [available](https://github.com/juglab/resmatching){target="_blank" .flj} 🎉. There is also a quickstart [jupyter notebook](https://github.com/juglab/resmatching/blob/main/notebooks/resmatching_walkthrough.ipynb){target="_blank" .flj}. Please give it a try!😇</div>

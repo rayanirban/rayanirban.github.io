@@ -8,15 +8,15 @@ format:
 
 ::: {.top-nav}
 ::: {.top-nav-container}
-<a href="#" class="nav-tab active" data-tab="about-me">About Me</a>
-<a href="#" class="nav-tab" data-tab="research">Research</a>
-<a href="#" class="nav-tab" data-tab="talks">Talks</a>
-<a href="#" class="nav-tab" data-tab="education">Education</a>
-<a href="#" class="nav-tab" data-tab="teaching">Teaching</a>
-<a href="#" class="nav-tab" data-tab="work">Work</a>
-<a href="#" class="nav-tab" data-tab="achievements">Achievements</a>
-<a href="#" class="nav-tab" data-tab="skills">Skills</a>
-<a href="#" class="nav-tab" data-tab="showcase">Showcase</a>
+<a href="#about-me" class="nav-tab active" data-tab="about-me">About Me</a>
+<a href="#research" class="nav-tab" data-tab="research">Research</a>
+<a href="#talks" class="nav-tab" data-tab="talks">Talks</a>
+<a href="#education" class="nav-tab" data-tab="education">Education</a>
+<a href="#teaching" class="nav-tab" data-tab="teaching">Teaching</a>
+<a href="#work" class="nav-tab" data-tab="work">Work</a>
+<a href="#achievements" class="nav-tab" data-tab="achievements">Achievements</a>
+<a href="#skills" class="nav-tab" data-tab="skills">Skills</a>
+<a href="#showcase" class="nav-tab" data-tab="showcase">Showcase</a>
 :::
 :::
 
@@ -241,45 +241,60 @@ If you use this template, please acknowledge this original design 😊
 ```{=html}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const navTabs = document.querySelectorAll('.nav-tab');
+  const navTabs = document.querySelectorAll('.nav-tab[data-tab]');
   const tabContents = document.querySelectorAll('.tab-content');
-  
+
+  const syncTopPadding = () => {
+    const topNav = document.querySelector('.top-nav');
+    if (!topNav) return;
+    const navHeight = topNav.offsetHeight;
+    document.body.style.paddingTop = `${navHeight}px`;
+    document.documentElement.style.scrollPaddingTop = `${navHeight + 20}px`;
+  };
+
+  const activateTab = (tab, shouldScroll = true, shouldUpdateHash = true) => {
+    const tabId = tab.getAttribute('data-tab');
+    const contentToShow = document.querySelector(`[data-tab-id="${tabId}"]`);
+    if (!contentToShow) return;
+
+    navTabs.forEach(t => t.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
+
+    tab.classList.add('active');
+    contentToShow.classList.add('active');
+
+    // This provides better browser support than CSS :has() selector.
+    document.body.classList.toggle('showcase-active', tabId === 'showcase');
+
+    if (shouldUpdateHash && window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', `#${tabId}`);
+    }
+
+    if (shouldScroll) {
+      setTimeout(() => {
+        const rightPanel = document.querySelector('.right-panel');
+        if (rightPanel && window.innerWidth <= 800) {
+          rightPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  };
+
+  syncTopPadding();
+  window.addEventListener('resize', syncTopPadding);
+
   navTabs.forEach(tab => {
     tab.addEventListener('click', function(e) {
       e.preventDefault();
-      
-      // Remove active class from all tabs and contents
-      navTabs.forEach(t => t.classList.remove('active'));
-      tabContents.forEach(content => content.classList.remove('active'));
-      
-      // Add active class to clicked tab
-      this.classList.add('active');
-      
-      // Show corresponding content
-      const tabId = this.getAttribute('data-tab');
-      const contentToShow = document.querySelector(`[data-tab-id="${tabId}"]`);
-      if (contentToShow) {
-        contentToShow.classList.add('active');
-        
-        // Toggle showcase-active class on body for hiding sidebars
-        // This provides better browser support than CSS :has() selector
-        if (tabId === 'showcase') {
-          document.body.classList.add('showcase-active');
-        } else {
-          document.body.classList.remove('showcase-active');
-        }
-        
-        // Scroll to the content on mobile
-        setTimeout(() => {
-          const rightPanel = document.querySelector('.right-panel');
-          if (rightPanel && window.innerWidth <= 800) {
-            rightPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }, 100);
-      }
+      activateTab(this);
     });
   });
+
+  const hashTabId = window.location.hash.replace('#', '');
+  const hashTab = hashTabId ? document.querySelector(`.nav-tab[data-tab="${hashTabId}"]`) : null;
+  if (hashTab) {
+    activateTab(hashTab, false, false);
+  }
 });
 </script>
 ```
-
