@@ -14,6 +14,11 @@
 ::: -->
 
 ::: {.news-item}
+<span class="news-date">May 2026</span>
+<div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} has been addtionally accepted as a poster to the [Computer Vision for Science (CV4Science) Workshop 2026](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} at [CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj} 🎉🎉</div>
+:::
+
+::: {.news-item}
 <span class="news-date">Apr 2026</span>
 <div class="news-content">Code, data and models for [ResMatching](https://rayanirban.github.io/resmatching/){target="_blank" .flj} are now [available](https://github.com/juglab/resmatching){target="_blank" .flj} 🎉. There is also a quickstart [jupyter notebook](https://github.com/juglab/resmatching/blob/main/notebooks/resmatching_walkthrough.ipynb){target="_blank" .flj}. Please give it a try!😇</div>
 :::
