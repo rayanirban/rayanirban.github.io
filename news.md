@@ -1,6 +1,6 @@
 <!-- ::: {.news-item}
 <span class="news-date">June 2026</span>
-<div class="news-content">Presenting our [poster](files/CVPR_poster.pdf){target="_blank" .flj} on [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} at [IEEE/CVF CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj} in Denver, CO, USA, on June 6, 2026. If you're around please drop by!🎉</div>
+<div class="news-content">Presenting our [poster](files/CVPR_poster.pdf){target="_blank" .flj} on [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} at [IEEE/CVF CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj} and also at the [Computer Vision for Science (CV4Science) Workshop](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} in Denver, CO, USA, on June 4 and 6, 2026. If you're around please drop by!🎉</div>
 :::
 
 ::: {.news-item}
@@ -15,7 +15,7 @@
 
 ::: {.news-item}
 <span class="news-date">May 2026</span>
-<div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} has been addtionally accepted as a poster to the [Computer Vision for Science (CV4Science) Workshop 2026](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} at [CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj} 🎉🎉</div>
+<div class="news-content">[HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} has been addtionally accepted as a poster to the [Computer Vision for Science (CV4Science) Workshop](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} at [CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj} 🎉🎉</div>
 :::
 
 ::: {.news-item}
