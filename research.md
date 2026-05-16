@@ -8,7 +8,7 @@
 ![](images/resolft_teaser.png){fig-align="center" width="80%" alt="RESOLFT time lapse imaging empowered by deep learning"}
 
 Deep learning extended RESOLFT nanoscopy by restoring low-SNR and sub-sampled acquisitions, enabling 5× longer imaging with 10× lower dose of light per frame, or a 4× increase in imaging speed for faster live-cell imaging while preserving ~60 nm resolution. This method enables reduced photobleaching and accelerated volumetric recording, revealing previously inaccessible sub-organelle dynamics in living cells.</br>
-[Preprint (under review)](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RESOLFT.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RESOLFT.png" class="infographic-pop"></span>
+[Preprint (under review)](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} | [GitHub](https://github.com/GuillaumeMinet/deepL_resolft){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RESOLFT.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RESOLFT.png" class="infographic-pop"></span>
 :::
 
 ::: {.project-item}
