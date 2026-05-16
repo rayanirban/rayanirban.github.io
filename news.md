@@ -6,12 +6,12 @@
 ::: {.news-item}
 <span class="news-date">June 2026</span>
 <div class="news-content">Super excited for an invited talk on **Scientific Inverse Problems in the Age of Generative AI** at the AI & Advanced Computing Institute, [Schmidt Sciences](https://www.schmidtsciences.org/){target="_blank" .flj} in NYC, USA on June 1, 2026. If you're around please drop by!😇</div>
-:::
+:::  -->
 
 ::: {.news-item}
 <span class="news-date">May 2026</span>
-<div class="news-content">Code, data and models for [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} are now [available](https://github.com/juglab/HazeMatching){target="_blank" .flj} 🎉. There is also a quickstart [jupyter notebook](https://github.com/juglab/resmatching/blob/main/notebooks/resmatching_walkthrough.ipynb){target="_blank" .flj}. Please give it a try!😇</div>
-::: -->
+<div class="news-content">Code, data and models for [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} are now [available](https://github.com/juglab/HazeMatching){target="_blank" .flj} 🎉. There is also a quickstart [jupyter notebook](https://github.com/juglab/HazeMatching/blob/main/notebooks/hazematching_walkthrough.ipynb){target="_blank" .flj}. Please give it a try!😇</div>
+:::
 
 ::: {.news-item}
 <span class="news-date">May 2026</span>
