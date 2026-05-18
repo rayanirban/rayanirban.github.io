@@ -5,7 +5,7 @@
 
 ::: {.news-item}
 <span class="news-date">June 2026</span>
-<div class="news-content">Super excited for an invited talk on **Scientific Inverse Problems in the Age of Generative AI** at the AI & Advanced Computing Institute, [Schmidt Sciences](https://www.schmidtsciences.org/){target="_blank" .flj} in NYC, USA on June 1, 2026. If you're around please drop by!😇</div>
+<div class="news-content">Super excited for an invited talk on **Scientific Inverse Problems in the Age of Generative AI** at the AI & Advanced Computing Institute, [Schmidt Sciences](https://www.schmidtsciences.org/){target="_blank" .flj} in NYC, USA on June 1, 2026 😇.</div>
 :::  -->
 
 ::: {.news-item}

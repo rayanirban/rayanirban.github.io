@@ -3,6 +3,11 @@
 <div style="font-size: 0.95rem;">
 
 <!-- - <span class="tag-poster">Poster</span> **HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching | [Poster](files/CVPR_poster.pdf){target="_blank" .flj}** • *Jun 2026*  
+  Computer Vision for Science Workshop @CVPR2026 | 📍 Denver, CO, USA.
+  
+  <br>
+
+<!-- - <span class="tag-poster">Poster</span> **HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching | [Poster](files/CVPR_poster.pdf){target="_blank" .flj}** • *Jun 2026*  
   IEEE/CVF CVPR 2026 | 📍 Denver, CO, USA.
   
   <br>
