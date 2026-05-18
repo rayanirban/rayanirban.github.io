@@ -6,59 +6,35 @@
 </div>
 
 <div class="research-topic-list">
-  <a href="#resolft-time-lapse" class="research-topic-link">
+  <a href="#phd-work" class="research-topic-link">
     <span class="research-topic-number">01</span>
     <span class="research-topic-main">
-      <span class="research-topic-title">RESOLFT time lapse imaging empowered by deep learning</span>
-      <span class="research-topic-meta">Low-dose live-cell nanoscopy with deep restoration</span>
+      <span class="research-topic-title">Current Research (PhD, 2022–Present)</span>
+      <span class="research-topic-meta">Current microscopy restoration work with flow matching and deep learning</span>
     </span>
-    <span class="research-topic-tag">Current</span>
+    <span class="research-topic-tag">2022-present</span>
   </a>
-  <a href="#resmatching" class="research-topic-link">
+  <a href="#phd-did-not-work" class="research-topic-link">
     <span class="research-topic-number">02</span>
     <span class="research-topic-main">
-      <span class="research-topic-title">ResMatching</span>
-      <span class="research-topic-meta">Guided conditional flow matching for computational super-resolution</span>
+      <span class="research-topic-title">Things that didn’t work earlier in the PhD</span>
+      <span class="research-topic-meta">Earlier ideas, negative results, and lessons that shaped the later work</span>
     </span>
-    <span class="research-topic-tag">ISBI 2026</span>
+    <span class="research-topic-tag">Notes</span>
   </a>
-  <a href="#hazematching" class="research-topic-link">
+  <a href="#hitachi-research" class="research-topic-link">
     <span class="research-topic-number">03</span>
     <span class="research-topic-main">
-      <span class="research-topic-title">HazeMatching</span>
-      <span class="research-topic-meta">Conditional flow matching for microscopy dehazing</span>
-    </span>
-    <span class="research-topic-tag">CVPR 2026</span>
-  </a>
-  <a href="#latent-diffusion-dehazing" class="research-topic-link">
-    <span class="research-topic-number">04</span>
-    <span class="research-topic-main">
-      <span class="research-topic-title">Latent diffusion dehazing</span>
-      <span class="research-topic-meta">An earlier PhD attempt and failure analysis</span>
-    </span>
-    <span class="research-topic-tag">2023</span>
-  </a>
-  <a href="#dewam-wavelet-model" class="research-topic-link">
-    <span class="research-topic-number">05</span>
-    <span class="research-topic-main">
-      <span class="research-topic-title">DeWaM wavelet restoration</span>
-      <span class="research-topic-meta">Learned wavelet deconvolution for microscopy restoration</span>
-    </span>
-    <span class="research-topic-tag">2022</span>
-  </a>
-  <a href="#hitachi-microscopy-analysis" class="research-topic-link">
-    <span class="research-topic-number">06</span>
-    <span class="research-topic-main">
-      <span class="research-topic-title">Deep learning for microscopy image analysis</span>
-      <span class="research-topic-meta">Hitachi research on SEM analysis, classification, and patents</span>
+      <span class="research-topic-title">Past Research (Hitachi Ltd., 2018–2021)</span>
+      <span class="research-topic-meta">Deep learning for SEM image analysis, classification, and patents</span>
     </span>
     <span class="research-topic-tag">2018-2021</span>
   </a>
-  <a href="#masters-cnn-lstm" class="research-topic-link">
-    <span class="research-topic-number">07</span>
+  <a href="#masters-research" class="research-topic-link">
+    <span class="research-topic-number">04</span>
     <span class="research-topic-main">
-      <span class="research-topic-title">Modeling feature evolution in CNNs using LSTM</span>
-      <span class="research-topic-meta">Master's thesis on temporal feature dynamics</span>
+      <span class="research-topic-title">Past Research (Masters Thesis, 2016–2018)</span>
+      <span class="research-topic-meta">Modeling feature evolution in CNNs using LSTM</span>
     </span>
     <span class="research-topic-tag">2016-2018</span>
   </a>
@@ -66,7 +42,7 @@
 </div>
 ```
 
-### Current Research (PhD, 2022–Present)
+### Current Research (PhD, 2022–Present) {#phd-work}
 
 ::: {#resolft-time-lapse .project-item}
 
@@ -109,7 +85,7 @@ A generative framework that restores optical microscopy images degraded by scatt
 <span class="infographic-wrapper"><a href="files/HM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HM.png" class="infographic-pop"></span>
 :::
 
-### Things that didn't work earlier in the PhD
+### Things that didn't work earlier in the PhD {#phd-did-not-work}
 
 ::: {.research-note}
 Most of these ideas did not turn into papers, but they were not wasted. I decided to share them because failed directions often contain the most useful parts of the research process: the assumptions that looked reasonable at first, the experiments that exposed where they broke, and the lessons that later became design principles. Putting these notes here is also a small attempt to make the work more honest and reusable for others thinking about similar inverse problems in microscopy.
@@ -145,7 +121,7 @@ The idea was interpretable but the result was negative: the learned-wavelet Step
 [Read the full write-up](wavelet-deconvolution.html){target="_blank" .flj}
 :::
 
-### Past Research (Hitachi Ltd., 2018–2021)
+### Past Research (Hitachi Ltd., 2018–2021) {#hitachi-research}
 
 ::: {#hitachi-microscopy-analysis .project-item}
 **Deep Learning for Microscopy Image Analysis**  
@@ -168,7 +144,7 @@ This phase of my work established a foundation in AI-driven visual understanding
 ![**Figure:** Conceptual schematic of deep learning pipelines developed at Hitachi for automated bacterial analysis and industrial image understanding.](images/past_research_teaser.png){width="100%" style="border-radius: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.1);"}
 :::
 
-### Past Research (Masters Thesis, 2016–2018)
+### Past Research (Masters Thesis, 2016–2018) {#masters-research}
 ::: {#masters-cnn-lstm .project-item}
 **<span style="font-size: 1.2em;">Modeling the Feature Evolution in CNNs using LSTM</span>**  
 ![](images/masters.png){fig-align="center" width="80%" alt="Modeling the Feature Evolution in CNNs using LSTM"}
