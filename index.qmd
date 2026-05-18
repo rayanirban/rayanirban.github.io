@@ -84,6 +84,8 @@ I earned my Bachelors degree in Computer Science in Chennai, India, and was born
 **PhD in Computer Science | *2022 – 2026 (expected)*** [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj} </br>
 Advisor: [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}  
 Thesis Advisory Committee: [Prof. Dr. Ivo F. Sbalzarini](https://sbalzarini-lab.org/?q=people/ivo_sbalzarini){target="_blank" .flj} and [Dr. Virginie Uhlmann](https://virginieuhlmann.com/){target="_blank" .flj}
+
+[I plan to submit my thesis by August 2026.]{style="color: red;"}
 :::
 
 ::: {.education-item}
