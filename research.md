@@ -41,6 +41,21 @@ A generative framework that restores optical microscopy images degraded by scatt
 <span class="infographic-wrapper"><a href="files/HM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HM.png" class="infographic-pop"></span>
 :::
 
+### Things that didn't work earlier in the PhD, but I still want to share
+
+::: {.project-item}
+
+**<span style="font-size: 1.2em;">Widefield Microscopy Image Dehazing using Diffusion Models in Latent Space</span>**  
+[Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}</br>
+
+![](images/latent_diffusion_dehazing_r2m.png){fig-align="center" width="100%" alt="Latent diffusion dehazing: regression-to-the-mean motivation and iterative restoration"}
+
+An earlier attempt at microscopy dehazing before HazeMatching. I tried to avoid regression-to-the-mean blur by replacing one-shot restoration with an iterative latent-space procedure: encode hazy images with a hierarchical VAE, predict clean latents, then learn a degradation operator that could step the latent back through progressively lower haze levels.
+
+The learned latent degradation step was unstable and the iterative variants did not beat direct UNet/HDN baselines. I kept the research-panel version short here; the full note includes the cleaned-up equations, figures, CycleGAN-style degradation formulation, and failure analysis.</br>
+[Read the full write-up](latent-diffusion-dehazing.html){target="_blank" .flj}
+:::
+
 ### Past Research (Hitachi Ltd., 2018–2021)
 
 ::: {.project-item}

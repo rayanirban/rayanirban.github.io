@@ -20,7 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-.display.math{display: block; text-align: center; margin: 0.5rem auto;}
 </style>
 
 
@@ -396,6 +395,18 @@ Vel Tech University | 📍 Chennai, India</p></li>
 </tr>
 </tbody></table>
 <p>A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures. This work was addtionally accepted as a poster to the <a href="https://sites.google.com/nyu.edu/computervisionforscience" class="flj" target="_blank">Computer Vision for Science (CV4Science) Workshop 2026</a> at <a href="https://cvpr.thecvf.com/" class="flj" target="_blank">CVPR 2026</a><br> <a href="https://github.com/juglab/HazeMatching" class="flj" target="_blank">GitHub</a> | <a href="https://arxiv.org/abs/2506.22397" class="flj" target="_blank">Paper (arXiv)</a> | <!-- [Project Page](#){target="_blank"} | --> <span class="infographic-wrapper"><a href="files/HM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HM.png" class="infographic-pop"></span></p>
+</div>
+<h3 id="things-that-didnt-work-earlier-in-the-phd-but-i-still-want-to-share" class="anchored">Things that didn’t work earlier in the PhD, but I still want to share</h3>
+<div class="project-item">
+<p><strong><span style="font-size: 1.2em;">Widefield Microscopy Image Dehazing using Diffusion Models in Latent Space</span></strong><br>
+<a href="https://rayanirban.github.io/" class="flj" target="_blank">Anirban Ray</a><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="images/latent_diffusion_dehazing_r2m.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" alt="Latent diffusion dehazing: regression-to-the-mean motivation and iterative restoration"></p>
+</figure>
+</div>
+<p>An earlier attempt at microscopy dehazing before HazeMatching. I tried to avoid regression-to-the-mean blur by replacing one-shot restoration with an iterative latent-space procedure: encode hazy images with a hierarchical VAE, predict clean latents, then learn a degradation operator that could step the latent back through progressively lower haze levels.</p>
+<p>The learned latent degradation step was unstable and the iterative variants did not beat direct UNet/HDN baselines. I kept the research-panel version short here; the full note includes the cleaned-up equations, figures, CycleGAN-style degradation formulation, and failure analysis.<br> <a href="latent-diffusion-dehazing.html" class="flj" target="_blank">Read the full write-up</a></p>
 </div>
 <h3 id="past-research-hitachi-ltd.-20182021" class="anchored">Past Research (Hitachi Ltd., 2018–2021)</h3>
 <div class="project-item">

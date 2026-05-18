@@ -4,6 +4,7 @@ project:
   resources:
     - images/
     - logos/
+    - files/
 
 website:
   title: "Anirban Ray"
@@ -34,4 +35,5 @@ format:
   html:
     theme: none
     css: styles.css
+    html-math-method: mathjax
     toc: false

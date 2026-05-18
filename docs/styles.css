@@ -294,6 +294,104 @@ body {
   text-align: start;
 }
 
+.project-item .math.display,
+.project-item mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.35rem 0;
+  text-align: center;
+}
+
+.writeup-page {
+  width: min(100% - 2rem, 980px);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+  color: var(--text-secondary);
+}
+
+.writeup-page h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+  margin: 0.5rem 0 0.75rem;
+  letter-spacing: 0;
+}
+
+.writeup-page h2 {
+  font-size: 1.55rem;
+  margin-top: 2.5rem;
+  letter-spacing: 0;
+}
+
+.writeup-page p,
+.writeup-page li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.writeup-back {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.writeup-meta {
+  color: cyan;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  margin-bottom: 1.5rem;
+}
+
+.writeup-summary {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 1.4rem;
+  border-left: 3px solid cyan;
+  border-radius: 8px;
+  background: rgba(0, 255, 255, 0.06);
+  color: var(--text-primary);
+}
+
+.writeup-page .quarto-figure,
+.writeup-page figure {
+  margin: 1.5rem 0 2rem;
+}
+
+.writeup-figure {
+  display: block;
+  width: min(100%, 860px);
+  max-width: 92%;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #050505;
+  border: 1px solid rgba(192, 192, 192, 0.18);
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.35);
+}
+
+.writeup-page figcaption {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-top: 0.6rem;
+}
+
+.writeup-page .math.display,
+.writeup-page mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.55rem 0;
+}
+
+.writeup-page pre {
+  background: rgba(26, 26, 26, 0.75);
+  border: 1px solid rgba(192, 192, 192, 0.18);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
 .project-item p:last-child {
   margin-bottom: 0;
 }
