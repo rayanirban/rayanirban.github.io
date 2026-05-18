@@ -88,11 +88,9 @@ A generative framework that restores optical microscopy images degraded by scatt
 ### Things that didn't work earlier in the PhD {#phd-did-not-work}
 
 ::: {.research-note}
-Most of these ideas did not turn into papers, but they were not wasted. I decided to share them because failed directions often contain the most useful parts of the research process: the assumptions that looked reasonable at first, the experiments that exposed where they broke, and the lessons that later became design principles. Putting these notes here is also a small attempt to make the work more honest and reusable for others thinking about similar inverse problems in microscopy.
+These ideas did not turn into papers, but they were not wasted. I am sharing them because failed directions often make the useful parts of research visible: the assumptions, experiments, and lessons that shaped what came next.
 
-Looking back, these attempts shaped how I think about my later work. The wavelet project taught me that a more structured or interpretable representation is not automatically a better restoration model: if the pipeline has to learn both the representation and the inverse mapping, the added constraints can make optimization harder than a strong direct baseline. The latent dehazing work pushed a related lesson from a different angle, moving me away from making restoration pipelines more elaborate just because the failure mode was subtle, and toward asking whether the model actually represents the ambiguity and uncertainty in the data. Together, those lessons influenced my later work on HazeMatching and ResMatching: instead of treating dehazing, denoising, and super-resolution as single deterministic guesses, I became more interested in generative formulations that can model plausible restorations while staying grounded in the imaging problem.
-
-These write-ups are not polished, but they include the key equations, figures, and failure analyses that I think are most useful to share. If you have questions or want to discuss any of the details, please feel free to reach out!
+The wavelet project taught me that structured or interpretable representations are not automatically better if the model must also learn the inverse mapping. The latent dehazing work taught a related lesson about avoiding extra pipeline complexity unless it really improves restoration. Both lessons influenced HazeMatching and ResMatching, where I moved toward generative formulations that can model plausible restorations while staying grounded in microscopy.
 :::
 
 ::: {#latent-diffusion-dehazing .project-item}
@@ -105,7 +103,7 @@ These write-ups are not polished, but they include the key equations, figures, a
 An earlier attempt at microscopy dehazing before HazeMatching. I tried to avoid regression-to-the-mean blur by replacing one-shot restoration with an iterative latent-space procedure: encode hazy images with a hierarchical VAE, predict clean latents, then learn a degradation operator that could step the latent back through progressively lower haze levels.
 
 The learned latent degradation step was unstable and the iterative variants did not beat direct UNet/HDN baselines. I kept the research-panel version short here; the full note includes the cleaned-up equations, figures, CycleGAN-style degradation formulation, and failure analysis.</br>
-[Read the full write-up](latent-diffusion-dehazing.html){target="_blank" .flj}
+[Read the full write-up](latent-diffusion-dehazing.html){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/USP_CycleGAN.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/USP_CycleGAN.png" class="infographic-pop"></span>
 :::
 
 ::: {#dewam-wavelet-model .project-item}
@@ -118,7 +116,7 @@ The learned latent degradation step was unstable and the iterative variants did 
 An early PhD attempt to make microscopy restoration more structured by learning wavelet analysis and synthesis filters, then doing supervised deconvolution in the learned coefficient domain. The setup moved from fixed wavelets to learned filters and finally to a coefficient-space restoration network.
 
 The idea was interpretable but the result was negative: the learned-wavelet Step 2 variants did not beat a direct U-Net baseline in clean or noisy settings. The full note keeps the setup, equations, PSNR comparison, qualitative panels, and failure analysis together.</br>
-[Read the full write-up](wavelet-deconvolution.html){target="_blank" .flj}
+[Read the full write-up](wavelet-deconvolution.html){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/USP_wavelet.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/USP_wavelet.png" class="infographic-pop"></span>
 :::
 
 ### Past Research (Hitachi Ltd., 2018–2021) {#hitachi-research}
