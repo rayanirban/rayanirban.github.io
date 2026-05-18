@@ -1,6 +1,74 @@
+```{=html}
+<div class="research-topic-index" aria-label="Research topic list">
+<div class="research-topic-index__header">
+  <span class="research-topic-index__eyebrow">Research map</span>
+  <strong>Jump to a topic</strong>
+</div>
+
+<div class="research-topic-list">
+  <a href="#resolft-time-lapse" class="research-topic-link">
+    <span class="research-topic-number">01</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">RESOLFT time lapse imaging empowered by deep learning</span>
+      <span class="research-topic-meta">Low-dose live-cell nanoscopy with deep restoration</span>
+    </span>
+    <span class="research-topic-tag">Current</span>
+  </a>
+  <a href="#resmatching" class="research-topic-link">
+    <span class="research-topic-number">02</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">ResMatching</span>
+      <span class="research-topic-meta">Guided conditional flow matching for computational super-resolution</span>
+    </span>
+    <span class="research-topic-tag">ISBI 2026</span>
+  </a>
+  <a href="#hazematching" class="research-topic-link">
+    <span class="research-topic-number">03</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">HazeMatching</span>
+      <span class="research-topic-meta">Conditional flow matching for microscopy dehazing</span>
+    </span>
+    <span class="research-topic-tag">CVPR 2026</span>
+  </a>
+  <a href="#latent-diffusion-dehazing" class="research-topic-link">
+    <span class="research-topic-number">04</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">Latent diffusion dehazing</span>
+      <span class="research-topic-meta">An earlier PhD attempt and failure analysis</span>
+    </span>
+    <span class="research-topic-tag">2023</span>
+  </a>
+  <a href="#dewam-wavelet-model" class="research-topic-link">
+    <span class="research-topic-number">05</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">DeWaM wavelet restoration</span>
+      <span class="research-topic-meta">Learned wavelet deconvolution for microscopy restoration</span>
+    </span>
+    <span class="research-topic-tag">2022</span>
+  </a>
+  <a href="#hitachi-microscopy-analysis" class="research-topic-link">
+    <span class="research-topic-number">06</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">Deep learning for microscopy image analysis</span>
+      <span class="research-topic-meta">Hitachi research on SEM analysis, classification, and patents</span>
+    </span>
+    <span class="research-topic-tag">2018-2021</span>
+  </a>
+  <a href="#masters-cnn-lstm" class="research-topic-link">
+    <span class="research-topic-number">07</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">Modeling feature evolution in CNNs using LSTM</span>
+      <span class="research-topic-meta">Master's thesis on temporal feature dynamics</span>
+    </span>
+    <span class="research-topic-tag">2016-2018</span>
+  </a>
+</div>
+</div>
+```
+
 ### Current Research (PhD, 2022–Present)
 
-::: {.project-item}
+::: {#resolft-time-lapse .project-item}
 
 **<span style="font-size: 1.2em;">RESOLFT time lapse imaging empowered by deep learning</span>**  
 [Guillaume Minet](https://www.testalab.org/people.php){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.testalab.org/){target="_blank" .flj}</br> 
@@ -11,7 +79,7 @@ Deep learning extended RESOLFT nanoscopy by restoring low-SNR and sub-sampled ac
 [Preprint (under review)](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} | [GitHub](https://github.com/GuillaumeMinet/deepL_resolft){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RESOLFT.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RESOLFT.png" class="infographic-pop"></span>
 :::
 
-::: {.project-item}
+::: {#resmatching .project-item}
 
 **<span style="font-size: 1.2em;">ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching [ [IEEE ISBI 2026 (Oral)] ](https://biomedicalimaging.org/2026/){target="_blank" .flj}</span>**  
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Vera Galinova](https://humantechnopole.it/en/people/vera-galinova/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}</br>
@@ -25,7 +93,7 @@ A guided conditional flow-matching framework for noise-resilient computational s
 [Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://rayanirban.github.io/resmatching/){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RM.png" class="infographic-pop"></span>
 :::
 
-::: {.project-item}
+::: {#hazematching .project-item}
 
 **<span style="font-size: 1.2em;">HazeMatching: Conditional Flow Matching for Microscopy Dehazing [ [CVPR 2026 (Findings)] ](https://cvpr.thecvf.com/){target="_blank" .flj}</span>**  
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Ashesh](https://ashesh-0.github.io/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}.</br>  
@@ -41,11 +109,17 @@ A generative framework that restores optical microscopy images degraded by scatt
 <span class="infographic-wrapper"><a href="files/HM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HM.png" class="infographic-pop"></span>
 :::
 
-### Things that didn't work earlier in the PhD, but I still want to share
+### Things that didn't work earlier in the PhD
 
-::: {.project-item}
+::: {.research-note}
+Most of these ideas did not turn into papers, but they were not wasted. I decided to share them because failed directions often contain the most useful parts of the research process: the assumptions that looked reasonable at first, the experiments that exposed where they broke, and the lessons that later became design principles. Putting these notes here is also a small attempt to make the work more honest and reusable for others thinking about similar inverse problems in microscopy.
 
-**<span style="font-size: 1.2em;">Widefield Microscopy Image Dehazing using Diffusion Models in Latent Space</span>**  
+Looking back, these attempts shaped how I think about my later work. The wavelet project taught me that a more structured or interpretable representation is not automatically a better restoration model: if the pipeline has to learn both the representation and the inverse mapping, the added constraints can make optimization harder than a strong direct baseline. The latent dehazing work pushed a related lesson from a different angle, moving me away from making restoration pipelines more elaborate just because the failure mode was subtle, and toward asking whether the model actually represents the ambiguity and uncertainty in the data. Together, those lessons influenced my later work on HazeMatching and ResMatching: instead of treating dehazing, denoising, and super-resolution as single deterministic guesses, I became more interested in generative formulations that can model plausible restorations while staying grounded in the imaging problem.
+:::
+
+::: {#latent-diffusion-dehazing .project-item}
+
+**<span style="font-size: 1.2em;">Widefield Microscopy Image Dehazing using Diffusion Models in Latent Space | 2023</span>**  
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}</br>
 
 ![](images/latent_diffusion_dehazing_r2m.png){fig-align="center" width="100%" alt="Latent diffusion dehazing: regression-to-the-mean motivation and iterative restoration"}
@@ -56,9 +130,22 @@ The learned latent degradation step was unstable and the iterative variants did 
 [Read the full write-up](latent-diffusion-dehazing.html){target="_blank" .flj}
 :::
 
+::: {#dewam-wavelet-model .project-item}
+
+**<span style="font-size: 1.2em;">DeWaM: Deconvolution Wavelet Model for Microscopy Image Restoration | 2022</span>**  
+[Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}</br>
+
+![](images/wavelet_dewam/baseline_unet_clean.jpg){fig-align="center" width="100%" alt="DeWaM wavelet deconvolution qualitative restoration result"}
+
+An early PhD attempt to make microscopy restoration more structured by learning wavelet analysis and synthesis filters, then doing supervised deconvolution in the learned coefficient domain. The setup moved from fixed wavelets to learned filters and finally to a coefficient-space restoration network.
+
+The idea was interpretable but the result was negative: the learned-wavelet Step 2 variants did not beat a direct U-Net baseline in clean or noisy settings. The full note keeps the setup, equations, PSNR comparison, qualitative panels, and failure analysis together.</br>
+[Read the full write-up](wavelet-deconvolution.html){target="_blank" .flj}
+:::
+
 ### Past Research (Hitachi Ltd., 2018–2021)
 
-::: {.project-item}
+::: {#hitachi-microscopy-analysis .project-item}
 **Deep Learning for Microscopy Image Analysis**  
 
 From 2018 to 2021, my research at [Hitachi Ltd., Tokyo](https://www.hitachi.com/rd/){target="_blank" .flj} focused on developing deep learning–based systems for high-precision image understanding in biomedical microscopy. I worked on combining computer vision and AI-driven automation for identifying and quantifying objects of interest in complex visual data.
@@ -80,7 +167,7 @@ This phase of my work established a foundation in AI-driven visual understanding
 :::
 
 ### Past Research (Masters Thesis, 2016–2018)
-::: {.project-item}
+::: {#masters-cnn-lstm .project-item}
 **<span style="font-size: 1.2em;">Modeling the Feature Evolution in CNNs using LSTM</span>**  
 ![](images/masters.png){fig-align="center" width="80%" alt="Modeling the Feature Evolution in CNNs using LSTM"}
 

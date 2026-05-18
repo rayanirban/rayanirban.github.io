@@ -294,6 +294,138 @@ body {
   text-align: start;
 }
 
+.research-topic-index {
+  margin: 0.75rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid rgba(192, 192, 192, 0.18);
+  border-left: 3px solid rgba(0, 255, 255, 0.65);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(37, 37, 37, 0.48), rgba(0, 255, 255, 0.05)),
+    rgba(5, 5, 5, 0.28);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24), 0 0 22px rgba(0, 255, 255, 0.08);
+}
+
+.research-topic-index__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.research-topic-index__header strong {
+  color: var(--accent-silver);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.research-topic-index__eyebrow {
+  color: cyan;
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.research-topic-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.research-topic-link {
+  display: grid;
+  grid-template-columns: 2.65rem minmax(0, 1fr) max-content;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 4rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid rgba(192, 192, 192, 0.14);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.26);
+  color: var(--text-primary) !important;
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.research-topic-link:hover {
+  background: rgba(0, 255, 255, 0.07);
+  border-color: rgba(0, 255, 255, 0.44);
+  box-shadow: 0 0 16px rgba(0, 255, 255, 0.16);
+  color: var(--text-primary) !important;
+  transform: translateX(4px);
+}
+
+.research-topic-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 8px;
+  background: rgba(0, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 255, 0.28);
+  color: cyan;
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.research-topic-main {
+  display: grid;
+  gap: 0.12rem;
+  min-width: 0;
+}
+
+.research-topic-title {
+  color: var(--accent-silver);
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.research-topic-meta {
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
+.research-topic-tag {
+  justify-self: end;
+  padding: 0.22rem 0.48rem;
+  border: 1px solid rgba(192, 192, 192, 0.18);
+  border-radius: 8px;
+  color: var(--accent-metallic);
+  background: rgba(37, 37, 37, 0.66);
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.research-note {
+  margin: 0.75rem 0 1.25rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid rgba(0, 255, 255, 0.45);
+  background: rgba(37, 37, 37, 0.22);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.research-note p {
+  margin: 0;
+  text-align: start;
+}
+
+.research-note p + p {
+  margin-top: 0.8rem;
+}
+
 .project-item .math.display,
 .project-item mjx-container[display="true"] {
   display: block;
@@ -390,6 +522,34 @@ body {
   border-radius: 8px;
   padding: 1rem;
   overflow-x: auto;
+}
+
+.wavelet-result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.wavelet-result-grid figure {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(5, 5, 5, 0.7);
+  border: 1px solid rgba(192, 192, 192, 0.18);
+}
+
+.wavelet-result-grid img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  background: #050505;
+}
+
+@media (max-width: 760px) {
+  .wavelet-result-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-item p:last-child {
@@ -1407,6 +1567,33 @@ footer {
   .booking-link a {
     font-size: 0.7rem !important;
     padding: 0.45rem 0.7rem !important;
+  }
+
+  .research-topic-index {
+    padding: 0.85rem;
+  }
+
+  .research-topic-index__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .research-topic-link {
+    grid-template-columns: 2.45rem minmax(0, 1fr);
+    gap: 0.7rem;
+    min-height: 0;
+    padding: 0.72rem;
+  }
+
+  .research-topic-number {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .research-topic-tag {
+    grid-column: 2;
+    justify-self: start;
   }
 
   .container {
