@@ -1,0 +1,101 @@
+{
+  "title": "Publications, Preprints and Patents",
+  "bold_names": ["Anirban Ray"],
+  "sections": [
+    {
+      "heading": "Publications and Preprints",
+      "note": "Add new entries by copying one object in this file. Numbering is generated automatically as [1], [2], ...",
+      "entries": [
+        {
+          "authors": [
+            "Guillaume Minet",
+            "Anirban Ray",
+            "Francesca Pennacchietti",
+            "Giovanna Coceano",
+            "Florian Jug",
+            "Ilaria Testa"
+          ],
+          "title": "RESOLFT time lapse imaging empowered by deep learning",
+          "url": "https://www.researchsquare.com/article/rs-8059028/v1",
+          "venue": "Research Square preprint, 2025."
+        },
+        {
+          "authors": ["Anirban Ray", "Ashesh", "Florian Jug"],
+          "title": "HazeMatching: Conditional Flow Matching for Microscopy Dehazing",
+          "url": "https://arxiv.org/abs/2506.22397",
+          "venue": "IEEE/CVF CVPR 2026 (Findings)."
+        },
+        {
+          "authors": ["Anirban Ray", "Vera Galinova", "Florian Jug"],
+          "title": "ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching",
+          "url": "https://arxiv.org/abs/2510.26601",
+          "venue": "IEEE ISBI 2026.",
+          "highlight": "Oral; top 24.3% of submissions."
+        },
+        {
+          "authors": [
+            "Yasuki Kakishita",
+            "Hideharu Hattori",
+            "Anirban Ray",
+            "Akiko Hisada",
+            "Yusuke Ominami",
+            "Jean-Pierre Baudoin",
+            "Jacques Yaacoub Bou Khalil",
+            "Didier Raoult"
+          ],
+          "title": "Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features",
+          "url": "https://ieeexplore.ieee.org/abstract/document/9751170",
+          "venue": "IEEE CISS 2022."
+        },
+        {
+          "authors": [
+            "Yasuki Kakishita",
+            "Anirban Ray",
+            "Hideharu Hattori",
+            "Akiko Hisada",
+            "Yusuke Ominami",
+            "Jean-Pierre Baudoin",
+            "Jacques Yaacoub Bou Khalil",
+            "Didier Raoult"
+          ],
+          "title": "Quantitative Analysis System for Bacterial Cells in SEM Image using Deep Learning",
+          "url": "https://ieeexplore.ieee.org/abstract/document/9400322",
+          "venue": "IEEE CISS 2021."
+        }
+      ]
+    },
+    {
+      "heading": "Patents",
+      "entries": [
+        {
+          "authors": ["Anirban Ray", "Hideharu Hattori", "Yasuki Kakishita"],
+          "title": "Apparatus, method and system for generating models for identifying objects of interest from images",
+          "url": "https://patents.google.com/patent/US12327363B2",
+          "venue": "US Patent 12327363B2, granted 2025."
+        },
+        {
+          "authors": [
+            "Anirban Ray",
+            "Hideharu Hattori",
+            "Yasuki Kakishita",
+            "Taku Sakazume"
+          ],
+          "title": "Image processing method, image processing apparatus, and image processing system",
+          "url": "https://patents.google.com/patent/US12211213B2",
+          "venue": "US Patent 12211213B2, granted 2025."
+        },
+        {
+          "authors": [
+            "Anirban Ray",
+            "Hideharu Hattori",
+            "Yasuki Kakishita",
+            "Taku Sakazume"
+          ],
+          "title": "Image processing method, image processing device, and image processing system",
+          "url": "https://patents.google.com/patent/EP3961562A1",
+          "venue": "EP Patent 3961562B1, granted 2023."
+        }
+      ]
+    }
+  ]
+}

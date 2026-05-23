@@ -430,34 +430,28 @@ body {
   margin: 0.85rem 0 1.35rem;
 }
 
-.publication-list ol {
-  display: grid;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-  counter-reset: publication-item;
-  list-style: none;
-}
-
-.publication-list li {
-  counter-increment: publication-item;
+.publication-list dl {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr);
-  gap: 0.3rem;
-  align-items: start;
-  line-height: 1.6;
+  gap: 1rem 0.3rem;
+  margin: 0;
 }
 
-.publication-list li::before {
-  content: "[" counter(publication-item) "]";
+.publication-list dt {
   color: var(--accent-silver);
   font-family: 'Courier New', 'Consolas', monospace;
   font-weight: 700;
+  line-height: 1.6;
 }
 
-.publication-list li > p {
+.publication-list dd {
   margin: 0;
   min-width: 0;
+  line-height: 1.6;
+}
+
+.publication-list dd > p {
+  margin: 0;
 }
 
 .project-item .math.display,
