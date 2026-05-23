@@ -10,6 +10,7 @@ format:
 ::: {.top-nav-container}
 <a href="#about-me" class="nav-tab active" data-tab="about-me">About Me</a>
 <a href="#research" class="nav-tab" data-tab="research">Research</a>
+<a href="#publications" class="nav-tab" data-tab="publications">Publications</a>
 <a href="#talks" class="nav-tab" data-tab="talks">Talks</a>
 <a href="#education" class="nav-tab" data-tab="education">Education</a>
 <a href="#teaching" class="nav-tab" data-tab="teaching">Teaching</a>
@@ -186,6 +187,43 @@ Chosen among 60 top students from India for advanced topics and research present
 
 </div>
 
+<div class="tab-content" data-tab-id="research">
+
+## Research
+{{< include research.md >}}
+
+</div>
+
+<div class="tab-content" data-tab-id="publications">
+
+## Publications, Preprints and Patents
+
+### Publications and Preprints
+
+::: {.publication-list}
+[1] **Anirban Ray**, Vera Galinova, and Florian Jug. [*ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching*](https://arxiv.org/abs/2510.26601){target="_blank" .flj}. IEEE ISBI 2026 **(Oral; top 24.3% of submissions).**
+
+[2] **Anirban Ray**, Ashesh, and Florian Jug. [*HazeMatching: Conditional Flow Matching for Microscopy Dehazing*](https://arxiv.org/abs/2506.22397){target="_blank" .flj}. IEEE/CVF CVPR 2026 (Findings).
+
+[3] Guillaume Minet, **Anirban Ray**, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa. [*RESOLFT time lapse imaging empowered by deep learning*](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj}. Research Square preprint, 2025.
+
+[4] Yasuki Kakishita, **Anirban Ray**, Hideharu Hattori, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult. [*Quantitative Analysis System for Bacterial Cells in SEM Image using Deep Learning*](https://ieeexplore.ieee.org/abstract/document/9400322){target="_blank" .flj}. CISS, 2021.
+
+[5] Yasuki Kakishita, Hideharu Hattori, **Anirban Ray**, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult. [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170){target="_blank" .flj}. CISS, 2022.
+:::
+
+### Patents
+
+::: {.publication-list}
+[1] **Anirban Ray**, Hideharu Hattori, and Yasuki Kakishita. [*Apparatus, method and system for generating models for identifying objects of interest from images*](https://patents.google.com/patent/US12327363B2){target="_blank" .flj}. US Patent 12327363B2, granted 2025.
+
+[2] **Anirban Ray**, Hideharu Hattori, Yasuki Kakishita, and Taku Sakazume. [*Image processing method, image processing apparatus, and image processing system*](https://patents.google.com/patent/US12211213B2){target="_blank" .flj}. US Patent 12211213B2, granted 2025.
+
+[3] **Anirban Ray**, Hideharu Hattori, Yasuki Kakishita, and Taku Sakazume. [*Image processing method, image processing device, and image processing system*](https://patents.google.com/patent/EP3961562A1){target="_blank" .flj}. EP Patent 3961562B1, granted 2023.
+:::
+
+</div>
+
 <div class="tab-content" data-tab-id="talks">
 
 ## Talks
@@ -209,15 +247,6 @@ Python, PyTorch, OpenCV, NumPy, LaTeX, Git, SLURM, Bash, Linux
 
 Bengali (Native), Hindi (Fluent), English (Fluent), Japanese (Conversational), Tamil (Elementary), Italian (Elementary)
 :::
-
-</div>
-
-<div class="tab-content" data-tab-id="research">
-
-## Research
-{{< include research.md >}}
-
-
 
 </div>
 

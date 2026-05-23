@@ -426,6 +426,17 @@ body {
   margin-top: 0.8rem;
 }
 
+.publication-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0.85rem 0 1.35rem;
+}
+
+.publication-list p {
+  margin: 0;
+  line-height: 1.6;
+}
+
 .project-item .math.display,
 .project-item mjx-container[display="true"] {
   display: block;
