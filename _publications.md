@@ -12,7 +12,7 @@
 : Guillaume Minet, **Anirban Ray**, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa. [*RESOLFT time lapse imaging empowered by deep learning*](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj}. Research Square preprint, 2025.
 
 [2]
-: **Anirban Ray**, Ashesh, and Florian Jug. [*HazeMatching: Conditional Flow Matching for Microscopy Dehazing*](https://arxiv.org/abs/2506.22397){target="_blank" .flj}. IEEE/CVF CVPR 2026 (Findings).
+: **Anirban Ray**, Ashesh, and Florian Jug. [*HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching*](https://arxiv.org/abs/2506.22397){target="_blank" .flj}. IEEE/CVF CVPR 2026 (Findings).
 
 [3]
 : **Anirban Ray**, Vera Galinova, and Florian Jug. [*ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching*](https://arxiv.org/abs/2510.26601){target="_blank" .flj}. IEEE ISBI 2026. **(Oral; top 24.3% of submissions.)**

@@ -21,7 +21,7 @@
         },
         {
           "authors": ["Anirban Ray", "Ashesh", "Florian Jug"],
-          "title": "HazeMatching: Conditional Flow Matching for Microscopy Dehazing",
+          "title": "HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching",
           "url": "https://arxiv.org/abs/2506.22397",
           "venue": "IEEE/CVF CVPR 2026 (Findings)."
         },
