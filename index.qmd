@@ -4,6 +4,7 @@ format:
   html:
     page-layout: full
     css: styles.css
+    include-in-header: _site-name.html
 ---
 
 ::: {.top-nav}
