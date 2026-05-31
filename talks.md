@@ -1,7 +1,7 @@
 <p class="subtitle talks-subtitle">List of my selected talks and poster presentations</p>
 ::: {.talks-list}
 
-<!-- ::: {.talk-item .poster}
+::: {.talk-item .poster}
 [Jun 2026]{.talk-date}  
 [HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching]{.talk-title}  
 [[IEEE/CVF CVPR 2026 (Findings)](https://cvpr.thecvf.com/){target="_blank" .flj}]{.talk-venue}  
@@ -15,7 +15,7 @@
 [[Computer Vision for Science (CV4Science) Workshop](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} at [CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj}]{.talk-venue}  
 [📍 Denver, CO, USA]{.talk-location}  
 [[Poster](files/CVPR_poster.pdf){target="_blank" .flj .talk-resource}]{.talk-links}
-::: -->
+:::
 
 <!-- ::: {.talk-item .talk}
 [Jun 2026]{.talk-date}  
