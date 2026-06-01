@@ -17,12 +17,12 @@
 [[Poster](files/CVPR_poster.pdf){target="_blank" .flj .talk-resource}]{.talk-links}
 :::
 
-<!-- ::: {.talk-item .talk}
+::: {.talk-item .talk}
 [Jun 2026]{.talk-date}  
 [Scientific Inverse Problems in the Age of Generative AI]{.talk-title}  
 [[Schmidt Sciences](https://www.schmidtsciences.org/){target="_blank" .flj} [AI & Advanced Computing Institute](https://www.schmidtsciences.org/focus-area-ai/){target="_blank" .flj}]{.talk-venue}  
 [📍 NYC, USA]{.talk-location}
-::: -->
+:::
 
 ::: {.talk-item .talk .poster}
 [Apr 2026]{.talk-date}  
