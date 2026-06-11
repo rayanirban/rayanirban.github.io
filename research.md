@@ -78,7 +78,7 @@ A guided conditional flow-matching framework for noise-resilient computational s
 <td style="border:none; text-align:center; padding:0.5rem;"><img src="images/LIF1_Test1.gif" alt="HazeMatching" style="width:100%;"></td>
 </tr></table>
 
-A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures. This work was addtionally accepted as a poster to the [Computer Vision for Science (CV4Science) Workshop 2026](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} at [CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj}</br>
+A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures. This work was addtionally accepted as a poster to the [Computer Vision for Science (CV4Science) Workshop 2026](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} at [CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj}. This project includes a microscopy dehazing dataset of paired widefield and confocal images, which we are releasing to the community to support further research in this area.</br>
 [GitHub](https://github.com/juglab/HazeMatching){target="_blank" .flj} |
 [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank" .flj} | 
 <!-- [Project Page](#){target="_blank"} | -->
