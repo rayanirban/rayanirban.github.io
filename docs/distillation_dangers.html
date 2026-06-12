@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems – Anirban Ray</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<link href="./profile.jpg" rel="icon" type="image/jpeg">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html-734cb40618f438257b19a1e532635a32.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Anirban Ray">
+<meta property="og:description" content="PhD Student in Computer Science at Technische Universität Dresden &amp; Human Technopole, Italy. Research focuses on flow-matching models for biological image restoration.">
+<meta property="og:site_name" content="Anirban Ray">
+<meta name="twitter:title" content="Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems">
+<meta name="twitter:creator" content="@anirbanray_">
+<meta name="twitter:site" content="@anirbanray_">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body>
+
+
+
+
+
+<div class="writeup-page">
+<p><a href="index.html#research" class="writeup-back flj">Back to research</a></p>
+<h2 id="why-fast-distillation-can-be-risky-for-scientific-imaging-inverse-problems" class="anchored">Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems</h2>
+<div class="writeup-meta">
+<p>Research note, June 2026</p>
+</div>
+<div class="writeup-summary">
+<p>Diffusion and flow-matching models trained with their original generative objectives give us a model-defined posterior sampling procedure. If the teacher is well trained and sampled accurately, its samples and their Monte Carlo mean can be interpreted as samples and an MMSE estimate under the teacher’s learned conditional distribution. After distillation to one to four steps, that guarantee no longer automatically transfers: the student has a new objective, a new sampler, and a new implicit distribution. Its samples need not come from the teacher posterior, and the mean of student samples need not equal the teacher’s posterior mean.</p>
+</div>
+<p>This note was prompted by discussions and lectures from the <a href="https://cvpr26-tutorial-fastgen.github.io/" class="flj" target="_blank">CVPR 2026 tutorial <em>Accelerated Diffusion Models: From Theory to Interactive World Models</em></a>, which I attended recently. The tutorial made a strong case for fast diffusion and flow-based generation; this writeup is my attempt to spell out why the same acceleration story needs extra care in scientific imaging inverse problems.</p>
+<p>Microscopy restoration is an inverse problem. We observe a degraded measurement <span class="math inline">\(y\)</span> and want to infer an unknown clean biological image <span class="math inline">\(x\)</span>. A generic measurement model is</p>
+<p><span class="math display">\[
+y = \mathcal{D}(x) + \eta,
+\]</span></p>
+<p>where <span class="math inline">\(\mathcal{D}\)</span> is the imaging or degradation operator and <span class="math inline">\(\eta\)</span> is measurement noise. In a Bayesian inverse problem, the object we would like to reason about is the posterior</p>
+<p><span class="math display">\[
+p_{\mathrm{true}}(x \mid y)
+\propto
+p(y \mid x)p(x).
+\]</span></p>
+<p>For microscopy, this posterior matters because a restored image can become evidence for puncta, filaments, membranes, organelle morphology, protein localization, or downstream biological measurements. The question is therefore not only whether an output looks clean. The more important question is whether the output is a faithful sample, or summary, of the conditional distribution supported by the measurement.</p>
+<h2 id="teacher-models-have-a-posterior-interpretation" class="anchored">Teacher Models Have a Posterior Interpretation</h2>
+<p>For conditional diffusion or score-based restoration, the teacher is trained to approximate a conditional score along a noising process:</p>
+<p><span class="math display">\[
+s_{\theta}(x_t,t,y)
+\approx
+\nabla_{x_t}\log p_t(x_t \mid y).
+\]</span></p>
+<p>Sampling then follows the learned reverse dynamics. Abstractly, if the teacher sampler is accurate, it defines samples</p>
+<p><span class="math display">\[
+x_T^{(k)}
+\sim
+p_{\theta}(x \mid y),
+\]</span></p>
+<p>where <span class="math inline">\(p_{\theta}(x \mid y)\)</span> is the teacher’s learned conditional distribution. For conditional flow matching, the teacher learns a velocity field</p>
+<p><span class="math display">\[
+\frac{d x_t}{dt}
+=
+v_{\theta}(x_t,t,y),
+\]</span></p>
+<p>and sampling is obtained by integrating the learned flow from a base distribution to the image distribution. Again, the model defines a conditional distribution:</p>
+<p><span class="math display">\[
+z^{(k)} \sim p_0(z),
+\qquad
+x_T^{(k)} = \Phi_{\theta}(z^{(k)},y),
+\qquad
+x_T^{(k)} \sim p_{\theta}(x \mid y).
+\]</span></p>
+<p>This does not mean the teacher posterior is the true posterior. It means the teacher samples are tied to the original training objective and the sampling procedure implied by that objective. If the original model is well trained, well conditioned on <span class="math inline">\(y\)</span>, and sampled accurately, then its samples are meaningful samples from the teacher’s learned posterior.</p>
+<p>The corresponding teacher MMSE estimate is</p>
+<p><span class="math display">\[
+\mu_{\theta}(y)
+=
+\mathbb{E}_{p_{\theta}(x\mid y)}[x].
+\]</span></p>
+<p>In practice this can be estimated by Monte Carlo sampling:</p>
+<p><span class="math display">\[
+\hat{\mu}_{\theta}(y)
+=
+\frac{1}{K}
+\sum_{k=1}^{K}
+x_T^{(k)},
+\qquad
+x_T^{(k)} \sim p_{\theta}(x \mid y).
+\]</span></p>
+<p>This is the important reason diffusion and flow-matching models are useful for scientific inverse problems: they can provide not just one restoration, but a distribution of plausible restorations and a posterior-mean estimate under the learned teacher model.</p>
+<h2 id="mse-models-are-different" class="anchored">MSE Models Are Different</h2>
+<p>A standard supervised restoration network trained with pixel-wise MSE solves a different problem:</p>
+<p><span class="math display">\[
+\mathcal{L}_{\mathrm{MSE}}(\omega)
+=
+\mathbb{E}_{x,y}
+\left[
+\left\lVert
+f_{\omega}(y)-x
+\right\rVert_2^2
+\right].
+\]</span></p>
+<p>For a fixed <span class="math inline">\(y\)</span>, the optimal MSE predictor is</p>
+<p><span class="math display">\[
+f_{\omega}^{\star}(y)
+=
+\mathbb{E}[x \mid y].
+\]</span></p>
+<p>So an MSE model is usually a conditional-mean estimator, not a posterior sampler. It gives one point estimate:</p>
+<p><span class="math display">\[
+\hat{x}_{\mathrm{MSE}}(y)
+=
+f_{\omega}(y).
+\]</span></p>
+<p>It does not produce samples</p>
+<p><span class="math display">\[
+x^{(k)} \sim p(x \mid y)
+\]</span></p>
+<p>unless an additional probabilistic mechanism is explicitly introduced. This distinction matters because a distilled generative student also produces sample-like outputs, but those outputs are not automatically the same object as either the teacher samples or the MSE point estimate.</p>
+<h2 id="what-distillation-changes" class="anchored">What Distillation Changes</h2>
+<p>Distillation replaces the original teacher sampling procedure with a fast student, often using one to four steps. A distilled student might be written as</p>
+<p><span class="math display">\[
+x_S = g_{\phi}(z,y),
+\qquad
+z \sim p_0(z),
+\]</span></p>
+<p>which defines an implicit student distribution</p>
+<p><span class="math display">\[
+x_S \sim p_{\phi}(x \mid y).
+\]</span></p>
+<p>The problem is that the student is not trained with the original diffusion or flow-matching loss. It is trained with a distillation objective, for example</p>
+<p><span class="math display">\[
+\mathcal{L}_{\mathrm{distill}}(\phi)
+=
+\mathbb{E}_{z,y,t}
+\left[
+d
+\left(
+g_{\phi}(z,y,t),
+\Phi_{\theta}(z,y,t)
+\right)
+\right],
+\]</span></p>
+<p>where <span class="math inline">\(\Phi_{\theta}\)</span> is a teacher trajectory, teacher endpoint, or teacher flow map, and <span class="math inline">\(d(\cdot,\cdot)\)</span> is some matching distance. This objective can make the student fast and visually close to the teacher, but it is not the same as the original teacher objective:</p>
+<p><span class="math display">\[
+\mathcal{L}_{\mathrm{distill}}(\phi)
+\neq
+\mathcal{L}_{\mathrm{teacher}}(\theta).
+\]</span></p>
+<p>Therefore, even if the teacher defines a useful learned posterior <span class="math inline">\(p_{\theta}(x \mid y)\)</span>, the student defines a different distribution <span class="math inline">\(p_{\phi}(x \mid y)\)</span>.</p>
+<p>The desired statement would be</p>
+<p><span class="math display">\[
+p_{\phi}(x \mid y)
+=
+p_{\theta}(x \mid y).
+\]</span></p>
+<p>But distillation does not automatically guarantee this. At best, it encourages an approximation:</p>
+<p><span class="math display">\[
+p_{\phi}(x \mid y)
+\approx
+p_{\theta}(x \mid y),
+\]</span></p>
+<p>and the quality of this approximation must be tested.</p>
+<h2 id="the-main-failure-mode" class="anchored">The Main Failure Mode</h2>
+<p>The central risk is that student samples can look like teacher samples without being distributed like teacher samples:</p>
+<p><span class="math display">\[
+x_S^{(k)} \sim p_{\phi}(x \mid y)
+\quad
+\not\Rightarrow
+\quad
+x_S^{(k)} \sim p_{\theta}(x \mid y).
+\]</span></p>
+<p>This matters because posterior sampling is only scientifically useful if the samples represent the right conditional uncertainty. A distilled model can lose modes, reduce diversity, overfit to visually common teacher outputs, or weaken the dependence on the measurement <span class="math inline">\(y\)</span>.</p>
+<p>Mode loss can be written as</p>
+<p><span class="math display">\[
+\operatorname{supp} p_{\phi}(x\mid y)
+\subsetneq
+\operatorname{supp} p_{\theta}(x\mid y).
+\]</span></p>
+<p>Weak conditioning can be written as</p>
+<p><span class="math display">\[
+I_{\phi}(X;Y)
+&lt;
+I_{\theta}(X;Y),
+\]</span></p>
+<p>where <span class="math inline">\(I(X;Y)\)</span> denotes mutual information between the generated restoration and the measurement. In words, the student may rely more on the learned image prior and less on the actual observation.</p>
+<p>This is exactly where hallucination enters. A sample can be plausible under the student distribution while not being a faithful sample from the teacher posterior:</p>
+<p><span class="math display">\[
+x_S \sim p_{\phi}(x \mid y),
+\qquad
+p_{\theta}(x_S \mid y)
+\text{ may be small.}
+\]</span></p>
+<p>For scientific imaging, that is dangerous. The output may look biologically realistic while no longer being a valid sample from the posterior distribution learned by the original teacher model.</p>
+<h2 id="student-mmse-is-not-teacher-mmse" class="anchored">Student MMSE Is Not Teacher MMSE</h2>
+<p>The same issue applies to posterior means. The teacher posterior mean is</p>
+<p><span class="math display">\[
+\mu_{\theta}(y)
+=
+\mathbb{E}_{p_{\theta}(x\mid y)}[x].
+\]</span></p>
+<p>The student sample mean is</p>
+<p><span class="math display">\[
+\mu_{\phi}(y)
+=
+\mathbb{E}_{p_{\phi}(x\mid y)}[x].
+\]</span></p>
+<p>Unless</p>
+<p><span class="math display">\[
+p_{\phi}(x\mid y)
+=
+p_{\theta}(x\mid y),
+\]</span></p>
+<p>there is no reason to expect</p>
+<p><span class="math display">\[
+\mu_{\phi}(y)
+=
+\mu_{\theta}(y).
+\]</span></p>
+<p>With finite samples,</p>
+<p><span class="math display">\[
+\hat{\mu}_{\phi}(y)
+=
+\frac{1}{K}
+\sum_{k=1}^{K}
+x_S^{(k)},
+\qquad
+x_S^{(k)} \sim p_{\phi}(x\mid y),
+\]</span></p>
+<p>is an estimate of the student mean, not the teacher mean. The gap is</p>
+<p><span class="math display">\[
+\left\lVert
+\mu_{\phi}(y)-\mu_{\theta}(y)
+\right\rVert.
+\]</span></p>
+<p>This gap can be scientifically meaningful. Even if individual student samples look sharp, the mean of those samples does not automatically recover the MMSE estimate of the original teacher model.</p>
+<h2 id="why-this-matters-for-microscopy" class="anchored">Why This Matters for Microscopy</h2>
+<p>In microscopy, generated structure can become biological evidence. If a distilled model changes the posterior, it may change the scientific interpretation:</p>
+<p><span class="math display">\[
+p_{\phi}(x\mid y)
+\neq
+p_{\theta}(x\mid y)
+\quad
+\Longrightarrow
+\quad
+\text{different uncertainty, different mean, different conclusions.}
+\]</span></p>
+<p>The student can fail in ways that are not the same as classical MSE blur:</p>
+<p><span class="math display">\[
+\text{MSE ambiguity}
+\longrightarrow
+\text{conditional averaging},
+\]</span></p>
+<p>whereas</p>
+<p><span class="math display">\[
+\text{distilled generative ambiguity}
+\longrightarrow
+\text{plausible but posterior-inconsistent samples}.
+\]</span></p>
+<p>The second failure mode is harder to notice because the image may be sharp, realistic, and visually convincing.</p>
+<h2 id="what-should-be-validated" class="anchored">What Should Be Validated</h2>
+<p>For a distilled model, visual similarity to teacher outputs is not enough. The relevant question is whether the student preserves the teacher posterior:</p>
+<p><span class="math display">\[
+p_{\phi}(x\mid y)
+\approx
+p_{\theta}(x\mid y).
+\]</span></p>
+<p>Useful checks include comparing teacher and student sample statistics:</p>
+<p><span class="math display">\[
+\left\lVert
+\hat{\mu}_{\phi}(y)-\hat{\mu}_{\theta}(y)
+\right\rVert,
+\qquad
+\left\lVert
+\widehat{\operatorname{Var}}_{\phi}(x\mid y)
+-
+\widehat{\operatorname{Var}}_{\theta}(x\mid y)
+\right\rVert.
+\]</span></p>
+<p>One should also test whether the student preserves measurement dependence:</p>
+<p><span class="math display">\[
+p_{\phi}(x\mid y)
+\neq
+p_{\phi}(x\mid \tilde{y})
+\quad
+\text{when}
+\quad
+y \neq \tilde{y},
+\]</span></p>
+<p>and whether generated samples remain data-consistent:</p>
+<p><span class="math display">\[
+r(x;y)
+=
+\left\lVert
+\mathcal{D}(x)-y
+\right\rVert^2.
+\]</span></p>
+<p>If the teacher provides slower but trusted samples, a distilled model should be evaluated against those samples not only by visual quality, but by posterior-level quantities:</p>
+<p><span class="math display">\[
+\mathbb{E}_{p_{\phi}}[h(x)]
+\approx
+\mathbb{E}_{p_{\theta}}[h(x)]
+\]</span></p>
+<p>for biologically relevant measurements <span class="math inline">\(h\)</span>, such as object count, intensity, filament length, puncta density, colocalization, or morphology.</p>
+<h2 id="takeaway" class="anchored">Takeaway</h2>
+<p>The issue is not that diffusion or flow-matching models are untrustworthy. The opposite is closer to the point: when trained and sampled with their original objectives, they give a principled learned posterior sampling procedure.</p>
+<p>The danger begins when we replace that procedure with a distilled student:</p>
+<p><span class="math display">\[
+p_{\theta}(x\mid y)
+\quad
+\xrightarrow{\text{distillation}}
+\quad
+p_{\phi}(x\mid y).
+\]</span></p>
+<p>The arrow is not a proof of equality. It is an approximation that must be validated.</p>
+<p>So the core message is:</p>
+<p><span class="math display">\[
+x_S^{(k)} \sim p_{\phi}(x\mid y)
+\quad
+\not\Rightarrow
+\quad
+x_S^{(k)} \sim p_{\theta}(x\mid y),
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\frac{1}{K}\sum_{k=1}^{K}x_S^{(k)}
+\quad
+\not\Rightarrow
+\quad
+\mathbb{E}_{p_{\theta}(x\mid y)}[x].
+\]</span></p>
+<p>For scientific imaging inverse problems, this matters because posterior inconsistency can look like biological discovery. A distilled model should therefore be treated as a new probabilistic model, not merely a faster version of the teacher.</p>
+<h2 id="citation" class="anchored">Citation</h2>
+<p>If you use or refer to this note, you can cite it as:</p>
+<p>Ray, Anirban. “Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems.” 2026. https://rayanirban.github.io/distillation_dangers.html</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">ray2026distillation_dangers</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Ray, Anirban},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span> = {2026},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> = {https://rayanirban.github.io/distillation_dangers.html},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span> = {Research note}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/rayanirban\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+</body></html>
