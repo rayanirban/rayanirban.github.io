@@ -468,7 +468,135 @@ body {
   width: min(100% - 2rem, 980px);
   margin: 0 auto;
   padding: 2rem 0 4rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
+/* Writeup page metallic background — matches main page */
+body:has(.writeup-page) {
+  background:
+    radial-gradient(ellipse at top, rgba(192, 192, 192, 0.05) 0%, transparent 50%),
+    linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  position: relative;
+}
+
+body:has(.writeup-page)::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg,
+      transparent,
+      transparent 2px,
+      rgba(192, 192, 192, 0.03) 2px,
+      rgba(192, 192, 192, 0.03) 4px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Citation section */
+.writeup-page .citation-block {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid rgba(192, 192, 192, 0.22);
+  border-left: 3px solid rgba(0, 255, 255, 0.45);
+  border-radius: 8px;
+  background: rgba(26, 26, 26, 0.6);
+  color: #ffffff;
+}
+
+.writeup-page .citation-block h2 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: none !important;
+}
+
+.writeup-page .citation-block p {
+  color: #ffffff !important;
+  margin-bottom: 0.75rem;
+}
+
+.writeup-page .citation-block pre {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(192, 192, 192, 0.18);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  color: #ffffff !important;
+}
+
+.writeup-page .citation-block code {
+  color: #ffffff !important;
+}
+
+/* Override Quarto syntax-highlighting spans inside citation */
+.writeup-page .citation-block code span,
+.writeup-page .citation-block .sourceCode span,
+.writeup-page .citation-block .va,
+.writeup-page .citation-block .ot,
+.writeup-page .citation-block .dt,
+.writeup-page .citation-block .st,
+.writeup-page .citation-block .kw,
+.writeup-page .citation-block .fu,
+.writeup-page .citation-block .co,
+.writeup-page .citation-block .dv,
+.writeup-page .citation-block a {
+  color: #ffffff !important;
+}
+
+/* Table of Contents styling for writeup pages */
+.writeup-page-toc {
+  margin: 1.5rem 0 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(192, 192, 192, 0.18);
+  border-left: 3px solid rgba(0, 255, 255, 0.5);
+  border-radius: 8px;
+  background: rgba(26, 26, 26, 0.55);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25), 0 0 14px rgba(0, 255, 255, 0.06);
+}
+
+.writeup-page-toc strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-silver);
+  margin-bottom: 0.85rem;
+}
+
+.writeup-page-toc ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: none;
+  counter-reset: toc;
+}
+
+.writeup-page-toc ol li {
+  counter-increment: toc;
+  margin-bottom: 0.45rem;
+}
+
+.writeup-page-toc ol li::before {
+  content: counter(toc) '.';
+  display: inline-block;
+  width: 1.6rem;
+  margin-left: -1.2rem;
+  color: cyan;
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.writeup-page-toc ol li a {
+  color: var(--text-primary) !important;
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.writeup-page-toc ol li a:hover {
+  color: cyan !important;
+  padding-left: 0.3rem;
 }
 
 .writeup-page h1 {
@@ -488,6 +616,7 @@ body {
 .writeup-page li {
   font-size: 1rem;
   line-height: 1.7;
+  color: var(--text-primary);
 }
 
 .writeup-back {

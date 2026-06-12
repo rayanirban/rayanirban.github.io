@@ -22,6 +22,20 @@ Research note, June 2026
 Diffusion and flow-matching models trained with their original generative objectives give us a model-defined posterior sampling procedure. If the teacher is well trained and sampled accurately, its samples and their Monte Carlo mean can be interpreted as samples and an MMSE estimate under the teacher's learned conditional distribution. After distillation to one to four steps, that guarantee no longer automatically transfers: the student has a new objective, a new sampler, and a new implicit distribution. Its samples need not come from the teacher posterior, and the mean of student samples need not equal the teacher's posterior mean.
 :::
 
+::: {.writeup-page-toc}
+**Contents**
+
+1. [Teacher Models Have a Posterior Interpretation](#teacher-models-have-a-posterior-interpretation)
+2. [MSE Models Are Different](#mse-models-are-different)
+3. [What Distillation Changes](#what-distillation-changes)
+4. [The Main Failure Mode](#the-main-failure-mode)
+5. [Student MMSE Is Not Teacher MMSE](#student-mmse-is-not-teacher-mmse)
+6. [Why This Matters for Microscopy](#why-this-matters-for-microscopy)
+7. [What Should Be Validated](#what-should-be-validated)
+8. [Examples of Distillation Methods](#examples-of-distillation-methods)
+9. [Takeaway](#takeaway)
+:::
+
 This note was prompted by discussions and lectures from the [CVPR 2026 tutorial *Accelerated Diffusion Models: From Theory to Interactive World Models*](https://cvpr26-tutorial-fastgen.github.io/){target="_blank" .flj}, which I attended recently. The tutorial made a strong case for fast diffusion and flow-based generation; this writeup is my attempt to spell out why the same acceleration story needs extra care in scientific imaging inverse problems.
 
 Microscopy restoration is an inverse problem. We observe a degraded measurement $y$ and want to infer an unknown clean biological image $x$. A generic measurement model is
@@ -385,6 +399,104 @@ $$
 
 for biologically relevant measurements $h$, such as object count, intensity, filament length, puncta density, colocalization, or morphology.
 
+## Examples of Distillation Methods
+
+To make the discussion above concrete, this section briefly describes several prominent distillation approaches. Each replaces the teacher sampling procedure in a different way, and each introduces a different student objective that is not the original teacher loss. The question of whether $p_{\phi}(x \mid y) \approx p_{\theta}(x \mid y)$ must be asked separately for each.
+
+### Consistency Models
+
+Consistency models (Song et al., 2023) enforce a self-consistency property: the student must map every point along a teacher ODE trajectory to the same clean output. The training objective is
+
+$$
+\mathcal{L}_{\mathrm{CM}}(\phi)
+=
+\mathbb{E}_{x,t,t'}
+\left[
+d\!\left(
+f_{\phi}(x_t, t),\;
+f_{\phi}(x_{t'}, t')
+\right)
+\right],
+$$
+
+where $t' < t$ are two time steps along the same probability flow ODE trajectory, and $d$ is a distance metric. The student learns to jump from any noise level directly to the clean image in one step. This removes all intermediate sampling steps, but the student's implicit distribution is shaped by the consistency constraint rather than the original score-matching objective. Consistency distillation produces one-step or few-step generators with high visual quality, but the student output distribution $p_{\phi}(x \mid y)$ is not constrained to match the teacher posterior in terms of calibrated uncertainty or mode coverage.
+
+### Flow Matching Distillation and Flow Maps
+
+In flow matching, the teacher defines a velocity field $v_{\theta}(x_t, t, y)$ and samples are obtained by numerically integrating this ODE. Distillation replaces the multi-step integration with a student that directly parameterizes a flow map:
+
+$$
+x_S = g_{\phi}(z, y),
+\qquad
+z \sim \mathcal{N}(0, I),
+$$
+
+trained to match teacher endpoints:
+
+$$
+\mathcal{L}_{\mathrm{FM\text{-}distill}}(\phi)
+=
+\mathbb{E}_{z, y}
+\left[
+\left\lVert
+g_{\phi}(z, y) - \Phi_{\theta}(z, y)
+\right\rVert^2
+\right],
+$$
+
+where $\Phi_{\theta}(z, y)$ is the result of integrating the teacher flow from noise $z$ to the image. The student learns to replicate the input–output map of the teacher ODE solver in a single forward pass. Reflow (Liu et al., 2023) iteratively straightens the flow trajectories so that fewer Euler steps suffice; the distilled student then approximates the straightened map. The student's distribution again depends on how well a finite-capacity network can approximate a potentially complex, multi-modal flow map.
+
+### Progressive Distillation
+
+Progressive distillation (Salimans & Ho, 2022) halves the number of sampling steps in each round. A student is trained to match in one step what the teacher does in two:
+
+$$
+\mathcal{L}_{\mathrm{prog}}(\phi)
+=
+\mathbb{E}_{x_t, t}
+\left[
+\left\lVert
+f_{\phi}(x_t, t) - \mathrm{TwoStep}_{\theta}(x_t, t)
+\right\rVert^2
+\right],
+$$
+
+where $\mathrm{TwoStep}_{\theta}$ denotes two DDIM steps of the teacher. After several rounds ($N \to N/2 \to N/4 \to \cdots$), the model generates in very few steps. Each round introduces an approximation error, and these errors compound. The student at the final round may be several distributional approximations removed from the original teacher posterior.
+
+### Adversarial Distillation
+
+Adversarial distillation (e.g., SDXL-Turbo / ADD, Sauer et al., 2023) adds a GAN-style discriminator to the distillation process:
+
+$$
+\mathcal{L}_{\mathrm{adv}}(\phi)
+=
+\mathcal{L}_{\mathrm{distill}}(\phi)
++
+\lambda\,\mathcal{L}_{\mathrm{GAN}}(\phi, \psi),
+$$
+
+where $\psi$ parameterizes a discriminator that distinguishes student outputs from real images. The adversarial term pushes student samples toward the manifold of realistic images, which can improve perceptual quality. However, mode dropping is a well-known GAN failure mode, and the adversarial objective actively trades distributional coverage for sample sharpness. This makes the posterior-preservation question especially pressing for scientific applications.
+
+### Score Distillation
+
+Score distillation sampling (SDS; Poole et al., 2023) and its variants use a pretrained diffusion model as a critic to guide optimization of a different representation (e.g., a NeRF or a single image). The gradient signal is derived from the teacher score:
+
+$$
+\nabla_{\phi}\mathcal{L}_{\mathrm{SDS}}
+=
+\mathbb{E}_{t,\epsilon}
+\left[
+w(t)\left(
+\hat{\epsilon}_{\theta}(x_t; t, y) - \epsilon
+\right)
+\frac{\partial x}{\partial \phi}
+\right],
+$$
+
+where $x = g_\phi(\cdot)$ is the student's parameterized output and $\hat{\epsilon}_\theta$ is the teacher's noise prediction. SDS does not produce posterior samples at all; it produces a single mode-seeking output. Variational score distillation (VSD; Wang et al., 2024) addresses some of these issues by maintaining a student score model, but the resulting distribution is still shaped by the variational objective rather than the original teacher posterior.
+
+Each of these methods achieves substantial speedups, but each introduces a different gap between $p_{\phi}(x \mid y)$ and $p_{\theta}(x \mid y)$. For natural-image generation, this gap may be acceptable. For scientific imaging, the gap must be measured and understood.
+
 ## Takeaway
 
 The issue is not that diffusion or flow-matching models are untrustworthy. The opposite is closer to the point: when trained and sampled with their original objectives, they give a principled learned posterior sampling procedure.
@@ -423,6 +535,7 @@ $$
 
 For scientific imaging inverse problems, this matters because posterior inconsistency can look like biological discovery. A distilled model should therefore be treated as a new probabilistic model, not merely a faster version of the teacher.
 
+::: {.citation-block}
 ## Citation
 
 If you use or refer to this note, you can cite it as:
@@ -438,5 +551,6 @@ Ray, Anirban. "Why Fast Distillation Can Be Risky for Scientific Imaging Inverse
   note = {Research note}
 }
 ```
+:::
 
 :::

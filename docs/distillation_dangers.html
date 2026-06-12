@@ -124,6 +124,20 @@ window.Quarto = {
 <div class="writeup-summary">
 <p>Diffusion and flow-matching models trained with their original generative objectives give us a model-defined posterior sampling procedure. If the teacher is well trained and sampled accurately, its samples and their Monte Carlo mean can be interpreted as samples and an MMSE estimate under the teacher’s learned conditional distribution. After distillation to one to four steps, that guarantee no longer automatically transfers: the student has a new objective, a new sampler, and a new implicit distribution. Its samples need not come from the teacher posterior, and the mean of student samples need not equal the teacher’s posterior mean.</p>
 </div>
+<div class="writeup-page-toc">
+<p><strong>Contents</strong></p>
+<ol type="1">
+<li><a href="#teacher-models-have-a-posterior-interpretation">Teacher Models Have a Posterior Interpretation</a></li>
+<li><a href="#mse-models-are-different">MSE Models Are Different</a></li>
+<li><a href="#what-distillation-changes">What Distillation Changes</a></li>
+<li><a href="#the-main-failure-mode">The Main Failure Mode</a></li>
+<li><a href="#student-mmse-is-not-teacher-mmse">Student MMSE Is Not Teacher MMSE</a></li>
+<li><a href="#why-this-matters-for-microscopy">Why This Matters for Microscopy</a></li>
+<li><a href="#what-should-be-validated">What Should Be Validated</a></li>
+<li><a href="#examples-of-distillation-methods">Examples of Distillation Methods</a></li>
+<li><a href="#takeaway">Takeaway</a></li>
+</ol>
+</div>
 <p>This note was prompted by discussions and lectures from the <a href="https://cvpr26-tutorial-fastgen.github.io/" class="flj" target="_blank">CVPR 2026 tutorial <em>Accelerated Diffusion Models: From Theory to Interactive World Models</em></a>, which I attended recently. The tutorial made a strong case for fast diffusion and flow-based generation; this writeup is my attempt to spell out why the same acceleration story needs extra care in scientific imaging inverse problems.</p>
 <p>Microscopy restoration is an inverse problem. We observe a degraded measurement <span class="math inline">\(y\)</span> and want to infer an unknown clean biological image <span class="math inline">\(x\)</span>. A generic measurement model is</p>
 <p><span class="math display">\[
@@ -395,6 +409,79 @@ r(x;y)
 \mathbb{E}_{p_{\theta}}[h(x)]
 \]</span></p>
 <p>for biologically relevant measurements <span class="math inline">\(h\)</span>, such as object count, intensity, filament length, puncta density, colocalization, or morphology.</p>
+<h2 id="examples-of-distillation-methods" class="anchored">Examples of Distillation Methods</h2>
+<p>To make the discussion above concrete, this section briefly describes several prominent distillation approaches. Each replaces the teacher sampling procedure in a different way, and each introduces a different student objective that is not the original teacher loss. The question of whether <span class="math inline">\(p_{\phi}(x \mid y) \approx p_{\theta}(x \mid y)\)</span> must be asked separately for each.</p>
+<h3 id="consistency-models" class="anchored">Consistency Models</h3>
+<p>Consistency models (Song et al., 2023) enforce a self-consistency property: the student must map every point along a teacher ODE trajectory to the same clean output. The training objective is</p>
+<p><span class="math display">\[
+\mathcal{L}_{\mathrm{CM}}(\phi)
+=
+\mathbb{E}_{x,t,t'}
+\left[
+d\!\left(
+f_{\phi}(x_t, t),\;
+f_{\phi}(x_{t'}, t')
+\right)
+\right],
+\]</span></p>
+<p>where <span class="math inline">\(t' &lt; t\)</span> are two time steps along the same probability flow ODE trajectory, and <span class="math inline">\(d\)</span> is a distance metric. The student learns to jump from any noise level directly to the clean image in one step. This removes all intermediate sampling steps, but the student’s implicit distribution is shaped by the consistency constraint rather than the original score-matching objective. Consistency distillation produces one-step or few-step generators with high visual quality, but the student output distribution <span class="math inline">\(p_{\phi}(x \mid y)\)</span> is not constrained to match the teacher posterior in terms of calibrated uncertainty or mode coverage.</p>
+<h3 id="flow-matching-distillation-and-flow-maps" class="anchored">Flow Matching Distillation and Flow Maps</h3>
+<p>In flow matching, the teacher defines a velocity field <span class="math inline">\(v_{\theta}(x_t, t, y)\)</span> and samples are obtained by numerically integrating this ODE. Distillation replaces the multi-step integration with a student that directly parameterizes a flow map:</p>
+<p><span class="math display">\[
+x_S = g_{\phi}(z, y),
+\qquad
+z \sim \mathcal{N}(0, I),
+\]</span></p>
+<p>trained to match teacher endpoints:</p>
+<p><span class="math display">\[
+\mathcal{L}_{\mathrm{FM\text{-}distill}}(\phi)
+=
+\mathbb{E}_{z, y}
+\left[
+\left\lVert
+g_{\phi}(z, y) - \Phi_{\theta}(z, y)
+\right\rVert^2
+\right],
+\]</span></p>
+<p>where <span class="math inline">\(\Phi_{\theta}(z, y)\)</span> is the result of integrating the teacher flow from noise <span class="math inline">\(z\)</span> to the image. The student learns to replicate the input–output map of the teacher ODE solver in a single forward pass. Reflow (Liu et al., 2023) iteratively straightens the flow trajectories so that fewer Euler steps suffice; the distilled student then approximates the straightened map. The student’s distribution again depends on how well a finite-capacity network can approximate a potentially complex, multi-modal flow map.</p>
+<h3 id="progressive-distillation" class="anchored">Progressive Distillation</h3>
+<p>Progressive distillation (Salimans &amp; Ho, 2022) halves the number of sampling steps in each round. A student is trained to match in one step what the teacher does in two:</p>
+<p><span class="math display">\[
+\mathcal{L}_{\mathrm{prog}}(\phi)
+=
+\mathbb{E}_{x_t, t}
+\left[
+\left\lVert
+f_{\phi}(x_t, t) - \mathrm{TwoStep}_{\theta}(x_t, t)
+\right\rVert^2
+\right],
+\]</span></p>
+<p>where <span class="math inline">\(\mathrm{TwoStep}_{\theta}\)</span> denotes two DDIM steps of the teacher. After several rounds (<span class="math inline">\(N \to N/2 \to N/4 \to \cdots\)</span>), the model generates in very few steps. Each round introduces an approximation error, and these errors compound. The student at the final round may be several distributional approximations removed from the original teacher posterior.</p>
+<h3 id="adversarial-distillation" class="anchored">Adversarial Distillation</h3>
+<p>Adversarial distillation (e.g., SDXL-Turbo / ADD, Sauer et al., 2023) adds a GAN-style discriminator to the distillation process:</p>
+<p><span class="math display">\[
+\mathcal{L}_{\mathrm{adv}}(\phi)
+=
+\mathcal{L}_{\mathrm{distill}}(\phi)
++
+\lambda\,\mathcal{L}_{\mathrm{GAN}}(\phi, \psi),
+\]</span></p>
+<p>where <span class="math inline">\(\psi\)</span> parameterizes a discriminator that distinguishes student outputs from real images. The adversarial term pushes student samples toward the manifold of realistic images, which can improve perceptual quality. However, mode dropping is a well-known GAN failure mode, and the adversarial objective actively trades distributional coverage for sample sharpness. This makes the posterior-preservation question especially pressing for scientific applications.</p>
+<h3 id="score-distillation" class="anchored">Score Distillation</h3>
+<p>Score distillation sampling (SDS; Poole et al., 2023) and its variants use a pretrained diffusion model as a critic to guide optimization of a different representation (e.g., a NeRF or a single image). The gradient signal is derived from the teacher score:</p>
+<p><span class="math display">\[
+\nabla_{\phi}\mathcal{L}_{\mathrm{SDS}}
+=
+\mathbb{E}_{t,\epsilon}
+\left[
+w(t)\left(
+\hat{\epsilon}_{\theta}(x_t; t, y) - \epsilon
+\right)
+\frac{\partial x}{\partial \phi}
+\right],
+\]</span></p>
+<p>where <span class="math inline">\(x = g_\phi(\cdot)\)</span> is the student’s parameterized output and <span class="math inline">\(\hat{\epsilon}_\theta\)</span> is the teacher’s noise prediction. SDS does not produce posterior samples at all; it produces a single mode-seeking output. Variational score distillation (VSD; Wang et al., 2024) addresses some of these issues by maintaining a student score model, but the resulting distribution is still shaped by the variational objective rather than the original teacher posterior.</p>
+<p>Each of these methods achieves substantial speedups, but each introduces a different gap between <span class="math inline">\(p_{\phi}(x \mid y)\)</span> and <span class="math inline">\(p_{\theta}(x \mid y)\)</span>. For natural-image generation, this gap may be acceptable. For scientific imaging, the gap must be measured and understood.</p>
 <h2 id="takeaway" class="anchored">Takeaway</h2>
 <p>The issue is not that diffusion or flow-matching models are untrustworthy. The opposite is closer to the point: when trained and sampled with their original objectives, they give a principled learned posterior sampling procedure.</p>
 <p>The danger begins when we replace that procedure with a distilled student:</p>
@@ -423,7 +510,8 @@ x_S^{(k)} \sim p_{\theta}(x\mid y),
 \mathbb{E}_{p_{\theta}(x\mid y)}[x].
 \]</span></p>
 <p>For scientific imaging inverse problems, this matters because posterior inconsistency can look like biological discovery. A distilled model should therefore be treated as a new probabilistic model, not merely a faster version of the teacher.</p>
-<h2 id="citation" class="anchored">Citation</h2>
+<section id="citation" class="citation-block">
+<h2 class="anchored">Citation</h2>
 <p>If you use or refer to this note, you can cite it as:</p>
 <p>Ray, Anirban. “Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems.” 2026. https://rayanirban.github.io/distillation_dangers.html</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">ray2026distillation_dangers</span>,</span>
@@ -433,6 +521,7 @@ x_S^{(k)} \sim p_{\theta}(x\mid y),
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> = {https://rayanirban.github.io/distillation_dangers.html},</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span> = {Research note}</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 </div>
 
 
