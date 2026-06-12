@@ -152,3 +152,39 @@ During my master's studies at [Nagoya Institute of Technology](https://www.nitec
 <p style="font-size: 0.8em; color: #ff4d4d; text-align: center; margin-top: 3rem; font-style: italic;">
   (Note that AI Generated infographics are representational only)
 </p>
+
+```{=html}
+<div class="research-topic-index" aria-label="Research notes" style="margin-top: 2.5rem;">
+<div class="research-topic-index__header">
+  <span class="research-topic-index__eyebrow">Writeups</span>
+  <strong>Research Notes</strong>
+</div>
+
+<div class="research-topic-list">
+  <a href="distillation_dangers.html" class="research-topic-link" target="_blank">
+    <span class="research-topic-number">01</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems</span>
+      <span class="research-topic-meta">Why posterior guarantees break after distillation, with examples from consistency models, flow maps, and more</span>
+    </span>
+    <span class="research-topic-tag">Jun 2026</span>
+  </a>
+  <a href="latent-diffusion-dehazing.html" class="research-topic-link" target="_blank">
+    <span class="research-topic-number">02</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">Widefield Microscopy Image Dehazing using Diffusion Models in Latent Space</span>
+      <span class="research-topic-meta">An earlier attempt at microscopy dehazing via iterative latent-space diffusion before HazeMatching</span>
+    </span>
+    <span class="research-topic-tag">2023</span>
+  </a>
+  <a href="wavelet-deconvolution.html" class="research-topic-link" target="_blank">
+    <span class="research-topic-number">03</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">DeWaM: Deconvolution Wavelet Model for Microscopy Image Restoration</span>
+      <span class="research-topic-meta">Learning wavelet analysis and synthesis filters for structured microscopy deconvolution</span>
+    </span>
+    <span class="research-topic-tag">2022</span>
+  </a>
+</div>
+</div>
+```

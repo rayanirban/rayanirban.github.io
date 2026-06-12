@@ -134,6 +134,7 @@ window.Quarto = {
 <li><a href="#student-mmse-is-not-teacher-mmse">Student MMSE Is Not Teacher MMSE</a></li>
 <li><a href="#why-this-matters-for-microscopy">Why This Matters for Microscopy</a></li>
 <li><a href="#what-should-be-validated">What Should Be Validated</a></li>
+<li><a href="#validation-checklist">Validation Checklist</a></li>
 <li><a href="#examples-of-distillation-methods">Examples of Distillation Methods</a></li>
 <li><a href="#takeaway">Takeaway</a></li>
 </ol>
@@ -163,7 +164,7 @@ x_T^{(k)}
 \sim
 p_{\theta}(x \mid y),
 \]</span></p>
-<p>where <span class="math inline">\(p_{\theta}(x \mid y)\)</span> is the teacher’s learned conditional distribution. For conditional flow matching, the teacher learns a velocity field</p>
+<p>where <span class="math inline">\(p_{\theta}(x \mid y)\)</span> is the teacher’s learned conditional distribution. Throughout this note, <span class="math inline">\(p_{\theta}(x \mid y)\)</span> denotes the conditional distribution learned by the teacher model. It is a learned approximation to the true inverse-problem posterior, not necessarily the exact Bayesian posterior <span class="math inline">\(p(x \mid y)\)</span>. For conditional flow matching, the teacher learns a velocity field</p>
 <p><span class="math display">\[
 \frac{d x_t}{dt}
 =
@@ -223,7 +224,7 @@ f_{\omega}(y).
 <p><span class="math display">\[
 x^{(k)} \sim p(x \mid y)
 \]</span></p>
-<p>unless an additional probabilistic mechanism is explicitly introduced. This distinction matters because a distilled generative student also produces sample-like outputs, but those outputs are not automatically the same object as either the teacher samples or the MSE point estimate.</p>
+<p>unless an additional probabilistic mechanism is explicitly introduced. This is not a flaw of MSE; it is exactly what the MSE objective asks for. The problem arises when a conditional mean is interpreted as a posterior sample, or when posterior diversity is scientifically important. This distinction matters because a distilled generative student also produces sample-like outputs, but those outputs are not automatically the same object as either the teacher samples or the MSE point estimate.</p>
 <h2 id="what-distillation-changes" class="anchored">What Distillation Changes</h2>
 <p>Distillation replaces the original teacher sampling procedure with a fast student, often using one to four steps. A distilled student might be written as</p>
 <p><span class="math display">\[
@@ -254,14 +255,14 @@ g_{\phi}(z,y,t),
 \neq
 \mathcal{L}_{\mathrm{teacher}}(\theta).
 \]</span></p>
-<p>Therefore, even if the teacher defines a useful learned posterior <span class="math inline">\(p_{\theta}(x \mid y)\)</span>, the student defines a different distribution <span class="math inline">\(p_{\phi}(x \mid y)\)</span>.</p>
+<p>Because the student is trained with a different objective and a different sampling map, equality between the student distribution and the teacher distribution is not guaranteed. The student should therefore be treated as defining a new implicit conditional distribution <span class="math inline">\(p_{\phi}(x \mid y)\)</span> unless distributional equivalence has been validated.</p>
 <p>The desired statement would be</p>
 <p><span class="math display">\[
 p_{\phi}(x \mid y)
 =
 p_{\theta}(x \mid y).
 \]</span></p>
-<p>But distillation does not automatically guarantee this. At best, it encourages an approximation:</p>
+<p>But distillation does not automatically guarantee this. In an idealized setting with enough capacity, perfect optimization, and an exact distillation objective, the student could in principle reproduce the teacher sampler. In practice, it encourages an approximation:</p>
 <p><span class="math display">\[
 p_{\phi}(x \mid y)
 \approx
@@ -277,20 +278,14 @@ x_S^{(k)} \sim p_{\phi}(x \mid y)
 \quad
 x_S^{(k)} \sim p_{\theta}(x \mid y).
 \]</span></p>
-<p>This matters because posterior sampling is only scientifically useful if the samples represent the right conditional uncertainty. A distilled model can lose modes, reduce diversity, overfit to visually common teacher outputs, or weaken the dependence on the measurement <span class="math inline">\(y\)</span>.</p>
-<p>Mode loss can be written as</p>
+<p>This matters because posterior sampling is only scientifically useful if the samples represent the right conditional uncertainty. A distilled model may assign reduced probability mass to some regions that are plausible under the teacher, especially under aggressive one-step or few-step distillation. This can appear as mode loss, reduced sample diversity, or biased biological statistics. More precisely, for a biologically relevant statistic <span class="math inline">\(h(x)\)</span>:</p>
 <p><span class="math display">\[
-\operatorname{supp} p_{\phi}(x\mid y)
-\subsetneq
-\operatorname{supp} p_{\theta}(x\mid y).
+p_{\phi}(h(x) \in A \mid y)
+\neq
+p_{\theta}(h(x) \in A \mid y),
 \]</span></p>
-<p>Weak conditioning can be written as</p>
-<p><span class="math display">\[
-I_{\phi}(X;Y)
-&lt;
-I_{\theta}(X;Y),
-\]</span></p>
-<p>where <span class="math inline">\(I(X;Y)\)</span> denotes mutual information between the generated restoration and the measurement. In words, the student may rely more on the learned image prior and less on the actual observation.</p>
+<p>where <span class="math inline">\(h(x)\)</span> might be puncta count, filament continuity, organelle morphology, or colocalization score.</p>
+<p>Weak conditioning — where the student relies more on the learned image prior and less on the actual observation — can sometimes be detected by reduced dependence between generated samples and measurements, for example through diagnostics related to the mutual information <span class="math inline">\(I(X;Y)\)</span>. However, mutual information should be treated as one possible diagnostic rather than a theorem: a model can depend strongly on <span class="math inline">\(y\)</span> and still be wrong.</p>
 <p>This is exactly where hallucination enters. A sample can be plausible under the student distribution while not being a faithful sample from the teacher posterior:</p>
 <p><span class="math display">\[
 x_S \sim p_{\phi}(x \mid y),
@@ -312,13 +307,7 @@ p_{\theta}(x_S \mid y)
 =
 \mathbb{E}_{p_{\phi}(x\mid y)}[x].
 \]</span></p>
-<p>Unless</p>
-<p><span class="math display">\[
-p_{\phi}(x\mid y)
-=
-p_{\theta}(x\mid y),
-\]</span></p>
-<p>there is no reason to expect</p>
+<p>Even if the student and teacher distributions differ, their means could in principle coincide. However, unless the student is explicitly constrained or validated to preserve the teacher expectation, there is no automatic guarantee that</p>
 <p><span class="math display">\[
 \mu_{\phi}(y)
 =
@@ -340,18 +329,9 @@ x_S^{(k)} \sim p_{\phi}(x\mid y),
 \mu_{\phi}(y)-\mu_{\theta}(y)
 \right\rVert.
 \]</span></p>
-<p>This gap can be scientifically meaningful. Even if individual student samples look sharp, the mean of those samples does not automatically recover the MMSE estimate of the original teacher model.</p>
+<p>This gap can be scientifically meaningful. Even if individual student samples look sharp, averaging student samples recovers the mean of the student distribution, <span class="math inline">\(\mathbb{E}_{p_{\phi}}[x \mid y]\)</span>, not automatically the MMSE estimate of the original teacher model.</p>
 <h2 id="why-this-matters-for-microscopy" class="anchored">Why This Matters for Microscopy</h2>
-<p>In microscopy, generated structure can become biological evidence. If a distilled model changes the posterior, it may change the scientific interpretation:</p>
-<p><span class="math display">\[
-p_{\phi}(x\mid y)
-\neq
-p_{\theta}(x\mid y)
-\quad
-\Longrightarrow
-\quad
-\text{different uncertainty, different mean, different conclusions.}
-\]</span></p>
+<p>In microscopy, generated structure can become biological evidence. If a distilled model does not preserve the teacher’s conditional distribution, it may change the scientific interpretation: different uncertainty, different mean, different conclusions.</p>
 <p>The student can fail in ways that are not the same as classical MSE blur:</p>
 <p><span class="math display">\[
 \text{MSE ambiguity}
@@ -366,7 +346,7 @@ p_{\theta}(x\mid y)
 \]</span></p>
 <p>The second failure mode is harder to notice because the image may be sharp, realistic, and visually convincing.</p>
 <h2 id="what-should-be-validated" class="anchored">What Should Be Validated</h2>
-<p>For a distilled model, visual similarity to teacher outputs is not enough. The relevant question is whether the student preserves the teacher posterior:</p>
+<p>For a distilled model, visual similarity to teacher outputs is not enough. The relevant question is whether the student preserves the teacher’s learned conditional distribution:</p>
 <p><span class="math display">\[
 p_{\phi}(x\mid y)
 \approx
@@ -394,14 +374,13 @@ p_{\phi}(x\mid \tilde{y})
 \quad
 y \neq \tilde{y},
 \]</span></p>
-<p>and whether generated samples remain data-consistent:</p>
+<p>and whether generated samples remain consistent with the measurement model. When a forward model is known, student and teacher samples should be checked for consistency. In the general case, this is a likelihood-based residual:</p>
 <p><span class="math display">\[
 r(x;y)
 =
-\left\lVert
-\mathcal{D}(x)-y
-\right\rVert^2.
+-\log p(y \mid x),
 \]</span></p>
+<p>which reduces to the squared residual <span class="math inline">\(\|\mathcal{D}(x)-y\|^2\)</span> in the Gaussian-noise special case. In microscopy, where Poisson noise, heteroscedastic noise, unknown PSFs, or detector nonlinearities are common, the likelihood-based form is often more appropriate.</p>
 <p>If the teacher provides slower but trusted samples, a distilled model should be evaluated against those samples not only by visual quality, but by posterior-level quantities:</p>
 <p><span class="math display">\[
 \mathbb{E}_{p_{\phi}}[h(x)]
@@ -409,6 +388,32 @@ r(x;y)
 \mathbb{E}_{p_{\theta}}[h(x)]
 \]</span></p>
 <p>for biologically relevant measurements <span class="math inline">\(h\)</span>, such as object count, intensity, filament length, puncta density, colocalization, or morphology.</p>
+<p>Distillation is not inherently invalid. A distilled model may be acceptable if it is validated for the intended scientific use. The key point is that visual similarity or standard reconstruction metrics are insufficient when the output is interpreted probabilistically. One should validate the student against the teacher and, where possible, against ground-truth or measurement-model-based criteria.</p>
+<h2 id="validation-checklist" class="anchored">Validation Checklist</h2>
+<p>For a teacher distribution <span class="math inline">\(p_{\theta}(x \mid y)\)</span> and a student distribution <span class="math inline">\(p_{\phi}(x \mid y)\)</span>, the following checks are recommended:</p>
+<ol type="1">
+<li><p><strong>Sample mean.</strong> Compare <span class="math inline">\(\mathbb{E}_{p_{\phi}}[x \mid y]\)</span> vs.&nbsp;<span class="math inline">\(\mathbb{E}_{p_{\theta}}[x \mid y]\)</span>.</p></li>
+<li><p><strong>Sample variance and uncertainty maps.</strong> Compare <span class="math inline">\(\operatorname{Var}_{p_{\phi}}(x \mid y)\)</span> vs.&nbsp;<span class="math inline">\(\operatorname{Var}_{p_{\theta}}(x \mid y)\)</span>.</p></li>
+<li><p><strong>Task-specific biological statistics.</strong> Compare the distributions of biologically relevant statistics:</p></li>
+</ol>
+<p><span class="math display">\[
+p_{\phi}(h(x) \mid y)
+\quad \text{vs.} \quad
+p_{\theta}(h(x) \mid y),
+\]</span></p>
+<p>where <span class="math inline">\(h(x)\)</span> could be puncta count, filament length, organelle shape, colocalization, or cell morphology.</p>
+<ol start="4" type="1">
+<li><strong>Measurement consistency.</strong> Compare the likelihood-based residuals:</li>
+</ol>
+<p><span class="math display">\[
+-\log p(y \mid x_S)
+\quad \text{vs.} \quad
+-\log p(y \mid x_T).
+\]</span></p>
+<ol start="5" type="1">
+<li><p><strong>Calibration.</strong> Check whether nominal credible intervals or uncertainty estimates have the expected empirical coverage.</p></li>
+<li><p><strong>Diversity and mode coverage.</strong> Use ensemble statistics, distributional distances, or downstream biological measurements to check whether the student has collapsed to a subset of teacher-like outputs.</p></li>
+</ol>
 <h2 id="examples-of-distillation-methods" class="anchored">Examples of Distillation Methods</h2>
 <p>To make the discussion above concrete, this section briefly describes several prominent distillation approaches. Each replaces the teacher sampling procedure in a different way, and each introduces a different student objective that is not the original teacher loss. The question of whether <span class="math inline">\(p_{\phi}(x \mid y) \approx p_{\theta}(x \mid y)\)</span> must be asked separately for each.</p>
 <h3 id="consistency-models" class="anchored">Consistency Models</h3>
@@ -481,10 +486,10 @@ w(t)\left(
 \right],
 \]</span></p>
 <p>where <span class="math inline">\(x = g_\phi(\cdot)\)</span> is the student’s parameterized output and <span class="math inline">\(\hat{\epsilon}_\theta\)</span> is the teacher’s noise prediction. SDS does not produce posterior samples at all; it produces a single mode-seeking output. Variational score distillation (VSD; Wang et al., 2024) addresses some of these issues by maintaining a student score model, but the resulting distribution is still shaped by the variational objective rather than the original teacher posterior.</p>
-<p>Each of these methods achieves substantial speedups, but each introduces a different gap between <span class="math inline">\(p_{\phi}(x \mid y)\)</span> and <span class="math inline">\(p_{\theta}(x \mid y)\)</span>. For natural-image generation, this gap may be acceptable. For scientific imaging, the gap must be measured and understood.</p>
+<p>Each of these methods achieves substantial speedups, but each introduces a different relationship between <span class="math inline">\(p_{\phi}(x \mid y)\)</span> and <span class="math inline">\(p_{\theta}(x \mid y)\)</span>, and none guarantees distributional equivalence by construction. For natural-image generation, any gap may be acceptable. For scientific imaging, the gap must be measured and understood.</p>
 <h2 id="takeaway" class="anchored">Takeaway</h2>
 <p>The issue is not that diffusion or flow-matching models are untrustworthy. The opposite is closer to the point: when trained and sampled with their original objectives, they give a principled learned posterior sampling procedure.</p>
-<p>The danger begins when we replace that procedure with a distilled student:</p>
+<p>A distilled sampler should not automatically be interpreted as a faster implementation of the teacher posterior. The teacher defines a learned conditional distribution <span class="math inline">\(p_{\theta}(x \mid y)\)</span>, while the distilled student defines another implicit conditional distribution <span class="math inline">\(p_{\phi}(x \mid y)\)</span>. Even when the student is trained to match teacher trajectories, teacher outputs, or consistency constraints, equality <span class="math inline">\(p_{\phi}(x \mid y) = p_{\theta}(x \mid y)\)</span> is not guaranteed:</p>
 <p><span class="math display">\[
 p_{\theta}(x\mid y)
 \quad
@@ -501,7 +506,7 @@ x_S^{(k)} \sim p_{\phi}(x\mid y)
 \quad
 x_S^{(k)} \sim p_{\theta}(x\mid y),
 \]</span></p>
-<p>and</p>
+<p>and averaging student samples estimates <span class="math inline">\(\mathbb{E}_{p_{\phi}}[x \mid y]\)</span>, not necessarily <span class="math inline">\(\mathbb{E}_{p_{\theta}}[x \mid y]\)</span>:</p>
 <p><span class="math display">\[
 \frac{1}{K}\sum_{k=1}^{K}x_S^{(k)}
 \quad
@@ -509,7 +514,7 @@ x_S^{(k)} \sim p_{\theta}(x\mid y),
 \quad
 \mathbb{E}_{p_{\theta}(x\mid y)}[x].
 \]</span></p>
-<p>For scientific imaging inverse problems, this matters because posterior inconsistency can look like biological discovery. A distilled model should therefore be treated as a new probabilistic model, not merely a faster version of the teacher.</p>
+<p>The danger is not distillation itself. The danger is treating a distilled one-step or few-step model as if it preserved the teacher’s conditional distribution by construction. In scientific inverse problems, this assumption can affect uncertainty estimates, posterior means, biological measurements, and downstream conclusions. Distilled models can be useful, but they should be validated as new probabilistic models rather than accepted as exact accelerated samplers of the teacher.</p>
 <section id="citation" class="citation-block">
 <h2 class="anchored">Citation</h2>
 <p>If you use or refer to this note, you can cite it as:</p>
