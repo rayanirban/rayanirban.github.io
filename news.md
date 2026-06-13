@@ -1,7 +1,6 @@
 ::: {.news-item}
 <span class="news-date">June 2026</span>
-<div class="news-content">Wrote a short writeup on why I believe distillation methods should be used with caution for scientific imaging inverse problems. Read it [here](distillation_dangers.qmd){target="_blank" .flj}. Please share your thoughts!
-</div>
+<div class="news-content">I wrote a short piece on why I think distillation methods should be used with caution in scientific imaging inverse problems. Read it [here](distillation_dangers.qmd){target="_blank" .flj}. I’d love to hear your thoughts!</div>
 :::
 
 ::: {.news-item}
