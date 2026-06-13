@@ -14,6 +14,10 @@ format:
 
 ::: {.distillation-hero}
 
+<div class="distillation-hero-art">
+  <img src="images/distil_danger.png" alt="Symbolic visualization of fast distillation risk in scientific imaging">
+</div>
+
 ::: {.writeup-meta}
 Research note, June 2026
 :::
@@ -656,6 +660,35 @@ Ray, Anirban. "Why Fast Distillation Can Be Risky for Scientific Imaging Inverse
   note = {Research note}
 }
 ```
+:::
+
+::: {.writeup-social}
+## Feedback and discussion
+
+<div class="writeup-social-row">
+<div class="writeup-feedback-item">
+<p class="writeup-social-intro">
+Feedback from [Sander Dieleman](https://x.com/sedielem){target="_blank" .flj} and my response:
+</p>
+
+<div class="writeup-twitter-embed">
+  <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none">
+    <p lang="en" dir="ltr">Loading comment...</p>
+    <a href="https://twitter.com/sedielem/status/2065722900338851938">View the comment on X</a>
+  </blockquote>
+</div>
+</div>
+
+<div class="writeup-discussion-cta">
+  <p>For broader discussion, add your thoughts on the original post:</p>
+
+  <p class="writeup-social-action">
+    <a href="https://twitter.com/anirbanray_/status/2065715816700543103" class="writeup-twitter-button" target="_blank" rel="noopener">Share your thoughts on the X post</a>
+  </p>
+</div>
+</div>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 :::
 
 :::
