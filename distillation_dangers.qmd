@@ -1,6 +1,21 @@
 ---
 title: ""
 pagetitle: "Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems"
+description: "Why posterior guarantees can break after one-step or few-step distillation in scientific imaging inverse problems."
+image: "images/distil_danger.png"
+open-graph:
+  title: "Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems"
+  description: "Why posterior guarantees can break after one-step or few-step distillation in scientific imaging inverse problems."
+  image: "images/distil_danger.png"
+  image-width: 1983
+  image-height: 793
+twitter-card:
+  title: "Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems"
+  description: "Why posterior guarantees can break after one-step or few-step distillation in scientific imaging inverse problems."
+  image: "images/distil_danger.png"
+  image-width: 1983
+  image-height: 793
+  card-style: summary_large_image
 format:
   html:
     page-layout: full
