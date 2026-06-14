@@ -2,25 +2,34 @@
 title: ""
 pagetitle: "Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems"
 description: "Why posterior guarantees can break after one-step or few-step distillation in scientific imaging inverse problems."
-image: "images/distil_danger.png"
+image: "images/distil_danger_social.jpg"
 open-graph:
   title: "Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems"
   description: "Why posterior guarantees can break after one-step or few-step distillation in scientific imaging inverse problems."
-  image: "images/distil_danger.png"
-  image-width: 1983
-  image-height: 793
+  type: article
+  url: "https://rayanirban.github.io/distillation_dangers.html"
+  image: "images/distil_danger_social.jpg"
+  image-width: 1200
+  image-height: 630
+  image-alt: "Symbolic visualization of fast distillation risk in scientific imaging"
 twitter-card:
   title: "Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems"
   description: "Why posterior guarantees can break after one-step or few-step distillation in scientific imaging inverse problems."
-  image: "images/distil_danger.png"
-  image-width: 1983
-  image-height: 793
+  image: "images/distil_danger_social.jpg"
+  image-width: 1200
+  image-height: 630
+  image-alt: "Symbolic visualization of fast distillation risk in scientific imaging"
   card-style: summary_large_image
 format:
   html:
     page-layout: full
     css: styles.css
     html-math-method: mathjax
+    include-in-header:
+      text: |
+        <link rel="canonical" href="https://rayanirban.github.io/distillation_dangers.html">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://rayanirban.github.io/distillation_dangers.html">
     toc: false
 ---
 
@@ -34,7 +43,7 @@ format:
 </div>
 
 ::: {.writeup-meta}
-Research note, June 2026
+Research note, June 2026 · ⏳ Reading time ~16 minutes
 :::
 
 ## Why Fast Distillation Can Be Risky for Scientific Imaging Inverse Problems
