@@ -33,16 +33,14 @@ format:
     toc: false
 ---
 
-```{=html}
-<div class="distillation-page-hero" style="--distillation-hero-height: 440px;">
-  <img src="images/distil_danger.png" alt="Symbolic visualization of fast distillation risk in scientific imaging">
-</div>
-```
-
 ::: {.writeup-page}
 [Back to research](index.html#research){.writeup-back .flj}
 
 ::: {.distillation-hero}
+
+<div class="distillation-hero-art">
+  <img src="images/distil_danger.png" alt="Symbolic visualization of fast distillation risk in scientific imaging">
+</div>
 
 ::: {.writeup-meta}
 Research note, June 2026 · ⏳ Reading time ~16 minutes
