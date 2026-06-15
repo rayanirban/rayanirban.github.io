@@ -707,8 +707,11 @@ Feedback from [Sander Dieleman](https://x.com/sedielem){target="_blank" .flj} an
   <p>For broader discussion, add your thoughts on the original post:</p>
 
   <p class="writeup-social-action">
-    <a href="https://twitter.com/anirbanray_/status/2065715816700543103" class="writeup-twitter-button" target="_blank" rel="noopener">Share your thoughts on the X post</a>
+    <a href="https://twitter.com/anirbanray_/status/2065715816700543103" class="writeup-twitter-button" target="_blank" rel="noopener">Share your thoughts on the X</a>
   </p>
+  <p class="writeup-social-action">
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7472206004844351488/" class="writeup-twitter-button" target="_blank" rel="noopener">Share your thoughts on the LinkedIn</a>
+  </p>  
 </div>
 </div>
 
