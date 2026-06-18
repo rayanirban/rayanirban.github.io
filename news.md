@@ -1,15 +1,15 @@
 ::: {.news-item}
-<span class="news-date">June 2026</span>
+<span class="news-date">Jun 2026</span>
 <div class="news-content">I wrote a short piece on why I think diffusion/flow step distillation methods should be used with caution in scientific imaging inverse problems. Read it [here](distillation_dangers.qmd){target="_blank" .flj}. I’d love to hear your [thoughts](https://twitter.com/anirbanray_/status/2065715816700543103){target="_blank" .flj}😇!</div>
 :::
 
 ::: {.news-item}
-<span class="news-date">June 2026</span>
+<span class="news-date">Jun 2026</span>
 <div class="news-content">Presenting our [poster](files/CVPR_poster.pdf){target="_blank" .flj} on [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} at [IEEE/CVF CVPR 2026 (Findings)](https://cvpr.thecvf.com/){target="_blank" .flj} and also at the [Computer Vision for Science (CV4Science) Workshop](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} in Denver, CO, USA. If you're around please drop by!🎉</div>
 :::
 
 ::: {.news-item}
-<span class="news-date">June 2026</span>
+<span class="news-date">Jun 2026</span>
 <div class="news-content">Super excited to be in NYC for an invited talk at [Schmidt Sciences](https://www.schmidtsciences.org/){target="_blank" .flj} [AI & Advanced Computing Institute](https://www.schmidtsciences.org/focus-area-ai/){target="_blank" .flj}, hosted by [Suhas Mahesh](https://suhasmahesh.com/){target="_blank" .flj}.</div>
 ::: 
 
