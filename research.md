@@ -38,6 +38,14 @@
     </span>
     <span class="research-topic-tag">2016-2018</span>
   </a>
+  <a href="#research-notes" class="research-topic-link">
+    <span class="research-topic-number">05</span>
+    <span class="research-topic-main">
+      <span class="research-topic-title">Research Notes</span>
+      <span class="research-topic-meta">Other miscellaneous writeups and notes on research directions, failures, and lessons learned</span>
+    </span>
+    <span class="research-topic-tag">Notes</span>
+  </a>
 </div>
 </div>
 ```
@@ -154,7 +162,7 @@ During my master's studies at [Nagoya Institute of Technology](https://www.nitec
 </p>
 
 ```{=html}
-<div class="research-topic-index" aria-label="Research notes" style="margin-top: 2.5rem;">
+<div id="research-notes" class="research-topic-index" aria-label="Research notes" style="margin-top: 2.5rem;">
 <div class="research-topic-index__header">
   <span class="research-topic-index__eyebrow">Writeups</span>
   <strong>Research Notes</strong>

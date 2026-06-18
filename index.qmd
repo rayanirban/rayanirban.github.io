@@ -65,7 +65,7 @@ PhD Student in Computational Image Restoration | Generative AI for Microscopy
 ## About Me
 
 I am a final year PhD Student in Computer Science at [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj}, advised by [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}<span class="tooltip-trigger" data-tooltip="Wondering why this arrangement?: I was selected through the IMPRS-CellDevoSys PhD Program at the Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG) to work with Dr. Florian Jug. At the time of my selection, he was a Principal Investigator at MPI-CBG and my PhD program was affiliated with the Faculty of Computer Science at Technische Universität Dresden. However, he relocated to Human Technopole in Milan, Italy before I officially commenced my PhD. In this new arrangement, while I could no longer keep my affiliation with MPI-CBG, I could keep my affiliation with Technische Universität Dresden.">&#8704;</span>, as a part of the [Multimodal AI Across Scales](https://maias.bio/){target="_blank" .flj} research program.
-My research focuses on developing flow-matching models to restore degraded biological images and applying other deep learning methods to inverse problems in microscopy for biological data, advancing the intersection of artificial intelligence and the life sciences. I am passionate about AI4Science and deeply interested in how *[science philanthropy](https://sciencephilanthropyalliance.org/){target="_blank" .flj}* can accelerate discovery and innovation. </br>  
+My research focuses on developing flow-matching models to restore degraded biological images and applying other deep learning methods to inverse problems in microscopy for biological data, advancing the intersection of artificial intelligence and the life sciences. I am passionate about AI4Science and deeply interested in how *[science philanthropy](https://sciencephilanthropyalliance.org/alliance/about){target="_blank" .flj}* can accelerate discovery and innovation. </br>  
 Previously, I did a Masters in Computer Vision and Deep Learning, funded by the [Japanese Government](https://www.pref.aichi.jp/soshiki/kokusai/aichi-scholarship-program.html){target="_blank"}, from [Nagoya Institute of Technology](https://www.nitech.ac.jp/eng/){target="_blank" .flj}, Japan, where I was advised by [Professor Jun Sato](https://scholar.google.com/citations?hl=en&user=ogGIgQEAAAAJ&view_op=list_works&sortby=pubdate){target="_blank" .flj} and co-advised by [Associate Professor Fumihiko Sakaue](https://scholar.google.com/citations?hl=en&user=x7TTwhYAAAAJ&view_op=list_works&sortby=pubdate){target="_blank" .flj}. Before beginning my doctoral journey, I worked as an Associate AI researcher at [Hitachi Research](https://www.hitachi.com/rd/){target="_blank" .flj} in Tokyo, applying deep learning to visual understanding and bioimage analysis.</br>  
 I earned my Bachelor's degree in Computer Science in Chennai, India, and was born and raised in [Kolkata, India](https://maps.app.goo.gl/uAYA9p9hDrgCzwhH7){target="_blank" .flj}, where I completed my [secondary](https://www.juliendayschool.org/){target="_blank" .flj} and higher secondary school education. Outside of research, I stay active through badminton, table tennis, hiking, long walks, and light strength training. I also enjoy self-learning piano in my free time and hope to devote more time to it after my PhD.
 </div>
@@ -110,7 +110,7 @@ Advisor: [Prof. Jun Sato](https://scholar.google.com/citations?hl=en&user=ogGIgQ
 
 <div class="tab-content" data-tab-id="teaching">
 
-## Teaching Experience
+## Teaching and Supervision Experience
 
 ::: {.education-item}
 **Teaching Assistant – DL4MIA | [2022](https://humantechnopole.it/en/trainings/deep-learning-for-microscopy-image-analysis-2022/){target="_blank"}, [2023](https://dl4mia2023.humantechnopole.it/){target="_blank"}, [2024](https://meetings.embo.org/event/24-deep-learning-mia){target="_blank" .flj}  
@@ -125,6 +125,14 @@ Supported the *Deep Learning for Microscopy Image Analysis* (DL4MIA) course acro
 Contributed to hands-on sessions on deep learning for biological imaging. Provided mentoring and technical guidance to participants during lab exercises and research projects.
 One of the project started in the group that I co-mentored, ended up being published in <a href="https://www.linkedin.com/posts/anirban-ray_our-super-cool-project-bit2bit-1-bit-quanta-activity-7260904021522010112-Nfgi?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqfVj4BuGmZW_XROl13l-KT-LedbrI2tzQ" target="_blank">NeurIPS 2024</a> and another work on <a href="https://www.researchsquare.com/article/rs-8059028/v1" target="_blank">improving RESOLFT Microscopy with deep learning</a> is currently under review.
 :::
+
+::: {.education-item}
+**Supervision | 2026**
+[Human Technopole, Milan, Italy](https://humantechnopole.it/){target="_blank" .flj}  
+Supervised one undergraduate intern during my PhD for two months, providing research guidance, technical mentoring, and feedback on project direction.
+:::
+
+
 
 </div>
 
