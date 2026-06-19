@@ -129,7 +129,7 @@ One of the project started in the group that I co-mentored, ended up being publi
 ::: {.education-item}
 **Supervision | 2026 (ongoing)**
 [Human Technopole, Milan, Italy](https://humantechnopole.it/){target="_blank" .flj}  
-Supervised one undergraduate intern during my PhD for two months, providing research guidance, technical mentoring, and feedback on project direction.
+Supervising one undergraduate intern during my PhD for two months, providing research guidance, technical mentoring, and feedback on project direction.
 :::
 
 
