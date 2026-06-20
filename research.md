@@ -60,7 +60,9 @@
 ![](images/resolft_teaser.png){fig-align="center" width="80%" alt="RESOLFT time lapse imaging empowered by deep learning"}
 
 Deep learning extended RESOLFT nanoscopy by restoring low-SNR and sub-sampled acquisitions, enabling 5× longer imaging with 10× lower dose of light per frame, or a 4× increase in imaging speed for faster live-cell imaging while preserving ~60 nm resolution. This method enables reduced photobleaching and accelerated volumetric recording, revealing previously inaccessible sub-organelle dynamics in living cells.</br>
-[Preprint (under review)](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} | [GitHub](https://github.com/GuillaumeMinet/deepL_resolft){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RESOLFT.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RESOLFT.png" class="infographic-pop"></span>
+[GitHub](https://github.com/GuillaumeMinet/deepL_resolft){target="_blank" .flj} | 
+[Preprint (under review)](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} |
+<span class="infographic-wrapper"><a href="files/RESOLFT.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RESOLFT.png" class="infographic-pop"></span>
 :::
 
 ::: {#resmatching .project-item}
@@ -73,23 +75,23 @@ Deep learning extended RESOLFT nanoscopy by restoring low-SNR and sub-sampled ac
 <td style="border:none; text-align:center; padding:0.5rem;"><img src="images/ER_Test_Cell_028_concatenated.gif" alt="HazeMatching" style="width:100%;"></td>
 </tr></table>
 A guided conditional flow-matching framework for noise-resilient computational super-resolution in fluorescence microscopy, unifying denoising, super-resolution, uncertainty estimation, and posterior sampling within a single generative model.</br>
+[Project Page](https://rayanirban.github.io/resmatching/){target="_blank" .flj} |
 [GitHub](https://github.com/juglab/resmatching){target="_blank" .flj} |
-[Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} | [Project Page](https://rayanirban.github.io/resmatching/){target="_blank" .flj} | <span class="infographic-wrapper"><a href="files/RM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RM.png" class="infographic-pop"></span>
+[Paper (arXiv)](https://arxiv.org/abs/2510.26601){target="_blank" .flj} |  <span class="infographic-wrapper"><a href="files/RM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RM.png" class="infographic-pop"></span>
 :::
 
 ::: {#hazematching .project-item}
 
-**<span style="font-size: 1.2em;">HazeMatching: Conditional Flow Matching for Microscopy Dehazing [ [CVPR 2026 (Findings)] ](https://cvpr.thecvf.com/){target="_blank" .flj}</span>**  
+**<span style="font-size: 1.2em;">HazeMatching: Conditional Flow Matching for Microscopy Dehazing [ [IEEE/CVF CVPR 2026 (Findings)] ](https://cvpr.thecvf.com/){target="_blank" .flj}</span>**  
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Ashesh](https://ashesh-0.github.io/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}.</br>  
 <table style="width:100%; margin:auto; border:none; border-collapse:collapse;"><tr>
 <td style="border:none; text-align:center; padding:0.5rem;"><img src="images/care_test_2.gif" alt="HazeMatching" style="width:100%;"></td>
 <td style="border:none; text-align:center; padding:0.5rem;"><img src="images/LIF1_Test1.gif" alt="HazeMatching" style="width:100%;"></td>
 </tr></table>
 
-A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures. This work was addtionally accepted as a poster to the [Computer Vision for Science (CV4Science) Workshop 2026](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} at [CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj}. This project includes a microscopy dehazing dataset of paired widefield and confocal images, which we are releasing to the community to support further research in this area.</br>
+A generative framework that restores optical microscopy images degraded by scattering and haze using Conditional Flow Matching (CFM). HazeMatching models the mapping between widefield and confocal modalities, enabling clearer visualization of biological structures. This project includes 5 microscopy dehazing datasets of paired widefield and confocal images, which we are releasing to the community to support further research in this area. This work was addtionally accepted as a poster to the [Computer Vision for Science (CV4Science) Workshop 2026](https://sites.google.com/nyu.edu/computervisionforscience){target="_blank" .flj} at [CVPR 2026](https://cvpr.thecvf.com/){target="_blank" .flj}.</br>
 [GitHub](https://github.com/juglab/HazeMatching){target="_blank" .flj} |
 [Paper (arXiv)](https://arxiv.org/abs/2506.22397){target="_blank" .flj} | 
-<!-- [Project Page](#){target="_blank"} | -->
 <span class="infographic-wrapper"><a href="files/HM.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HM.png" class="infographic-pop"></span>
 :::
 
