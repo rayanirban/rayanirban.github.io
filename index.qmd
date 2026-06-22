@@ -191,7 +191,7 @@ Awarded full funding for Master's studies at Nagoya Institute of Technology. Sel
 ::: {.education-item}
 **Selected Participant – Undergraduate Summer School on Computer Science | *2013*** [Indian Institute of Science, Bengaluru India](https://www.csa.iisc.ac.in/){target="_blank"}
 
-Chosen as as 3rd year undergrad student among 60 top students (mostly 4th year undergrad students) from India for advanced topics and research presentation in computer science.
+Chosen as a 3rd year undergrad student among 60 top students (mostly 4th year undergrad students) from India for advanced topics and research presentation in computer science.
 :::
 
 </div>
