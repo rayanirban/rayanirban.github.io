@@ -183,7 +183,7 @@ Selected as a Master's student among 150 top global students (mostly PhDs) for a
 :::
 
 ::: {.education-item}
-**Aichi Monozukuri Scholarship | *2015*** [Aichi Prefectural Government, Japan](https://www.pref.aichi.jp/soshiki/kokusai/aichi-scholarship-program.html){target="_blank"}
+**Aichi Monozukuri Scholarship | *2015*** [Aichi Prefecture, Government of Japan](https://www.pref.aichi.jp/soshiki/kokusai/aichi-scholarship-program.html){target="_blank"}
 
 Awarded full funding for Master's studies at Nagoya Institute of Technology. Selected among the top 10 students in Asia.
 :::
