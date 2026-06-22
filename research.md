@@ -138,8 +138,8 @@ From 2018 to 2021, my research at [Hitachi Ltd., Tokyo](https://www.hitachi.com/
 
 **Publications:**
 
-- [*Quantitative Analysis System for Bacterial Cells in SEM Images Using Deep Learning*](https://ieeexplore.ieee.org/abstract/document/9400322){target="_blank" .flj} (*CISS 2021*) — introduced a neural architecture for accurate segmentation and counting of bacterial cells from scanning electron microscopy (SEM) data. | <span class="infographic-wrapper"><a href="files/HitPaper2.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HitPaper2.png" class="infographic-pop"></span>
-- [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170){target="_blank" .flj} (*CISS 2022*) — improved bacterial classification by jointly modeling morphological and internal structural cues. | <span class="infographic-wrapper"><a href="files/HitPaper1.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HitPaper1.png" class="infographic-pop"></span>
+- [*Quantitative Analysis System for Bacterial Cells in SEM Images Using Deep Learning*](https://ieeexplore.ieee.org/abstract/document/9400322){target="_blank" .flj} (*IEEE CISS 2021*) — introduced a neural architecture for accurate segmentation and counting of bacterial cells from scanning electron microscopy (SEM) data. | <span class="infographic-wrapper"><a href="files/HitPaper2.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HitPaper2.png" class="infographic-pop"></span>
+- [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170){target="_blank" .flj} (*IEEE CISS 2022*) — improved bacterial classification by jointly modeling morphological and internal structural cues. | <span class="infographic-wrapper"><a href="files/HitPaper1.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/HitPaper1.png" class="infographic-pop"></span>
 
 **Patents:**
 
