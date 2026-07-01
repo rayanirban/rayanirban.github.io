@@ -85,7 +85,7 @@ I earned my Bachelor's degree in Computer Science in Chennai, India, and was bor
 ::: {.education-item}
 **PhD in Computer Science | *2022 – 2026 (expected)*** [Technische Universität Dresden](https://tu-dresden.de){target="_blank" .flj} & [Human Technopole, Italy](https://humantechnopole.it){target="_blank" .flj} </br>
 Advisor: [Dr. Florian Jug](http://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}  
-TAC Members: [Prof. Dr. Ivo F. Sbalzarini](https://sbalzarini-lab.org/?q=people/ivo_sbalzarini){target="_blank" .flj} and [Dr. Virginie Uhlmann](https://virginieuhlmann.com/){target="_blank" .flj}  
+TAC Members: [Prof. Dr. Ivo F. Sbalzarini](https://sbalzarini-lab.org/?q=people/ivo_sbalzarini){target="_blank" .flj} and [Dr. Virginie Uhlmann](https://www.mls.uzh.ch/en/research/uhlmann.html){target="_blank" .flj}  
 Thesis (working) title: *Computational Image Restoration with Generative AI for Microscopy*
 
 [I plan to submit my thesis by July 2026.]{style="color: red;"}
