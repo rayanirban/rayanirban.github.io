@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A mathematical walk from empirical Bayes denoising to modern generative modeling: score matching, diffusion prediction heads, DDIM, reverse SDEs, probability-flow ODEs, and conditional flow matching.">
+
+<title>Tweedie’s Formula as the Rosetta Stone of Score Matching, Diffusion, DDIM, and CFM – Anirban Ray</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<link href="./profile.jpg" rel="icon" type="image/jpeg">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html-734cb40618f438257b19a1e532635a32.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link rel="canonical" href="https://rayanirban.github.io/generative_models.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rayanirban.github.io/generative_models.html">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Tweedie’s Formula as the Rosetta Stone of Score Matching, Diffusion, DDIM, and CFM">
+<meta property="og:description" content="A mathematical walk from empirical Bayes denoising to score matching, diffusion, DDIM, reverse SDEs, ODEs, and conditional flow matching.">
+<meta property="og:image" content="https://rayanirban.github.io/images/tweedie_cover.png">
+<meta property="og:site_name" content="Anirban Ray">
+<meta property="og:image:alt" content="Cover artwork for Tweedie's Formula showing a generative trajectory from noise to data">
+<meta property="og:image:height" content="941">
+<meta property="og:image:width" content="1672">
+<meta name="twitter:title" content="Tweedie’s Formula as the Rosetta Stone of Score Matching, Diffusion, DDIM, and CFM">
+<meta name="twitter:description" content="A mathematical walk from empirical Bayes denoising to score matching, diffusion, DDIM, reverse SDEs, ODEs, and conditional flow matching.">
+<meta name="twitter:image" content="https://rayanirban.github.io/images/tweedie_cover.png">
+<meta name="twitter:image:alt" content="Cover artwork for Tweedie's Formula showing a generative trajectory from noise to data">
+<meta name="twitter:creator" content="@anirbanray_">
+<meta name="twitter:site" content="@anirbanray_">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="941">
+<meta name="twitter:image-width" content="1672">
+</head>
+
+<body>
+
+
+
+
+
+<div class="writeup-page generative-note">
+<p><a href="index.html#research" class="writeup-back flj">Back to research</a></p>
+<div class="distillation-hero">
+<div class="distillation-hero-art">
+<p><img src="images/tweedie_cover.png" alt="Cover artwork for Tweedie's Formula showing a generative trajectory from noise to data"></p>
+</div>
+<div class="writeup-meta">
+<p>Research note, July 2026 · Reading time ~18 minutes</p>
+</div>
+<h2 id="tweedies-formula-as-the-rosetta-stone-of-score-matching-diffusion-ddim-and-cfm" class="anchored">Tweedie’s Formula as the Rosetta Stone of Score Matching, Diffusion, DDIM, and CFM</h2>
+<div class="writeup-summary">
+<p>A mathematical walk from empirical Bayes denoising to modern generative modeling: score matching, diffusion <span class="math inline">\(x_0\)</span>-, <span class="math inline">\(\epsilon\)</span>-, <span class="math inline">\(v\)</span>-prediction, DDIM, reverse SDEs, probability-flow ODEs, and conditional flow matching.</p>
+</div>
+</div>
+<div class="distillation-thesis">
+<p><strong>Core thesis.</strong> Tweedie’s formula says that denoising, score estimation, noise prediction, velocity prediction, DDIM transport, and CFM vector fields are different coordinate systems for the same posterior geometry induced by Gaussian corruption.</p>
+</div>
+<div class="distillation-quick-grid">
+<div class="distillation-quick-card">
+<p><strong>Posterior denoising</strong></p>
+<p>The central object is <span class="math inline">\(\mathbb E[x_0 \mid x_t]\)</span>, the clean posterior mean under Gaussian corruption.</p>
+</div>
+<div class="distillation-quick-card">
+<p><strong>Score geometry</strong></p>
+<p>The score is the correction field that moves noisy points toward that posterior mean.</p>
+</div>
+<div class="distillation-quick-card">
+<p><strong>Sampler coordinates</strong></p>
+<p>Diffusion heads, DDIM, reverse SDEs, ODEs, and CFM velocities reuse the same geometry.</p>
+</div>
+</div>
+<div class="writeup-page-toc">
+<p><strong>Contents</strong></p>
+<ol type="1">
+<li><a href="#setup">The Central Question</a></li>
+<li><a href="#derive">Deriving Tweedie’s Formula</a></li>
+<li><a href="#interactive1">Interactive: Tweedie Denoising</a></li>
+<li><a href="#param">Prediction Heads</a></li>
+<li><a href="#vpv">Diffusion v-Prediction</a></li>
+<li><a href="#cfm">Conditional Flow Matching</a></li>
+<li><a href="#ddim">DDIM</a></li>
+<li><a href="#sdeode">Reverse SDE vs Probability-Flow ODE</a></li>
+<li><a href="#fisher">Fisher Information</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#overall-map">Overall Map</a></li>
+<li><a href="#refs">References</a></li>
+</ol>
+</div>
+<h2 id="setup" class="anchored">The Central Question</h2>
+<p>Suppose the world gives us clean data <span class="math inline">\(x_0 \sim p_0(x_0)\)</span>, but we only observe a noised version</p>
+<div class="eqbox">
+<p><span class="math display">\[
+x_t = \alpha_t x_0 + \sigma_t \epsilon,
+\qquad
+\epsilon\sim\mathcal N(0,I).
+\]</span></p>
+</div>
+<p>Diffusion models, score models, DDIM samplers, and flow matching models differ in how they parameterize the neural network and how they sample. But at the heart of all of them is one posterior object:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\mathbb E[x_0\mid x_t].
+\]</span></p>
+</div>
+<p><strong>Tweedie’s formula</strong> says that this posterior denoised estimate can be written using the <em>marginal score</em> <span class="math inline">\(s_t(x_t)=\nabla_{x_t}\log p_t(x_t)\)</span>:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+\mathbb E[x_0\mid x_t]
+=
+\frac{x_t+\sigma_t^2\nabla_{x_t}\log p_t(x_t)}{\alpha_t}.
+}
+\]</span></p>
+</div>
+<p>The rest of this note is just unpacking this one identity until many seemingly different objectives become the same object in different coordinates.</p>
+<h2 id="derive" class="anchored">Deriving Tweedie’s Formula</h2>
+<p>Let</p>
+<div class="eqbox">
+<p><span class="math display">\[
+p_t(x_t\mid x_0)=\mathcal N(x_t;\alpha_t x_0,\sigma_t^2 I).
+\]</span></p>
+</div>
+<p>The marginal noisy density is</p>
+<div class="eqbox">
+<p><span class="math display">\[
+p_t(x_t)=\int p_t(x_t\mid x_0)p_0(x_0)\,dx_0.
+\]</span></p>
+</div>
+<p>Take the score of the marginal:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\nabla_{x_t}\log p_t(x_t)
+=
+\frac{\nabla_{x_t}p_t(x_t)}{p_t(x_t)}.
+\]</span></p>
+</div>
+<p>Move the derivative inside the integral:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\nabla_{x_t}p_t(x_t)
+=
+\int \nabla_{x_t}p_t(x_t\mid x_0)p_0(x_0)\,dx_0.
+\]</span></p>
+</div>
+<p>For the Gaussian conditional,</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\nabla_{x_t}\log p_t(x_t\mid x_0)
+=
+-\frac{x_t-\alpha_t x_0}{\sigma_t^2}.
+\]</span></p>
+</div>
+<p>Therefore</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\nabla_{x_t}\log p_t(x_t)
+=
+\mathbb E\left[
+-\frac{x_t-\alpha_t x_0}{\sigma_t^2}
+\,\middle|\,x_t
+\right].
+\]</span></p>
+</div>
+<p>Since <span class="math inline">\(x_t\)</span> is fixed inside the conditional expectation,</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\nabla_{x_t}\log p_t(x_t)
+=
+-\frac{x_t-\alpha_t\mathbb E[x_0\mid x_t]}{\sigma_t^2}.
+\]</span></p>
+</div>
+<p>Rearrange:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+\mathbb E[x_0\mid x_t]
+=
+\frac{x_t+\sigma_t^2s_t(x_t)}{\alpha_t}.
+}
+\]</span></p>
+</div>
+<div class="distillation-key-point">
+<p><strong>Interpretation.</strong> The score is not merely a gradient field for sampling. It is also the correction term that moves a noisy point toward its posterior clean mean.</p>
+<p><span class="math display">\[
+\mathbb E[x_0\mid x_t]-\frac{x_t}{\alpha_t}
+=
+\frac{\sigma_t^2}{\alpha_t}s_t(x_t).
+\]</span></p>
+</div>
+<section id="interactive1" class="plot-card">
+<div class="plot-head">
+<div>
+<h2 class="anchored">
+Interactive Plot 1: Tweedie Denoising in 1D
+</h2>
+<p>
+We use a one-dimensional mixture prior. Move the observation <span class="math inline">\(y=x_t\)</span> and noise level <span class="math inline">\(\sigma\)</span> to see the posterior mean <span class="math inline">\(\mathbb E[x_0\mid y]\)</span>, the marginal score, and Tweedie’s identity.
+</p>
+</div>
+</div>
+<div class="controls">
+<div class="control">
+<label>Observation <span class="math inline">\(y\)</span> <span id="obsVal"></span></label><input id="obs" type="range" min="-6" max="6" step="0.01" value="1.2">
+</div>
+<div class="control">
+<label>Noise <span class="math inline">\(\sigma\)</span> <span id="sigVal"></span></label><input id="sigma" type="range" min="0.15" max="3" step="0.01" value="0.9">
+</div>
+</div>
+<canvas id="plotTweedie" width="980" height="360">
+</canvas>
+<div class="legend">
+<span><i class="sw s1"></i>marginal <span class="math inline">\(p_t(y)\)</span></span><span><i class="sw s2"></i>score <span class="math inline">\(\nabla_y\log p_t(y)\)</span></span><span><i class="sw s3"></i>Tweedie posterior mean</span>
+</div>
+<div id="twRead" class="readout">
+
+</div>
+</section>
+<h2 id="param" class="anchored">The Same Estimator in Different Diffusion Parameterizations</h2>
+<p>Modern diffusion papers often choose different neural-network outputs. But if the forward noising process is Gaussian, these outputs are algebraically convertible.</p>
+<div class="eqbox">
+<p><span class="math display">\[
+x_t=\alpha_t x_0+\sigma_t\epsilon,
+\qquad
+\epsilon\sim\mathcal N(0,I).
+\]</span></p>
+</div>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>
+Parameterization
+</th>
+<th>
+What the network learns
+</th>
+<th>
+Tweedie interpretation
+</th>
+<th>
+Implied score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<span class="math inline">\(x_0\)</span>-prediction
+</td>
+<td>
+<span class="math inline">\(x_\theta(x_t,t)\approx x_0\)</span>
+</td>
+<td>
+<span class="math inline">\(x_\theta\approx\mathbb E[x_0\mid x_t]\)</span>
+</td>
+<td>
+<span class="math inline">\(s_\theta=\dfrac{\alpha_t x_\theta-x_t}{\sigma_t^2}\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\epsilon\)</span>-prediction
+</td>
+<td>
+<span class="math inline">\(\epsilon_\theta(x_t,t)\approx\epsilon\)</span>
+</td>
+<td>
+<span class="math inline">\(\epsilon_\theta\approx\mathbb E[\epsilon\mid x_t] = -\sigma_t s_t(x_t)\)</span>
+</td>
+<td>
+<span class="math inline">\(s_\theta=-\dfrac{\epsilon_\theta}{\sigma_t}\)</span>
+</td>
+</tr>
+<tr>
+<td>
+score prediction
+</td>
+<td>
+<span class="math inline">\(s_\theta(x_t,t)\approx\nabla_{x_t}\log p_t(x_t)\)</span>
+</td>
+<td>
+directly learns Tweedie correction field
+</td>
+<td>
+<span class="math inline">\(s_\theta\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(v\)</span>-prediction
+</td>
+<td>
+<span class="math inline">\(v_\theta\)</span> in an orthogonal coordinate system
+</td>
+<td>
+learns a rotation of clean and noise posteriors
+</td>
+<td>
+see below
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="noise-prediction-is-posterior-residual-prediction" class="anchored">Noise Prediction Is Posterior Residual Prediction</h3>
+<p>From the forward equation,</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\mathbb E[\epsilon\mid x_t]
+=
+\frac{x_t-\alpha_t\mathbb E[x_0\mid x_t]}{\sigma_t}.
+\]</span></p>
+</div>
+<p>Plug in Tweedie:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+\mathbb E[\epsilon\mid x_t]= -\sigma_t s_t(x_t).
+}
+\]</span></p>
+</div>
+<p>So <span class="math inline">\(\epsilon\)</span>-prediction is not arbitrary. It is a scaled score prediction.</p>
+<h2 id="vpv" class="anchored">Diffusion v-Prediction: A Rotation of Clean and Noise</h2>
+<p>A common continuous-time convention writes</p>
+<div class="eqbox">
+<p><span class="math display">\[
+x_t=\alpha_t x_0+\sigma_t\epsilon,
+\qquad
+\alpha_t^2+\sigma_t^2=1.
+\]</span></p>
+</div>
+<p>The velocity-style diffusion target is often</p>
+<div class="eqbox">
+<p><span class="math display">\[
+v_t=\alpha_t\epsilon-\sigma_t x_0.
+\]</span></p>
+</div>
+<p>This is a rotation of <span class="math inline">\((x_0,\epsilon)\)</span>. The inverse rotation is</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{x_0=\alpha_t x_t-\sigma_t v_t},
+\qquad
+\boxed{\epsilon=\sigma_t x_t+\alpha_t v_t}.
+\]</span></p>
+</div>
+<p>Taking conditional expectations gives the Tweedie interpretation:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+v_\theta(x_t,t)
+\approx
+\mathbb E[v_t\mid x_t]
+=
+\alpha_t\mathbb E[\epsilon\mid x_t]
+-\sigma_t\mathbb E[x_0\mid x_t].
+\]</span></p>
+</div>
+<p>Using <span class="math inline">\(\mathbb E[\epsilon\mid x_t]= -\sigma_t s_t\)</span> and Tweedie for <span class="math inline">\(\mathbb E[x_0\mid x_t]\)</span>,</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+v_t^{\star}(x_t)
+=
+-\frac{\sigma_t}{\alpha_t}x_t
+-\frac{\sigma_t}{\alpha_t}s_t(x_t)
+}
+\quad
+\text{when }\alpha_t^2+\sigma_t^2=1.
+\]</span></p>
+</div>
+<p>More usefully, the conversions are:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{\hat x_0=\alpha_t x_t-\sigma_t v_\theta},
+\qquad
+\boxed{\hat\epsilon=\sigma_t x_t+\alpha_t v_\theta},
+\qquad
+\boxed{s_\theta=-\frac{\sigma_t x_t+\alpha_t v_\theta}{\sigma_t}}.
+\]</span></p>
+</div>
+<div class="distillation-warning">
+<p><strong>Notation warning.</strong> Diffusion <span class="math inline">\(v\)</span>-prediction and CFM velocity prediction are related in spirit but not the same object. Diffusion <span class="math inline">\(v\)</span> is usually a rotation of clean/noise variables; CFM velocity is a path derivative <span class="math inline">\(\dot x_t\)</span>.</p>
+</div>
+<section class="plot-card">
+<h2 class="anchored">
+Interactive Plot 2: Convert One Prediction Head into All Others
+</h2>
+<p>
+Choose <span class="math inline">\(t\)</span> and a scalar noisy point. We use a simple VP schedule <span class="math inline">\(\alpha=\cos(\frac{\pi t}{2})\)</span>, <span class="math inline">\(\sigma=\sin(\frac{\pi t}{2})\)</span> and an analytic mixture score. The table updates all equivalent outputs.
+</p>
+<div class="controls">
+<div class="control">
+<label>Diffusion time <span class="math inline">\(t\)</span> <span id="tVal"></span></label><input id="timeParam" type="range" min="0.02" max="0.98" step="0.001" value="0.45">
+</div>
+<div class="control">
+<label>Noisy point <span class="math inline">\(x_t\)</span> <span id="xtVal"></span></label><input id="xtParam" type="range" min="-5" max="5" step="0.01" value="1.5">
+</div>
+</div>
+<canvas id="plotParam" width="980" height="360">
+</canvas>
+<div id="paramRead" class="readout">
+
+</div>
+</section>
+<h2 id="cfm" class="anchored">Conditional Flow Matching through the Same Lens</h2>
+<p>For the simple Gaussian-to-data linear interpolation used in many CFM explanations, write</p>
+<div class="eqbox">
+<p><span class="math display">\[
+x_t=(1-t)x_0+t x_1,
+\]</span></p>
+</div>
+<p>where <span class="math inline">\(x_0\sim\mathcal N(0,I)\)</span> is noise and <span class="math inline">\(x_1\sim p_{\text{data}}\)</span> is clean data. This is the same Gaussian corruption form, just with the clean endpoint called <span class="math inline">\(x_1\)</span>:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+x_t=t x_1+(1-t)\epsilon,
+\qquad
+\alpha_t=t,
+\quad
+\sigma_t=1-t.
+\]</span></p>
+</div>
+<p>Tweedie gives the clean endpoint posterior:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+\mathbb E[x_1\mid x_t]
+=
+\frac{x_t+(1-t)^2s_t(x_t)}{t}.
+}
+\]</span></p>
+</div>
+<p>The CFM target velocity is the conditional mean path derivative:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+u_t(x_t)
+=
+\mathbb E[\dot x_t\mid x_t]
+=
+\mathbb E[x_1-x_0\mid x_t].
+\]</span></p>
+</div>
+<p>Because <span class="math inline">\(x_0=(x_t-tx_1)/(1-t)\)</span>,</p>
+<div class="eqbox">
+<p><span class="math display">\[
+x_1-x_0=\frac{x_1-x_t}{1-t}.
+\]</span></p>
+</div>
+<p>Therefore</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+u_t(x_t)
+=
+\frac{\mathbb E[x_1\mid x_t]-x_t}{1-t}.
+}
+\]</span></p>
+</div>
+<p>Plug in Tweedie:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+u_t(x_t)=\frac{x_t}{t}+\frac{1-t}{t}s_t(x_t)
+},
+\qquad
+\boxed{
+s_t(x_t)=\frac{t u_t(x_t)-x_t}{1-t}.
+}
+\]</span></p>
+</div>
+<p>And the endpoints implied by a CFM velocity are</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{\hat x_1=x_t+(1-t)u_t(x_t)},
+\qquad
+\boxed{\hat x_0=x_t-t u_t(x_t)}.
+\]</span></p>
+</div>
+<div class="distillation-key-point">
+<p><strong>CFM interpretation.</strong> CFM velocity prediction learns the posterior mean displacement from the noise endpoint to the clean endpoint. Score matching learns the same thing after a time-dependent affine change of coordinates.</p>
+</div>
+<h2 id="ddim" class="anchored">DDIM as Deterministic Posterior-Mean Transport</h2>
+<p>In DDPM, the reverse process is usually stochastic. DDIM showed that one can construct a non-Markovian reverse process with the same training objective but deterministic or partially stochastic sampling. The key practical formula starts from a predicted clean estimate <span class="math inline">\(\hat x_0\)</span> and predicted noise <span class="math inline">\(\hat\epsilon\)</span>:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\hat x_0=
+\frac{x_t-\sqrt{1-\bar\alpha_t}\,\epsilon_\theta(x_t,t)}
+{\sqrt{\bar\alpha_t}},
+\qquad
+\hat\epsilon=\epsilon_\theta(x_t,t).
+\]</span></p>
+</div>
+<p>The deterministic DDIM step from time <span class="math inline">\(t\)</span> to <span class="math inline">\(s&lt;t\)</span> is</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+x_s=
+\sqrt{\bar\alpha_s}\,\hat x_0
++
+\sqrt{1-\bar\alpha_s}\,\hat\epsilon.
+}
+\]</span></p>
+</div>
+<p>Through Tweedie, <span class="math inline">\(\hat x_0\)</span> is a posterior clean mean, while <span class="math inline">\(\hat\epsilon=-\sigma_t s_t\)</span> is a posterior residual/score estimate. DDIM therefore reuses the same estimated clean/noise coordinates and moves them to a lower noise level.</p>
+<section class="plot-card">
+<h3 class="anchored">
+Interactive Plot 3: Deterministic DDIM vs Stochastic Reverse Steps
+</h3>
+<p>
+This toy 1D plot uses the analytic score of a mixture distribution. Deterministic paths are smooth; stochastic paths add fresh noise during reverse sampling.
+</p>
+<div class="controls">
+<div class="control">
+<label>Start noise seed <span id="seedVal"></span></label><input id="seedSlider" type="range" min="1" max="99" step="1" value="17">
+</div>
+<div class="control">
+<label>Stochasticity <span class="math inline">\(\eta\)</span> <span id="etaVal"></span></label><input id="etaSlider" type="range" min="0" max="1" step="0.01" value="0.45">
+</div>
+</div>
+<canvas id="plotDDIM" width="980" height="360">
+</canvas>
+<div class="legend">
+<span><i class="sw s1"></i>DDIM / ODE-like path</span><span><i class="sw s5"></i>stochastic reverse path</span>
+</div>
+</section>
+<h2 id="sdeode" class="anchored">Reverse SDE vs Probability-Flow ODE</h2>
+<p>The score-SDE framework starts from a forward SDE</p>
+<div class="eqbox">
+<p><span class="math display">\[
+dx=f(x,t)dt+g(t)dW_t.
+\]</span></p>
+</div>
+<p>The reverse-time SDE is</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+dx=
+\left[
+f(x,t)-g(t)^2\nabla_x\log p_t(x)
+\right]dt
++
+g(t)d\bar W_t,
+}
+\]</span></p>
+</div>
+<p>where time is run backward. The probability-flow ODE has the same marginal densities <span class="math inline">\(p_t\)</span> but no Brownian noise:</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\boxed{
+dx=
+\left[
+f(x,t)-\frac{1}{2}g(t)^2\nabla_x\log p_t(x)
+\right]dt.
+}
+\]</span></p>
+</div>
+<p>Both require the same score. Tweedie tells us that this score is equivalent to a posterior denoiser. Thus:</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>
+Sampler
+</th>
+<th>
+Uses
+</th>
+<th>
+Same marginal path?
+</th>
+<th>
+Intuition
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Reverse SDE
+</td>
+<td>
+score + stochastic noise
+</td>
+<td>
+Yes
+</td>
+<td>
+remove noise while injecting calibrated randomness
+</td>
+</tr>
+<tr>
+<td>
+Probability-flow ODE
+</td>
+<td>
+score only
+</td>
+<td>
+Yes
+</td>
+<td>
+deterministic transport through same marginals
+</td>
+</tr>
+<tr>
+<td>
+DDIM with <span class="math inline">\(\eta=0\)</span>
+</td>
+<td>
+predicted <span class="math inline">\(\hat x_0\)</span>, <span class="math inline">\(\hat\epsilon\)</span>
+</td>
+<td>
+discrete deterministic analogue
+</td>
+<td>
+moves in clean/noise coordinates
+</td>
+</tr>
+<tr>
+<td>
+CFM ODE
+</td>
+<td>
+velocity field <span class="math inline">\(u_t\)</span>
+</td>
+<td>
+depends on chosen path
+</td>
+<td>
+learns deterministic vector field directly
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="fisher" class="anchored">Fisher Information: The Energy of the Score Field</h2>
+<p>The Fisher information of the noisy marginal is</p>
+<div class="eqbox">
+<p><span class="math display">\[
+\mathcal I(t)
+=
+\mathbb E_{x_t\sim p_t}
+\left[
+\|\nabla_{x_t}\log p_t(x_t)\|^2
+\right].
+\]</span></p>
+</div>
+<p>In Gaussian denoising, Tweedie gives</p>
+<div class="eqbox">
+<p><span class="math display">\[
+s_t(x_t)
+=
+\frac{\alpha_t\mathbb E[x_0\mid x_t]-x_t}{\sigma_t^2}
+=
+-\frac{\mathbb E[\epsilon\mid x_t]}{\sigma_t}.
+\]</span></p>
+</div>
+<p>So Fisher information measures how much posterior residual information remains in <span class="math inline">\(x_t\)</span>. Large score norm means the noisy marginal has sharp structure; small score norm means the distribution is closer to a broad Gaussian.</p>
+<div class="distillation-key-point">
+<p><strong>Useful identity.</strong> For Gaussian noise corruption <span class="math inline">\(Y=X+\sigma Z\)</span>, de Bruijn’s identity links entropy growth to Fisher information:</p>
+<p><span class="math display">\[
+\frac{d}{d\tau}h(X+\sqrt{\tau}Z)
+=
+\frac{1}{2}\mathcal I(X+\sqrt{\tau}Z).
+\]</span></p>
+<p>As you inject Gaussian noise, entropy increases at a rate controlled by Fisher information. This is one reason Fisher information naturally appears in score-based generative modeling.</p>
+</div>
+<section class="plot-card">
+<h3 class="anchored">
+Interactive Plot 4: Fisher Information vs Noise
+</h3>
+<p>
+For the same 1D mixture prior, we numerically integrate <span class="math inline">\(\mathcal I(\sigma)=\mathbb E[s_\sigma(Y)^2]\)</span>. Larger noise smooths the distribution and usually reduces sharp score structure.
+</p>
+<div class="controls">
+<div class="control">
+<label>Highlighted <span class="math inline">\(\sigma\)</span> <span id="fishVal"></span></label><input id="fishSlider" type="range" min="0.15" max="3" step="0.01" value="0.9">
+</div>
+</div>
+<canvas id="plotFisher" width="980" height="360">
+</canvas>
+<div id="fishRead" class="readout">
+
+</div>
+</section>
+<h2 id="summary" class="anchored">The Whole Unification in One Table</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>
+View
+</th>
+<th>
+Network target
+</th>
+<th>
+Tweedie meaning
+</th>
+<th>
+Conversion to score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Score matching
+</td>
+<td>
+<span class="math inline">\(s_\theta\)</span>
+</td>
+<td>
+learns correction toward posterior mean
+</td>
+<td>
+<span class="math inline">\(s_\theta\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Diffusion <span class="math inline">\(x_0\)</span>-prediction
+</td>
+<td>
+<span class="math inline">\(x_\theta\)</span>
+</td>
+<td>
+<span class="math inline">\(\mathbb E[x_0\mid x_t]\)</span>
+</td>
+<td>
+<span class="math inline">\(\dfrac{\alpha_t x_\theta-x_t}{\sigma_t^2}\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Diffusion <span class="math inline">\(\epsilon\)</span>-prediction
+</td>
+<td>
+<span class="math inline">\(\epsilon_\theta\)</span>
+</td>
+<td>
+<span class="math inline">\(\mathbb E[\epsilon\mid x_t]\)</span>
+</td>
+<td>
+<span class="math inline">\(-\dfrac{\epsilon_\theta}{\sigma_t}\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Diffusion <span class="math inline">\(v\)</span>-prediction
+</td>
+<td>
+<span class="math inline">\(v_\theta=\alpha_t\epsilon-\sigma_t x_0\)</span>
+</td>
+<td>
+rotated posterior clean/noise coordinate
+</td>
+<td>
+<span class="math inline">\(-\dfrac{\sigma_t x_t+\alpha_t v_\theta}{\sigma_t}\)</span>, for VP convention
+</td>
+</tr>
+<tr>
+<td>
+DDIM
+</td>
+<td>
+<span class="math inline">\(\hat x_0,\hat\epsilon\)</span> reused across times
+</td>
+<td>
+deterministic movement in Tweedie clean/noise coordinates
+</td>
+<td>
+same as <span class="math inline">\(x_0\)</span> or <span class="math inline">\(\epsilon\)</span> prediction
+</td>
+</tr>
+<tr>
+<td>
+Reverse SDE
+</td>
+<td>
+<span class="math inline">\(s_\theta\)</span>
+</td>
+<td>
+stochastic denoising dynamics
+</td>
+<td>
+direct
+</td>
+</tr>
+<tr>
+<td>
+Probability-flow ODE
+</td>
+<td>
+<span class="math inline">\(s_\theta\)</span>
+</td>
+<td>
+deterministic transport with same marginals
+</td>
+<td>
+direct
+</td>
+</tr>
+<tr>
+<td>
+CFM velocity
+</td>
+<td>
+<span class="math inline">\(u_\theta\approx\mathbb E[\dot x_t\mid x_t]\)</span>
+</td>
+<td>
+posterior mean endpoint displacement
+</td>
+<td>
+for <span class="math inline">\(x_t=(1-t)x_0+t x_1\)</span>: <span class="math inline">\(\dfrac{t u_\theta-x_t}{1-t}\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="distillation-final">
+<p><strong>One-sentence takeaway.</strong> Tweedie’s formula turns many generative-modeling objects into translations of a single posterior-denoising identity.</p>
+</div>
+<h2 id="overall-map" class="anchored">Overall Map</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="images/tweedie_overall.png" class="writeup-figure img-fluid"></p>
+<figcaption>Overview diagram connecting Tweedie’s formula with diffusion, score, and flow models.</figcaption>
+</figure>
+</div>
+<h2 id="refs" class="anchored">References and Further Reading</h2>
+<ol type="1">
+<li>Jonathan Ho, Ajay Jain, Pieter Abbeel. <em>Denoising Diffusion Probabilistic Models</em>, NeurIPS 2020. <a href="https://arxiv.org/abs/2006.11239" class="flj" target="_blank">arXiv:2006.11239</a>.</li>
+<li>Jiaming Song, Chenlin Meng, Stefano Ermon. <em>Denoising Diffusion Implicit Models</em>, ICLR 2021. <a href="https://arxiv.org/abs/2010.02502" class="flj" target="_blank">arXiv:2010.02502</a>.</li>
+<li>Yang Song, Jascha Sohl-Dickstein, Diederik P. Kingma, Abhishek Kumar, Stefano Ermon, Ben Poole. <em>Score-Based Generative Modeling through Stochastic Differential Equations</em>, ICLR 2021. <a href="https://arxiv.org/abs/2011.13456" class="flj" target="_blank">arXiv:2011.13456</a>.</li>
+<li>Yaron Lipman, Ricky T. Q. Chen, Heli Ben-Hamu, Maximilian Nickel, Matthew Le. <em>Flow Matching for Generative Modeling</em>, ICLR 2023. <a href="https://arxiv.org/abs/2210.02747" class="flj" target="_blank">arXiv:2210.02747</a>.</li>
+<li>Alexandre Thiery. <em>Reverse Diffusions, Score and Tweedie</em>. <a href="https://alexxthiery.github.io/posts/reverse_and_tweedie/reverse_and_tweedie.html" class="flj" target="_blank">Blog note</a>.</li>
+<li>For recent generalizations: <em>Tweedie’s Formulae and Diffusion Generative Models Beyond Gaussian</em>. <a href="https://arxiv.org/abs/2605.19391" class="flj" target="_blank">arXiv:2605.19391</a>.</li>
+</ol>
+<div class="generative-footer">
+<p>The plots are toy one-dimensional examples; the identities above hold in vector form with the same algebra.</p>
+</div>
+<script src="scripts/generative_models.js"></script>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/rayanirban\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+</body></html>
