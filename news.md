@@ -1,4 +1,9 @@
 ::: {.news-item}
+<span class="news-date">Jul 2026</span>
+<div class="news-content">[RESOLFT time lapse imaging empowered by deep learning](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} has been accepted to Nature Communications 😱🎉🎉!</div>
+:::
+
+::: {.news-item}
 <span class="news-date">Jun 2026</span>
 <div class="news-content">I wrote a short piece on why I think diffusion/flow step distillation methods should be used with caution in scientific imaging inverse problems. Read it [here](distillation_dangers.qmd){target="_blank" .flj}. I’d love to hear your [thoughts](https://twitter.com/anirbanray_/status/2065715816700543103){target="_blank" .flj}😇!</div>
 :::

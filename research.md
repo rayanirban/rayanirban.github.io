@@ -54,14 +54,14 @@
 
 ::: {#resolft-time-lapse .project-item}
 
-**<span style="font-size: 1.2em;">RESOLFT time lapse imaging empowered by deep learning</span>**  
+**<span style="font-size: 1.2em;">RESOLFT time lapse imaging empowered by deep learning [ [Nature Communications (in Press) ] ](){target="_blank" .flj}</span>**  
 [Guillaume Minet](https://www.testalab.org/people.php){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.testalab.org/){target="_blank" .flj}</br> 
 
 ![](images/resolft_teaser.png){fig-align="center" width="80%" alt="RESOLFT time lapse imaging empowered by deep learning"}
 
 Deep learning extended RESOLFT (REversible Saturable OpticaL Fluorescence Transition) nanoscopy by restoring low-SNR and sub-sampled acquisitions, enabling 5× longer imaging with 10× lower dose of light per frame, or a 4× increase in imaging speed for faster live-cell imaging while preserving ~60 nm resolution. This method enables reduced photobleaching and accelerated volumetric recording, revealing previously inaccessible sub-organelle dynamics in living cells.</br>
 [GitHub](https://github.com/GuillaumeMinet/deepL_resolft){target="_blank" .flj} | 
-[Preprint (under review)](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} |
+[Preprint](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} |
 <span class="infographic-wrapper"><a href="files/RESOLFT.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RESOLFT.png" class="infographic-pop"></span>
 :::
 
