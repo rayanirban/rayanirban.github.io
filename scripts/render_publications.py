@@ -49,7 +49,7 @@ def render_entry(index: int, entry: dict, bold_names: set[str]) -> list[str]:
     venue = md_escape(entry["venue"])
     highlight = entry.get("highlight")
 
-    suffix = f" {venue}"
+    suffix = f' <span class="publication-venue">{venue}</span>'
     if highlight:
         suffix += f" **({md_escape(highlight)})**"
 

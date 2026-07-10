@@ -54,7 +54,8 @@
 
 ::: {#resolft-time-lapse .project-item}
 
-**<span style="font-size: 1.2em;">RESOLFT time lapse imaging empowered by deep learning [ [Nature Communications 2026 (in Press) ] ](){target="_blank" .flj}</span>**  
+**<span class="project-title">RESOLFT time lapse imaging empowered by deep learning</span>**  
+<span class="project-venue">Nature Communications 2026 (in press)</span>
 [Guillaume Minet](https://www.testalab.org/people.php){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.testalab.org/){target="_blank" .flj}</br> 
 
 ![](images/resolft_teaser.png){fig-align="center" width="80%" alt="RESOLFT time lapse imaging empowered by deep learning"}
@@ -67,7 +68,8 @@ Deep learning extended RESOLFT (REversible Saturable OpticaL Fluorescence Transi
 
 ::: {#resmatching .project-item}
 
-**<span style="font-size: 1.2em;">ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching [ [IEEE ISBI 2026 (Oral)] ](https://biomedicalimaging.org/2026/){target="_blank" .flj}</span>**  
+**<span class="project-title">ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching</span>**  
+<span class="project-venue">[IEEE ISBI 2026 (Oral)](https://biomedicalimaging.org/2026/){target="_blank" .flj}</span>
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Vera Galinova](https://humantechnopole.it/en/people/vera-galinova/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}</br>
 <!-- ![](images/resmatching_teaser.png){fig-align="center" width="80%" alt="ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching"} -->
 <table style="width:100%; margin:auto; border:none; border-collapse:collapse;"><tr>
@@ -82,7 +84,8 @@ A guided conditional flow-matching framework for noise-resilient computational s
 
 ::: {#hazematching .project-item}
 
-**<span style="font-size: 1.2em;">HazeMatching: Conditional Flow Matching for Microscopy Dehazing [ [IEEE/CVF CVPR 2026 (Findings)] ](https://cvpr.thecvf.com/){target="_blank" .flj}</span>**  
+**<span class="project-title">HazeMatching: Conditional Flow Matching for Microscopy Dehazing</span>**  
+<span class="project-venue">[IEEE/CVF CVPR 2026 (Findings)](https://cvpr.thecvf.com/){target="_blank" .flj}</span>
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Ashesh](https://ashesh-0.github.io/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}.</br>  
 <table style="width:100%; margin:auto; border:none; border-collapse:collapse;"><tr>
 <td style="border:none; text-align:center; padding:0.5rem;"><img src="images/care_test_2.gif" alt="HazeMatching" style="width:100%;"></td>
