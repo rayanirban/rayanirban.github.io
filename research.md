@@ -55,12 +55,12 @@
 ::: {#resolft-time-lapse .project-item}
 
 **<span class="project-title">RESOLFT time lapse imaging empowered by deep learning</span>**  
-<span class="project-venue">Nature Communications 2026 (in press)</span>
+<span class="project-venue" style="font-style: italic;">Nature Communications, 2026 (in press)</span>
 [Guillaume Minet](https://www.testalab.org/people.php){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.testalab.org/){target="_blank" .flj}</br> 
 
 ![](images/4_resolft.gif){fig-align="center" width="80%" alt="Animated RESOLFT time-lapse imaging result"}
 
-Deep learning extended RESOLFT (REversible Saturable OpticaL Fluorescence Transition) nanoscopy by restoring low-SNR and sub-sampled acquisitions, enabling 5× longer imaging with 10× lower dose of light per frame, or a 4× increase in imaging speed for faster live-cell imaging while preserving ~60 nm resolution. This method enables reduced photobleaching and accelerated volumetric recording, revealing previously inaccessible sub-organelle dynamics in living cells. The viddeo show a small mitochondrial membrane protrusions elongating and retracting very rapidly, captured with this method, which otherwise, happening too fast, to be seen at lower frame rate.</br>
+Deep learning extended RESOLFT (REversible Saturable OpticaL Fluorescence Transition) nanoscopy by restoring low-SNR and sub-sampled acquisitions, enabling 5× longer imaging with 10× lower dose of light per frame, or a 4× increase in imaging speed for faster live-cell imaging while preserving ~60 nm resolution. This method enables reduced photobleaching and accelerated volumetric recording, revealing previously inaccessible sub-organelle dynamics in living cells. The video above shows a small mitochondrial membrane protrusion rapidly elongating and retracting dynamic behavior that could be captured with this method but would likely be missed at a lower frame rate.</br>
 [GitHub](https://github.com/GuillaumeMinet/deepL_resolft){target="_blank" .flj} | 
 [Preprint](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} |
 <span class="infographic-wrapper"><a href="files/RESOLFT.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RESOLFT.png" class="infographic-pop" alt="AI-generated RESOLFT project infographic"></span>
@@ -69,7 +69,7 @@ Deep learning extended RESOLFT (REversible Saturable OpticaL Fluorescence Transi
 ::: {#resmatching .project-item}
 
 **<span class="project-title">ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching</span>**  
-<span class="project-venue">[IEEE ISBI 2026 (Oral)](https://biomedicalimaging.org/2026/){target="_blank" .flj}</span>
+<span class="project-venue" style="font-style: italic;">[IEEE ISBI 2026 (Oral)](https://biomedicalimaging.org/2026/){target="_blank" .flj}</span>
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Vera Galinova](https://humantechnopole.it/en/people/vera-galinova/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}</br>
 <!-- ![](images/resmatching_teaser.png){fig-align="center" width="80%" alt="ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching"} -->
 <table style="width:100%; margin:auto; border:none; border-collapse:collapse;"><tr>
@@ -85,7 +85,7 @@ A guided conditional flow-matching framework for noise-resilient computational s
 ::: {#hazematching .project-item}
 
 **<span class="project-title">HazeMatching: Conditional Flow Matching for Microscopy Dehazing</span>**  
-<span class="project-venue">[IEEE/CVF CVPR 2026 (Findings)](https://cvpr.thecvf.com/){target="_blank" .flj}</span>
+<span class="project-venue" style="font-style: italic;">[IEEE/CVF CVPR 2026 (Findings)](https://cvpr.thecvf.com/){target="_blank" .flj}</span>
 [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, [Ashesh](https://ashesh-0.github.io/){target="_blank" .flj}, and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}.</br>  
 <table style="width:100%; margin:auto; border:none; border-collapse:collapse;"><tr>
 <td style="border:none; text-align:center; padding:0.5rem;"><img src="images/care_test_2.gif" alt="HazeMatching" style="width:100%;"></td>
