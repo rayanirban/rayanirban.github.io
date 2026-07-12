@@ -56,7 +56,7 @@
 
 **<span class="project-title">RESOLFT time lapse imaging empowered by deep learning</span>**  
 <span class="project-venue" style="font-style: italic;">Nature Communications, 2026 (in press)</span>
-[Guillaume Minet](https://www.testalab.org/people.php){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.testalab.org/){target="_blank" .flj}</br> 
+[Guillaume Minet](https://se.linkedin.com/in/guillaume-minet-707b24228){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.testalab.org/){target="_blank" .flj}</br> 
 
 ![](images/4_resolft.gif){fig-align="center" width="80%" alt="Animated RESOLFT time-lapse imaging result"}
 
