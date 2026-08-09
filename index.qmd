@@ -30,7 +30,7 @@ format:
 ![](profile.jpg){.profile-img}
 
 ::: {.profile-info}
-**Anirban Ray**
+<h1>Anirban Ray</h1>
 PhD Student in Computational Image Restoration | Generative AI for Microscopy
 
 :::
