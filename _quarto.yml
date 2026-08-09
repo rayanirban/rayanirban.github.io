@@ -4,6 +4,7 @@ project:
   pre-render:
     - python3 scripts/render_publications.py
   resources:
+    - google185f86cd5467e288.html
     - images/
     - logos/
     - files/
