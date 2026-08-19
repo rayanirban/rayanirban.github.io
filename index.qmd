@@ -98,7 +98,8 @@ Thesis title: *Image Classification by Learning the Salient Feature-Flow Sequenc
 
 ::: {.education-item}
 **Research Student | *Oct, 2015 – Mar, 2016*** [Nagoya Institute of Technology, Nagoya, Japan](https://www.nitech.ac.jp/eng/){target="_blank" .flj}  
-Advisor: [Prof. Jun Sato](https://scholar.google.com/citations?hl=en&user=ogGIgQEAAAAJ&view_op=list_works&sortby=pubdate){target="_blank" .flj} and [Prof. Fumihiko Sakaue](https://scholar.google.com/citations?hl=en&user=x7TTwhYAAAAJ&view_op=list_works&sortby=pubdate){target="_blank" .flj} | Preparatory phase for Master's thesis on Computer Vision and Deep Learning.
+Advisor: [Prof. Jun Sato](https://scholar.google.com/citations?hl=en&user=ogGIgQEAAAAJ&view_op=list_works&sortby=pubdate){target="_blank" .flj} and [Prof. Fumihiko Sakaue](https://scholar.google.com/citations?hl=en&user=x7TTwhYAAAAJ&view_op=list_works&sortby=pubdate){target="_blank" .flj}   
+Preparatory phase for Master's thesis on Computer Vision and Deep Learning.
 :::
 
 ::: {.education-item}
