@@ -1,6 +1,6 @@
 ::: {.news-item}
 <span class="news-date">Sep 2026</span>
-<div class="news-content">Invited to serve as a Technical Program Committee Reviewer for the [IEEE International Symposium on Biomedical Imaging (ISBI) 2027](https://biomedicalimaging.org/2027/){target="_blank" .flj}.
+<div class="news-content">Invited to serve as a Technical Program Committee Reviewer for the [IEEE International Symposium on Biomedical Imaging (ISBI) 2027](https://biomedicalimaging.org/2027/){target="_blank" .flj}🥹.
 </div>
 :::
 
