@@ -54,7 +54,7 @@
 
 ::: {#resolft-time-lapse .project-item}
 
-**<span class="project-title">Time-lapse RESOLFT nanoscopy empowered by deep learning </span>**  
+**<span class="project-title">Time-lapse RESOLFT nanoscopy empowered by deep learning</span>**  
 <span class="project-venue" style="font-style: italic;">Nature Communications, 2026 (in press)</span>
 [Guillaume Minet](https://se.linkedin.com/in/guillaume-minet-707b24228){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.testalab.org/){target="_blank" .flj}</br> 
 
