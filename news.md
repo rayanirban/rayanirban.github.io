@@ -1,6 +1,6 @@
 ::: {.news-item}
 <span class="news-date">Jul 2026</span>
-<div class="news-content">[RESOLFT time lapse imaging empowered by deep learning](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} has been accepted to Nature Communications 😱🎉🎉! (Currently in press)</div>
+<div class="news-content">[Time-lapse RESOLFT nanoscopy empowered by deep learning ](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} has been accepted to Nature Communications 😱🎉🎉! (Currently in press)</div>
 :::
 
 ::: {.news-item}
