@@ -1,6 +1,13 @@
 <p class="subtitle talks-subtitle">List of my selected talks and poster presentations</p>
 ::: {.talks-list}
 
+<!-- ::: {.talk-item .talk}
+[Oct 2026]{.talk-date}  
+[Learning to Recover Biological Structure under Uncertainty in Light Microscopy]{.talk-title}  
+[[AlQuraishi lab](https://www.aqlab.io/){target="_blank" .flj}, [Department of Systems Biology, Columbia University ](https://systemsbiology.columbia.edu/department-overview){target="_blank" .flj}]{.talk-venue}  
+[📍 NYC, USA]{.talk-location}
+::: -->
+
 ::: {.talk-item .poster}
 [Jun 2026]{.talk-date}  
 [HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching]{.talk-title}  

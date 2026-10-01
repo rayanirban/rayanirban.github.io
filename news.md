@@ -1,3 +1,13 @@
+<!-- ::: {.news-item}
+<span class="news-date">Oct 2026</span>
+<div class="news-content">The final version of [Time-lapse RESOLFT nanoscopy empowered by deep learning](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj}, accepted to Nature Communications, is finally out 🎉🎉</div>
+::: -->
+
+<!-- ::: {.news-item}
+<span class="news-date">Oct 2026</span>
+<div class="news-content">Super excited to be in NYC for an invited talk at the [AlQuraishi lab](https://www.aqlab.io/){target="_blank" .flj}, [Department of Systems Biology, Columbia University ](https://systemsbiology.columbia.edu/department-overview){target="_blank" .flj}, hosted by [Prof. Mohammed AlQuraishi](https://moalquraishi.wordpress.com/about/){target="_blank" .flj}.</div>
+:::  -->
+
 ::: {.news-item}
 <span class="news-date">Sep 2026</span>
 <div class="news-content">Invited to serve as a Technical Program Committee Reviewer for the [IEEE International Symposium on Biomedical Imaging (ISBI) 2027](https://biomedicalimaging.org/2027/){target="_blank" .flj} 🥹.
@@ -162,7 +172,7 @@
 
 ::: {.news-item}
 <span class="news-date">Dec 2022</span>
-<div class="news-content">[Attended](https://x.com/anirbanray_/status/1600465694839123968){target="_blank" .flj} [Mathematics and Image Analysis Workshop](https://rt-maiages.math.cnrs.fr/mia25/mia25/){target="_blank" .flj} in Paris</div>
+<div class="news-content">[Attended](https://x.com/anirbanray_/status/1600465694839123968){target="_blank" .flj} [Mathematical Models for Plug-and-play Image Restoration Workshop](https://gdr-mia.math.cnrs.fr/events/pnpworkshop/){target="_blank" .flj} in Paris</div>
 :::
 
 ::: {.news-item}
