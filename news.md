@@ -3,10 +3,10 @@
 <div class="news-content">The final version of [Time-lapse RESOLFT nanoscopy empowered by deep learning](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj}, accepted to Nature Communications, is finally out 🎉🎉</div>
 ::: -->
 
-<!-- ::: {.news-item}
+::: {.news-item}
 <span class="news-date">Oct 2026</span>
 <div class="news-content">Super excited to be in NYC for an invited talk at the [AlQuraishi lab](https://www.aqlab.io/){target="_blank" .flj}, [Department of Systems Biology, Columbia University ](https://systemsbiology.columbia.edu/department-overview){target="_blank" .flj}, hosted by [Prof. Mohammed AlQuraishi](https://moalquraishi.wordpress.com/about/){target="_blank" .flj}.</div>
-:::  -->
+::: 
 
 ::: {.news-item}
 <span class="news-date">Sep 2026</span>
