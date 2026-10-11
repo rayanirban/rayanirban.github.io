@@ -55,14 +55,14 @@
 ::: {#resolft-time-lapse .project-item}
 
 **<span class="project-title">Time-lapse RESOLFT nanoscopy empowered by deep learning</span>**  
-<span class="project-venue" style="font-style: italic;">Nature Communications, 2026 (in press)</span>
+<span class="project-venue" style="font-style: italic;">Nature Communications, 2026</span>
 [Guillaume Minet](https://se.linkedin.com/in/guillaume-minet-707b24228){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.scilifelab.se/researchers/ilaria-testa/){target="_blank" .flj}</br> 
 
 ![](images/4_resolft.gif){fig-align="center" width="80%" alt="Animated RESOLFT time-lapse imaging result"}
 
 Deep learning extended RESOLFT (REversible Saturable OpticaL Fluorescence Transition) nanoscopy by restoring low-SNR and sub-sampled acquisitions, enabling 5× longer imaging with 10× lower dose of light per frame, or a 4× increase in imaging speed for faster live-cell imaging while preserving ~60 nm resolution. This method enables reduced photobleaching and accelerated volumetric recording, revealing previously inaccessible sub-organelle dynamics in living cells. The video above shows a small mitochondrial membrane protrusion rapidly elongating and retracting dynamic behavior that could be captured with this method but would likely be missed at a lower frame rate.</br>
 [GitHub](https://github.com/GuillaumeMinet/deepL_resolft){target="_blank" .flj} | 
-[Preprint](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj} |
+[Publication](https://www.nature.com/articles/s41467-026-78580-z){target="_blank" .flj} |
 <span class="infographic-wrapper"><a href="files/RESOLFT.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RESOLFT.png" class="infographic-pop" alt="AI-generated RESOLFT project infographic"></span>
 :::
 

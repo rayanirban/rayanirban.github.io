@@ -9,7 +9,7 @@
 ::: {.publication-list}
 
 [1]
-: Guillaume Minet, **Anirban Ray**, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa. [*Time-lapse RESOLFT nanoscopy empowered by deep learning *](https://www.researchsquare.com/article/rs-8059028/v1){target="_blank" .flj}. <span class="publication-venue">Nature Communications, 2026 (in Press).</span>
+: Guillaume Minet, **Anirban Ray**, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa. [*Time-lapse RESOLFT nanoscopy empowered by deep learning *](https://www.nature.com/articles/s41467-026-78580-z){target="_blank" .flj}. <span class="publication-venue">Nature Communications, 2026.</span>
 
 [2]
 : **Anirban Ray**, Ashesh, and Florian Jug. [*HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching*](https://arxiv.org/abs/2506.22397){target="_blank" .flj}. <span class="publication-venue">IEEE/CVF CVPR 2026 (Findings).</span>
