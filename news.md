@@ -1,6 +1,6 @@
 ::: {.news-item}
 <span class="news-date">Oct 2026</span>
-<div class="news-content">The final version of [Time-lapse RESOLFT nanoscopy empowered by deep learning](https://www.nature.com/articles/s41467-026-78580-z){target="_blank" .flj}, accepted to Nature Communications, is finally out 🎉🎉</div>
+<div class="news-content">The final version of [Time-lapse RESOLFT nanoscopy empowered by deep learning](https://www.nature.com/articles/s41467-026-78580-z){target="_blank" .flj}, accepted to Nature Communications, is out 🎉.</div>
 :::
 
 ::: {.news-item}
