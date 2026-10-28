@@ -47,7 +47,7 @@ PhD Student in Computational Image Restoration | Generative AI for Microscopy
 :::
 
 ::: {.contact-links}
-[<span class="contact-emoji">✉️</span> Email](mailto:anirban.ray@fht.org){.social-link} [<span class="contact-emoji">📄</span> CV](files/CV.pdf){.social-link target="_blank"}
+[<span class="contact-emoji">✉️</span> Email](mailto:ray.anirbanray@gmail.com){.social-link} [<span class="contact-emoji">📄</span> CV](files/CV.pdf){.social-link target="_blank"}
 :::
 
 ::: {.booking-link}
