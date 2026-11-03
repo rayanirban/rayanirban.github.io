@@ -1849,11 +1849,11 @@ h3 {
 
 /* Social Links */
 .social-links {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.3rem;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   max-width: 220px;
   font-size: 0.9em;
@@ -1865,6 +1865,7 @@ h3 {
 }
 
 .social-links a {
+  flex: 0 0 calc((100% - 0.9rem) / 4);
   color: var(--accent-metallic);
   font-size: 0.75rem;
   font-weight: 500;
@@ -2435,10 +2436,10 @@ footer {
   .social-links {
     gap: 0.25rem;
     max-width: 220px;
-    grid-template-columns: repeat(4, 1fr);
   }
 
   .social-links a {
+    flex-basis: calc((100% - 0.75rem) / 4);
     font-size: 0.7rem !important;
     padding: 0.4rem 0.4rem !important;
     width: 100%;
