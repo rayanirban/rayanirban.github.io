@@ -92,7 +92,7 @@ Anirban Ray
 <div class="contact-links">
 <p><a href="mailto:ray.anirbanray@gmail.com" class="social-link"><span class="contact-emoji">✉️</span> Email</a> <a href="files/CV.pdf" class="social-link" target="_blank"><span class="contact-emoji">📄</span> CV</a></p>
 </div>
-<div class="next-obsession">
+<div class="next-obsession" hidden="">
 <h2 class="no-anchor">
 My Next Obsession
 </h2>
@@ -966,7 +966,13 @@ Left my job at <a href="https://www.hitachi.com/rd/" class="flj" target="_blank"
 document.addEventListener('DOMContentLoaded', function() {
   const navTabs = document.querySelectorAll('.nav-tab[data-tab]');
   const tabContents = document.querySelectorAll('.tab-content');
-  const foldingAnimation = document.querySelector('.next-obsession img');
+  // Set to true to show My Next Obsession; false hides the heading and GIF.
+  const SHOW_PROTEIN_ANIMATION = false;
+  const foldingSection = document.querySelector('.next-obsession');
+  if (foldingSection) foldingSection.hidden = !SHOW_PROTEIN_ANIMATION;
+  const foldingAnimation = SHOW_PROTEIN_ANIMATION
+    ? document.querySelector('.next-obsession img')
+    : null;
   const foldingAnimationUrl = foldingAnimation ? new URL(foldingAnimation.src) : null;
   let animationPlay = 0;
   let activePanel = document.querySelector('.nav-tab.active')?.getAttribute('data-tab');
