@@ -1,3 +1,14 @@
+<!-- ::: {.news-item}
+<span class="news-date">Dec 2026</span>
+<div class="news-content">Reviewing at [IEEE/CVF CVPR 2027](https://cvpr.thecvf.com/){target="_blank" .flj}😇.
+</div>
+::: -->
+
+::: {.news-item}
+<span class="news-date">Nov 2026</span>
+<div class="news-content">Preprint of [BEACON](https://arxiv.org/abs/2611.32406){target="_blank" .flj} is now available 🎉🎉</div>
+:::
+
 ::: {.news-item}
 <span class="news-date">Oct 2026</span>
 <div class="news-content">The final version of [Time-lapse RESOLFT nanoscopy empowered by deep learning](https://www.nature.com/articles/s41467-026-78580-z){target="_blank" .flj}, accepted to Nature Communications is out 🎉.</div>

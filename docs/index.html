@@ -259,7 +259,7 @@ Loading…
 <div class="education-item">
 <p><strong>Doctorate in Computer Science | <em>2022 – 2026 (expected)</em></strong> <a href="https://tu-dresden.de" class="flj" target="_blank">Technische Universität Dresden</a> &amp; <a href="https://humantechnopole.it" class="flj" target="_blank">Human Technopole, Italy</a> <br> Advisor: <a href="http://humantechnopole.it/en/people/florian-jug/" class="flj" target="_blank">Dr.&nbsp;Florian Jug</a><br>
 TAC Members: <a href="https://sbalzarini-lab.org/people/ivo-sbalzarini/" class="flj" target="_blank">Prof.&nbsp;Dr.&nbsp;Ivo F. Sbalzarini</a> and <a href="https://www.mls.uzh.ch/en/research/uhlmann/professor-uhlmann.html" class="flj" target="_blank">Dr.&nbsp;Virginie Uhlmann</a><br>
-Thesis title: <em>Computational Image Restoration with Conditional Generative Models for Microscopy</em> | <a href="" class="flj" target="_blank">Thesis (coming soon!)</a></p>
+Thesis title: <em>Computational Image Restoration with Conditional Generative Models for Microscopy</em> | <span style="color: gray;">Thesis (coming soon!)</span> <!-- [Thesis (coming soon!)](){target="_blank".flj} --></p>
 </div>
 <div class="education-item">
 <p><strong>Master of Engineering in Computer Science | <em>2016 – 2018</em></strong> <a href="https://www.nitech.ac.jp/eng/" class="flj" target="_blank">Nagoya Institute of Technology</a><br>
@@ -341,10 +341,10 @@ Supervised one undergraduate intern during my PhD for two months (summer interns
   <a href="#phd-work" class="research-topic-link">
     <span class="research-topic-number">01</span>
     <span class="research-topic-main">
-      <span class="research-topic-title">Current Research (PhD, 2022–Present)</span>
+      <span class="research-topic-title">PhD Work (2022–2026)</span>
       <span class="research-topic-meta">Current microscopy restoration work with flow matching and deep learning</span>
     </span>
-    <span class="research-topic-tag">2022-present</span>
+    <span class="research-topic-tag">2022-2026</span>
   </a>
   <a href="#phd-did-not-work" class="research-topic-link">
     <span class="research-topic-number">02</span>
@@ -380,13 +380,22 @@ Supervised one undergraduate intern during my PhD for two months (summer interns
   </a>
 </div>
 </div>
-<h3 id="phd-work" class="anchored">Current Research (PhD, 2022–Present)</h3>
+<h3 id="phd-work" class="anchored">PhD Work (2022–2026)</h3>
+<div id="beacon" class="project-item">
+<p><strong><span class="project-title">BEACON: Learning Observation-Conditioned Starting Points for Guided Conditional Flow Matching in Microscopy</span></strong> <span class="project-venue" style="font-style: italic;">ArXiv, 2026</span> <a href="https://rayanirban.github.io/" class="flj" target="_blank">Anirban Ray</a> and <a href="https://humantechnopole.it/en/people/florian-jug/" class="flj" target="_blank">Florian Jug</a><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="images/beacon_black.gif" class="img-fluid quarto-figure quarto-figure-center" style="border: 3px solid white; box-sizing: border-box;;width:100.0%" alt="Animated BEACON"></p>
+</figure>
+</div>
+<p>BEACON (<em>BE</em>st-of-K <em>A</em>daptive learned coupling for guided <em>CON</em>ditional flow matching) learns where to start the restoration process from the degraded microscopy image. Building on <a href="https://arxiv.org/abs/2506.22397" class="flj" target="_blank">HazeMatching</a> and <a href="https://arxiv.org/abs/2510.26601" class="flj" target="_blank">ResMatching</a>, a lightweight conditional noise model proposes multiple starting points during training, and the candidate with the lowest flow-matching loss is used to train the model. At inference, restoration requires only a single draw from the learned distribution, with no candidate selection or access to a clean target. Repeated sampling produces plausible restorations and estimates of predictive variability. Evaluated on ten datasets spanning microscopy dehazing and computational super-resolution, BEACON achieves the best median perception–distortion rank across all four evaluated pairings of fidelity and perceptual metrics, balancing reconstruction accuracy with perceptual realism. <br> <span style="color: gray;">GitHub (coming soon!)</span> | <a href="https://arxiv.org/abs/2611.32406" class="flj" target="_blank">Paper (arXiv)</a> | <span class="infographic-wrapper"><a href="files/BEACON_Microscopy_Restoration_Infographic.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/BEACON_Microscopy_Restoration_Infographic.png" class="infographic-pop"></span></p>
+</div>
 <div id="resolft-time-lapse" class="project-item">
 <p><strong><span class="project-title">Time-lapse RESOLFT nanoscopy empowered by deep learning</span></strong><br>
 <span class="project-venue" style="font-style: italic;">Nature Communications, 2026</span> <a href="https://se.linkedin.com/in/guillaume-minet-707b24228" class="flj" target="_blank">Guillaume Minet</a>, <a href="https://rayanirban.github.io/" class="flj" target="_blank">Anirban Ray</a>, Francesca Pennacchietti, Giovanna Coceano, <a href="https://humantechnopole.it/en/people/florian-jug/" class="flj" target="_blank">Florian Jug</a>, and <a href="https://www.scilifelab.se/researchers/ilaria-testa/" class="flj" target="_blank">Ilaria Testa</a><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img src="images/4_resolft.gif" class="img-fluid quarto-figure quarto-figure-center" style="width:80.0%" alt="Animated RESOLFT time-lapse imaging result"></p>
+<p><img src="images/4_resolft.gif" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" alt="Animated RESOLFT time-lapse imaging result"></p>
 </figure>
 </div>
 <p>Deep learning extended RESOLFT (REversible Saturable OpticaL Fluorescence Transition) nanoscopy by restoring low-SNR and sub-sampled acquisitions, enabling 5× longer imaging with 10× lower dose of light per frame, or a 4× increase in imaging speed for faster live-cell imaging while preserving ~60 nm resolution. This method enables reduced photobleaching and accelerated volumetric recording, revealing previously inaccessible sub-organelle dynamics in living cells. The video above shows a small mitochondrial membrane protrusion rapidly elongating and retracting dynamic behavior that could be captured with this method but would likely be missed at a lower frame rate.<br> <a href="https://github.com/GuillaumeMinet/deepL_resolft" class="flj" target="_blank">GitHub</a> | <a href="https://www.nature.com/articles/s41467-026-78580-z" class="flj" target="_blank">Publication</a> | <span class="infographic-wrapper"><a href="files/RESOLFT.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/RESOLFT.png" class="infographic-pop" alt="AI-generated RESOLFT project infographic"></span></p>
@@ -532,21 +541,25 @@ Supervised one undergraduate intern during my PhD for two months (summer interns
 <dl>
 <dt>[1]</dt>
 <dd>
-Guillaume Minet, <strong>Anirban Ray</strong>, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa. <a href="https://www.nature.com/articles/s41467-026-78580-z" class="flj" target="_blank"><em>Time-lapse RESOLFT nanoscopy empowered by deep learning </em></a>. <span class="publication-venue">Nature Communications, 2026.</span>
+<strong>Anirban Ray</strong> and Florian Jug. <a href="https://arxiv.org/abs/2611.32406" class="flj" target="_blank"><em>BEACON: Learning Observation-Conditioned Starting Points for Guided Conditional Flow Matching in Microscopy</em></a>. <span class="publication-venue">ArXiv, 2026.</span>
 </dd>
 <dt>[2]</dt>
 <dd>
-<strong>Anirban Ray</strong>, Ashesh, and Florian Jug. <a href="https://arxiv.org/abs/2506.22397" class="flj" target="_blank"><em>HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching</em></a>. <span class="publication-venue">IEEE/CVF CVPR 2026 (Findings).</span>
+Guillaume Minet, <strong>Anirban Ray</strong>, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa. <a href="https://www.nature.com/articles/s41467-026-78580-z" class="flj" target="_blank"><em>Time-lapse RESOLFT nanoscopy empowered by deep learning </em></a>. <span class="publication-venue">Nature Communications, 2026.</span>
 </dd>
 <dt>[3]</dt>
 <dd>
-<strong>Anirban Ray</strong>, Vera Galinova, and Florian Jug. <a href="https://arxiv.org/abs/2510.26601" class="flj" target="_blank"><em>ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching</em></a>. <span class="publication-venue">IEEE ISBI 2026.</span> <strong>(Oral; top 24.3% of submissions.)</strong>
+<strong>Anirban Ray</strong>, Ashesh, and Florian Jug. <a href="https://arxiv.org/abs/2506.22397" class="flj" target="_blank"><em>HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching</em></a>. <span class="publication-venue">IEEE/CVF CVPR 2026 (Findings).</span>
 </dd>
 <dt>[4]</dt>
 <dd>
-Yasuki Kakishita, Hideharu Hattori, <strong>Anirban Ray</strong>, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult. <a href="https://ieeexplore.ieee.org/abstract/document/9751170" class="flj" target="_blank"><em>Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features</em></a>. <span class="publication-venue">IEEE CISS 2022.</span>
+<strong>Anirban Ray</strong>, Vera Galinova, and Florian Jug. <a href="https://arxiv.org/abs/2510.26601" class="flj" target="_blank"><em>ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching</em></a>. <span class="publication-venue">IEEE ISBI 2026.</span> <strong>(Oral; top 24.3% of submissions.)</strong>
 </dd>
 <dt>[5]</dt>
+<dd>
+Yasuki Kakishita, Hideharu Hattori, <strong>Anirban Ray</strong>, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult. <a href="https://ieeexplore.ieee.org/abstract/document/9751170" class="flj" target="_blank"><em>Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features</em></a>. <span class="publication-venue">IEEE CISS 2022.</span>
+</dd>
+<dt>[6]</dt>
 <dd>
 Yasuki Kakishita, <strong>Anirban Ray</strong>, Hideharu Hattori, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult. <a href="https://ieeexplore.ieee.org/abstract/document/9400322" class="flj" target="_blank"><em>Quantitative Analysis System for Bacterial Cells in SEM Image using Deep Learning</em></a>. <span class="publication-venue">IEEE CISS 2021.</span>
 </dd>
@@ -674,6 +687,17 @@ List of my selected talks and poster presentations
 <section id="news" class="news-block">
 <h3 class="anchored">News</h3>
 <div class="news-items-container">
+<!-- ::: {.news-item}
+<span class="news-date">Dec 2026</span>
+<div class="news-content">Reviewing at [IEEE/CVF CVPR 2027](https://cvpr.thecvf.com/){target="_blank" .flj}😇.
+</div>
+::: -->
+<div class="news-item">
+<span class="news-date">Nov 2026</span>
+<div class="news-content">
+Preprint of <a href="https://arxiv.org/abs/2611.32406" class="flj" target="_blank">BEACON</a> is now available 🎉🎉
+</div>
+</div>
 <div class="news-item">
 <span class="news-date">Oct 2026</span>
 <div class="news-content">

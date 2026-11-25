@@ -8,6 +8,14 @@
       "entries": [
         {
           "authors": [
+            "Anirban Ray",
+            "Florian Jug"
+          ],
+          "title": "BEACON: Learning Observation-Conditioned Starting Points for Guided Conditional Flow Matching in Microscopy",
+          "url": "https://arxiv.org/abs/2611.32406",
+          "venue": "ArXiv, 2026."
+        },        {
+          "authors": [
             "Guillaume Minet",
             "Anirban Ray",
             "Francesca Pennacchietti",

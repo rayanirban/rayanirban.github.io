@@ -9,10 +9,10 @@
   <a href="#phd-work" class="research-topic-link">
     <span class="research-topic-number">01</span>
     <span class="research-topic-main">
-      <span class="research-topic-title">Current Research (PhD, 2022–Present)</span>
+      <span class="research-topic-title">PhD Work (2022–2026)</span>
       <span class="research-topic-meta">Current microscopy restoration work with flow matching and deep learning</span>
     </span>
-    <span class="research-topic-tag">2022-present</span>
+    <span class="research-topic-tag">2022-2026</span>
   </a>
   <a href="#phd-did-not-work" class="research-topic-link">
     <span class="research-topic-number">02</span>
@@ -50,7 +50,21 @@
 </div>
 ```
 
-### Current Research (PhD, 2022–Present) {#phd-work}
+### PhD Work (2022–2026) {#phd-work}
+
+::: {#beacon .project-item}
+
+**<span class="project-title">BEACON: Learning Observation-Conditioned Starting Points for Guided Conditional Flow Matching in Microscopy</span>**
+<span class="project-venue" style="font-style: italic;">ArXiv, 2026</span>
+[Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj} and [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}</br>
+
+![](images/beacon_black.gif){fig-align="center" width="100%" style="border: 3px solid white; box-sizing: border-box;" alt="Animated BEACON"}
+
+BEACON (*BE*st-of-K *A*daptive learned coupling for guided *CON*ditional flow matching) learns where to start the restoration process from the degraded microscopy image. Building on [HazeMatching](https://arxiv.org/abs/2506.22397){target="_blank" .flj} and [ResMatching](https://arxiv.org/abs/2510.26601){target="_blank" .flj}, a lightweight conditional noise model proposes multiple starting points during training, and the candidate with the lowest flow-matching loss is used to train the model. At inference, restoration requires only a single draw from the learned distribution, with no candidate selection or access to a clean target. Repeated sampling produces plausible restorations and estimates of predictive variability. Evaluated on ten datasets spanning microscopy dehazing and computational super-resolution, BEACON achieves the best median perception–distortion rank across all four evaluated pairings of fidelity and perceptual metrics, balancing reconstruction accuracy with perceptual realism.
+</br>
+<span style="color: gray;">GitHub (coming soon!)</span> | 
+[Paper (arXiv)](https://arxiv.org/abs/2611.32406){target="_blank" .flj} |  <span class="infographic-wrapper"><a href="files/BEACON_Microscopy_Restoration_Infographic.png" target="_blank" class="flj">AI Generated infographic</a> <img src="files/BEACON_Microscopy_Restoration_Infographic.png" class="infographic-pop"></span>
+:::
 
 ::: {#resolft-time-lapse .project-item}
 
@@ -58,7 +72,7 @@
 <span class="project-venue" style="font-style: italic;">Nature Communications, 2026</span>
 [Guillaume Minet](https://se.linkedin.com/in/guillaume-minet-707b24228){target="_blank" .flj}, [Anirban Ray](https://rayanirban.github.io/){target="_blank" .flj}, Francesca Pennacchietti, Giovanna Coceano, [Florian Jug](https://humantechnopole.it/en/people/florian-jug/){target="_blank" .flj}, and [Ilaria Testa](https://www.scilifelab.se/researchers/ilaria-testa/){target="_blank" .flj}</br> 
 
-![](images/4_resolft.gif){fig-align="center" width="80%" alt="Animated RESOLFT time-lapse imaging result"}
+![](images/4_resolft.gif){fig-align="center" width="100%" alt="Animated RESOLFT time-lapse imaging result"}
 
 Deep learning extended RESOLFT (REversible Saturable OpticaL Fluorescence Transition) nanoscopy by restoring low-SNR and sub-sampled acquisitions, enabling 5× longer imaging with 10× lower dose of light per frame, or a 4× increase in imaging speed for faster live-cell imaging while preserving ~60 nm resolution. This method enables reduced photobleaching and accelerated volumetric recording, revealing previously inaccessible sub-organelle dynamics in living cells. The video above shows a small mitochondrial membrane protrusion rapidly elongating and retracting dynamic behavior that could be captured with this method but would likely be missed at a lower frame rate.</br>
 [GitHub](https://github.com/GuillaumeMinet/deepL_resolft){target="_blank" .flj} | 

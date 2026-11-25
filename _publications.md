@@ -9,18 +9,21 @@
 ::: {.publication-list}
 
 [1]
-: Guillaume Minet, **Anirban Ray**, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa. [*Time-lapse RESOLFT nanoscopy empowered by deep learning *](https://www.nature.com/articles/s41467-026-78580-z){target="_blank" .flj}. <span class="publication-venue">Nature Communications, 2026.</span>
+: **Anirban Ray** and Florian Jug. [*BEACON: Learning Observation-Conditioned Starting Points for Guided Conditional Flow Matching in Microscopy*](https://arxiv.org/abs/2611.32406){target="_blank" .flj}. <span class="publication-venue">ArXiv, 2026.</span>
 
 [2]
-: **Anirban Ray**, Ashesh, and Florian Jug. [*HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching*](https://arxiv.org/abs/2506.22397){target="_blank" .flj}. <span class="publication-venue">IEEE/CVF CVPR 2026 (Findings).</span>
+: Guillaume Minet, **Anirban Ray**, Francesca Pennacchietti, Giovanna Coceano, Florian Jug, and Ilaria Testa. [*Time-lapse RESOLFT nanoscopy empowered by deep learning *](https://www.nature.com/articles/s41467-026-78580-z){target="_blank" .flj}. <span class="publication-venue">Nature Communications, 2026.</span>
 
 [3]
-: **Anirban Ray**, Vera Galinova, and Florian Jug. [*ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching*](https://arxiv.org/abs/2510.26601){target="_blank" .flj}. <span class="publication-venue">IEEE ISBI 2026.</span> **(Oral; top 24.3% of submissions.)**
+: **Anirban Ray**, Ashesh, and Florian Jug. [*HazeMatching: Dehazing Light Microscopy Images with Guided Conditional Flow Matching*](https://arxiv.org/abs/2506.22397){target="_blank" .flj}. <span class="publication-venue">IEEE/CVF CVPR 2026 (Findings).</span>
 
 [4]
-: Yasuki Kakishita, Hideharu Hattori, **Anirban Ray**, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult. [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170){target="_blank" .flj}. <span class="publication-venue">IEEE CISS 2022.</span>
+: **Anirban Ray**, Vera Galinova, and Florian Jug. [*ResMatching: Noise-Resilient Computational Super-Resolution via Guided Conditional Flow Matching*](https://arxiv.org/abs/2510.26601){target="_blank" .flj}. <span class="publication-venue">IEEE ISBI 2026.</span> **(Oral; top 24.3% of submissions.)**
 
 [5]
+: Yasuki Kakishita, Hideharu Hattori, **Anirban Ray**, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult. [*Deep Learning Based Bacteria Classification from SEM Images Using a Combination of Membrane and Internal Features*](https://ieeexplore.ieee.org/abstract/document/9751170){target="_blank" .flj}. <span class="publication-venue">IEEE CISS 2022.</span>
+
+[6]
 : Yasuki Kakishita, **Anirban Ray**, Hideharu Hattori, Akiko Hisada, Yusuke Ominami, Jean-Pierre Baudoin, Jacques Yaacoub Bou Khalil, and Didier Raoult. [*Quantitative Analysis System for Bacterial Cells in SEM Image using Deep Learning*](https://ieeexplore.ieee.org/abstract/document/9400322){target="_blank" .flj}. <span class="publication-venue">IEEE CISS 2021.</span>
 
 :::
