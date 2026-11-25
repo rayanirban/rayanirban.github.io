@@ -183,8 +183,9 @@ body {
   position: sticky;
   top: 80px;
   align-self: flex-start;
-  max-height: calc(100vh - 100px);
-  overflow-y: none;
+  max-height: none;
+  overflow: visible;
+  top: var(--profile-sticky-top, 80px);
 }
 
 .left-panel hr {
@@ -1871,6 +1872,7 @@ h3 {
 }
 
 .next-obsession h2 {
+  border-bottom: none;
   display: block;
   padding-inline: 0;
   width: 100%;
@@ -1878,6 +1880,10 @@ h3 {
   margin: 0 0 0.65rem;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.next-obsession p {
+  margin: 0;
 }
 
 .next-obsession img {
@@ -2337,7 +2343,7 @@ footer {
 
   .left-panel {
     position: sticky;
-    top: 80px;
+    top: var(--profile-sticky-top, 80px);
   }
 
   .right-panel {
