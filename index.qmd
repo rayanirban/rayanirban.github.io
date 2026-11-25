@@ -264,7 +264,7 @@ Bengali (Native), Hindi (Fluent), English (Fluent), Japanese (Conversational), T
 
 
 ::: {style="text-align: center; color: gray; font-size: 0.75rem; margin-top: 0.5rem; padding-bottom: 1rem;"}
-If you use this template, please acknowledge this original design 😊
+If you use this [template](https://github.com/rayanirban/rayanirban.github.io){target="_blank"}, please acknowledge this original design 😊
 :::
 
 ```{=html}

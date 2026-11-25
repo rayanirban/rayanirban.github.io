@@ -6,7 +6,7 @@
 
 ::: {.news-item}
 <span class="news-date">Nov 2026</span>
-<div class="news-content">Preprint of [BEACON](https://arxiv.org/abs/2611.32406){target="_blank" .flj} is now available 🎉🎉</div>
+<div class="news-content">Preprint of [BEACON](https://arxiv.org/abs/2611.32406){target="_blank" .flj} is now available 🎉🎉.</div>
 :::
 
 ::: {.news-item}
