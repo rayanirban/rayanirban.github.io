@@ -46,8 +46,18 @@ PhD Student in Computational Image Restoration | Generative AI for Microscopy
 [<img src="logos/instagram.png" class="social-icon-img" alt="Instagram">](https://instagram.com/anirbanray_){.social-link target="_blank"} 
 :::
 
+
+::: {.profile-contact-section}
+
 ::: {.contact-links}
 [<span class="contact-emoji">✉️</span> Email](mailto:ray.anirbanray@gmail.com){.social-link} [<span class="contact-emoji">📄</span> CV](files/CV.pdf){.social-link target="_blank"}
+:::
+
+<div class="next-obsession">
+  <h2 class="no-anchor">My Next Obsession</h2>
+  <img src="images/Protein%20Folding%20Animation%20Frames.gif" alt="Animated protein folding sequence" width="420" height="415">
+</div>
+
 :::
 
 ::: {.booking-link}

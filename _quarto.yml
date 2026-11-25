@@ -14,7 +14,7 @@ website:
   title: "Anirban Ray"
   site-url: https://rayanirban.github.io
   repo-url: https://github.com/rayanirban/rayanirban.github.io
-  favicon: profile.jpg
+  favicon: images/protein-folding-frames-icon.png
   open-graph:
     site-name: "Anirban Ray"
     title: "Anirban Ray"
@@ -42,3 +42,6 @@ format:
     css: styles.css
     html-math-method: mathjax
     toc: false
+    include-in-header:
+      - text: |
+          <link rel="apple-touch-icon" sizes="192x192" href="/images/protein-folding-frames-icon.png">
